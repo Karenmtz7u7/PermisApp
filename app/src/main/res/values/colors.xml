@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="verde1">#3B5E2C</color>
+    <color name="verde2">#DDAD3B</color>
+    <color name="verde3">#246C2D</color>
+    <color name="gris">#A9A0A0</color>
+    <color name="gris2">#DDD8D4</color>
+    <color name="gris3">#D9D9D9</color>
+    <color name="grischido">#F6F6F6</color>
+    <color name="grismaschido">#F1F1F1</color>
+    <color name="cafe">#1E0907</color>
+    <color name="rojo">#E33C3C</color>
+    <color name="rojo2">#DA7676</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="botonesperfil">#171F1D</color>
+    <color name="verde">#3B912D</color>
+    <color name="nocolor">#00FFFFFF</color>
+</resources>

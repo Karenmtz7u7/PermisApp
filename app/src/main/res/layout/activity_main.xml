@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".activities.MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="35dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center"
+            android:foregroundGravity="center">
+            <ImageView
+                android:id="@+id/privacy_pol"
+                android:layout_width="270dp"
+                android:layout_height="272dp"
+                android:src="@drawable/mobile_login_rafiki" />
+
+            <TextView
+                android:id="@+id/iniciar_ses"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:lineHeight="38sp"
+                android:text="Iniciar sesión"
+                android:textAppearance="@style/iniciar_ses"
+                android:textColor="@color/verde1"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_margin="15dp">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_marginTop="16dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    app:startIconDrawable="@drawable/ic_email_"
+                    android:fontFamily="@font/poppins"
+                    android:hint="Correo electrónico"
+                    android:inputType="textEmailAddress"
+                    android:lineHeight="18sp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/correoelectronicotxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        tools:layout_editor_absoluteX="15dp"
+                        tools:layout_editor_absoluteY="417dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:startIconDrawable="@drawable/ic_lock_24"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginTop="16dp"
+                    android:hint="Contraseña"
+                    android:lineHeight="18sp"
+                    app:endIconMode="password_toggle">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/passwordtxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        tools:layout_editor_absoluteX="12dp"
+                        tools:layout_editor_absoluteY="507dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/olvidocontrabtn"
+                    android:layout_marginLeft="8dp"
+                    android:layout_width="165dp"
+                    android:layout_height="20dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="¿Olvidó su contraseña?"
+                    android:textColor="@color/cafe"
+
+                    android:textAppearance="@style/olvid_su_co"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/ingresarbtn"
+                android:layout_width="282dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/rounded_button"
+                android:fontFamily="@font/poppins"
+                android:lineHeight="38sp"
+                android:text="Ingresar"
+                android:textColor="@color/cafe"
+                android:textStyle="bold"
+                app:backgroundTint="@color/gris" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <View
+                    android:layout_width="90dp"
+                    android:layout_height="6dp"
+                    android:background="@drawable/rectangle_4"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:textAlignment="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textSize="12sp"
+                    android:textAppearance="@style/retirarse_a"
+                    android:text="¿Aún no tienes una cuenta?"/>
+                <View
+                    android:layout_width="90dp"
+                    android:layout_height="6dp"
+                    android:background="@drawable/rectangle_3"/>
+            </LinearLayout>
+            <Button
+                android:id="@+id/signinbtn"
+                android:layout_width="280dp"
+                android:layout_height="60dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppins"
+                android:lineHeight="38sp"
+                android:text="Registrarse"
+                app:backgroundTint="@color/verde"
+                android:textColor="@color/cafe"
+                android:textStyle="bold"
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "705438412342",
+    "project_id": "dbpermisapp",
+    "storage_bucket": "dbpermisapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:705438412342:android:a602c25f1526577166b297",
+        "android_client_info": {
+          "package_name": "com.aplicacion.permisapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "705438412342-3uglmqpklh1crfj2ms6d4l8le7vu8836.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBd1D3Db-oRvq739S5Iw9sBWPd8RPMp9i0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "705438412342-3uglmqpklh1crfj2ms6d4l8le7vu8836.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

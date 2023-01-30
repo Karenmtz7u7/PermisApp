@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">PermisApp</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cerrarsesion">Cerrar sesión</string>
+    <string name="cerrarpregunta">¿Deseas cerrar sesión?</string>
+    <string name="horario">Aun no has agregado tu horario \n Pulsa aquí para subirlo</string>
+    <string name="guardar_cambios">Guardar cambios</string>
+    <string name="default_notification_channel_id">fcm_default_channel</string>
+    <string-array name="jefes">
+
+        <item>  Jefe 1</item>
+        <item>  Jefe 2</item>
+        <item>  Jefe 3</item>
+    </string-array>
+
+
+</resources>
