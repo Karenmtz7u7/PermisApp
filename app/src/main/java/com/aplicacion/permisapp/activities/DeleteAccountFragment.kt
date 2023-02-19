@@ -97,9 +97,7 @@ class DeleteAccountFragment : DialogFragment(), DialogInterface.OnShowListener {
         dialog.show()
         dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
         view.findViewById<Button>(R.id.botonAlert).setOnClickListener {
-            val i = Intent(context, MainActivity::class.java)
-            i.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-            startActivity(i)
+            cerrarsesion()
             dialog.dismiss()
         }
     }
@@ -120,6 +118,14 @@ class DeleteAccountFragment : DialogFragment(), DialogInterface.OnShowListener {
         view.findViewById<Button>(R.id.botonAlert).setOnClickListener {
             dialog.dismiss()
         }
+    }
+
+    private fun cerrarsesion() {
+        authProvider.logOut()
+        val i= Intent(activity, MainActivity::class.java )
+        i.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(i)
+
     }
 
 
