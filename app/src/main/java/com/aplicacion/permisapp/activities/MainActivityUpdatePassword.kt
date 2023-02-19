@@ -1,5 +1,6 @@
 package com.aplicacion.permisapp.activities
 
+import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.DialogInterface
 import android.os.Bundle
@@ -46,12 +47,10 @@ class MainActivityUpdatePassword() : DialogFragment(), DialogInterface.OnShowLis
         dialog?.let {
             updateBtn = it.findViewById(R.id.updatePassbtn)
             cancel = it.findViewById(R.id.cancelbtn)
+                updateBtn?.setOnClickListener {
+                    passupdate()
+                }
 
-            updateBtn?.setOnClickListener {
-                passupdate()
-                dismiss()
-
-            }
             cancel?.setOnClickListener {
                 dismiss()
             }
@@ -61,22 +60,26 @@ class MainActivityUpdatePassword() : DialogFragment(), DialogInterface.OnShowLis
     private fun passupdate(){
         val pass = binding.passwordtxt.text.toString()
         val confirmPass = binding.passwordverifytxt.text.toString()
-
-        if (pass == confirmPass){
-            if (authProvider.starSession()){
-                authProvider.updatePassword(pass)?.addOnCompleteListener { task->
-                    if (task.isSuccessful){
-                        showMessage()
-                        dismiss()
-                    }else{
-                        showMessageError()
-                        dismiss()
+        if (pass.isEmpty() || confirmPass.isEmpty()){
+            binding.textalert.text = "¡No puedes dejar cajas de texto vacias!"
+        }else{
+            if (pass == confirmPass){
+                if (authProvider.starSession()){
+                    authProvider.updatePassword(pass)?.addOnCompleteListener { task->
+                        if (task.isSuccessful){
+                            showMessage()
+                            dismiss()
+                        }else{
+                            showMessageError()
+                            dismiss()
+                        }
                     }
                 }
             }
-        }
-        else{
-            binding.textalert.text = "¡Las contraseñas no coinciden!"
+            else{
+                binding.textalert.text = "¡Las contraseñas no coinciden!"
+                binding.passwordverifytxt.setText("")
+            }
         }
     }
 

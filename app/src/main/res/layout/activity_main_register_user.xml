@@ -123,6 +123,7 @@
                         android:fontFamily="@font/poppins"
                         android:hint="Telefono "
                         android:inputType="phone"
+                        android:nextFocusRight="@id/noemtxt"
                         android:lineHeight="18sp"
                         app:startIconDrawable="@drawable/ic_outline_phone_24"
                         tools:ignore="MissingConstraints">
@@ -146,6 +147,7 @@
                         android:fontFamily="@font/poppins"
                         android:hint="No. de empleado"
                         android:inputType="number"
+                        android:nextFocusRight="@id/Carreratxt"
                         android:lineHeight="18sp"
                         app:helperText="Obligatorio"
                         app:startIconDrawable="@drawable/ic_outline_numbers_24">
@@ -168,7 +170,9 @@
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
                     android:layout_marginTop="15dp"
+                    android:nextFocusDown="@id/emailusertxt"
                     app:startIconDrawable="@drawable/ic_work"
+                    android:hint="Área a la que pertenece"
                     android:gravity="center"
                     android:lineHeight="18sp"
                     app:helperText="Obligatorio">
@@ -179,8 +183,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:clickable="false"
-                        android:focusable="false"
-                        android:hint="Área a la que pertenece"
+                        android:focusable="true"
                         android:background="@drawable/rectangle_7"
                         android:backgroundTint="@color/gris"
                         android:textSize="15sp"
@@ -262,7 +265,7 @@
                 android:id="@+id/signinbtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:backgroundTint="@color/verde"
+
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="15dp"
                 android:layout_marginRight="50dp"
@@ -270,7 +273,7 @@
                 android:fontFamily="@font/poppins"
                 android:lineHeight="38sp"
                 android:text="Registrarse"
-                android:textColor="@color/cafe"
+                android:textColor="@color/white"
                 android:textStyle="bold"
                 />
             <LinearLayout

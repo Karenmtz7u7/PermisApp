@@ -129,7 +129,6 @@ class MainActivityRegisterUser : AppCompatActivity() {
                     )
                     clientProvider.create(client).addOnCompleteListener {
                         if (it.isSuccessful){
-                            showMessage()
                             binding.usuarionametxt.setText("")
                             binding.usuarioapellidotxt.setText("")
                             binding.telphonetxt.setText("")
@@ -139,23 +138,12 @@ class MainActivityRegisterUser : AppCompatActivity() {
                             binding.Carreratxt.setText("")
                             binding.RFCtxt.setText("")
                             binding.passwordverifytxt.setText("")
-
+                            showMessage()
 
                         }else{
                             showMessageError()
                         }
                     }
-
-                    binding.usuarionametxt.setText("")
-                    binding.usuarioapellidotxt.setText("")
-                    binding.telphonetxt.setText("")
-                    binding.noemtxt.setText("")
-                    binding.emailusertxt.setText("")
-                    binding.passwordtxt.setText("")
-                    binding.Carreratxt.setText("")
-                    binding.RFCtxt.setText("")
-                    binding.passwordverifytxt.setText("")
-
                 }else{
                     showMessageError()
                 }

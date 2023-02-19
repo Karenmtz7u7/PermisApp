@@ -45,8 +45,10 @@ class AuthProvider {
         }
         return exist
     }
+
      fun logOut(){
-        auth.signOut()
+       FirebaseAuth.getInstance().signOut()
+
      }
 
     fun deleteAccount(): Task<Void>? {

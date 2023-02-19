@@ -138,8 +138,8 @@ class MainActivityPerfil : AppCompatActivity() {
 
     }
     private fun accountDelete(){
-        DeleteAccountFragment().show(supportFragmentManager,DeleteAccountFragment::class.java.simpleName)
-
+        val i= Intent(this, MainActivityDeleteAccount::class.java )
+        startActivity(i)
     }
 
 
