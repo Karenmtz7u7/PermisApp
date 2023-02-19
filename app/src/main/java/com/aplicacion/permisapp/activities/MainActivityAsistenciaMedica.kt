@@ -2,6 +2,7 @@ package com.aplicacion.permisapp.activities
 
 
 import android.app.Activity
+import android.app.TimePickerDialog
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
@@ -12,11 +13,17 @@ import android.util.Log
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.TimePicker
 import android.widget.Toast
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
+import com.android.volley.Request
+import com.android.volley.RequestQueue
+import com.android.volley.Response
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
 import com.aplicacion.permisapp.Models.Client
 import com.aplicacion.permisapp.Models.Incidencias
 import com.aplicacion.permisapp.R
@@ -71,16 +78,94 @@ class MainActivityAsistenciaMedica : AppCompatActivity() {
         }
 
         binding.fechamedico.setOnClickListener { showDatePickerDialog() }
-        binding.horaInicialmedico.setOnClickListener { showTimePickerDialog() }
+        binding.horaInicialmedico.setOnClickListener { hora() }
 
-        binding.HoraFinalmedico.setOnClickListener { showTimePickerDialog2() }
+        binding.HoraFinalmedico.setOnClickListener { hora2() }
 
-        binding.buttonEnviarSolicitud.setOnClickListener { sendSolicitud() }
+        binding.buttonEnviarSolicitud.setOnClickListener { sendSolicitud()
+            excel()
+        }
 
         binding.button.setOnClickListener { solicitarpermiso() }
 
         binding.button3.setOnClickListener { file() }
     }
+
+
+
+
+    //Excel
+    private fun excel() {
+
+        clientProvider.getSP(authProvider.getid()).addOnSuccessListener { document ->
+            val client = document.toObject(Client::class.java)
+            val nombre = "${client?.nombre}"
+            val apellido = "${client?.apellido}"
+            val noEmpleado = "${client?.noEmpleado}"
+            val area = "${client?.area}"
+
+            val incidencias = Incidencias(
+
+                nombre = nombre,
+                apellido = apellido,
+                noEmpleado = noEmpleado,
+                area = area)
+
+
+
+            if (binding.editTextTextPersonName2.text.toString().isEmpty() or
+                binding.horaInicialmedico.text.toString().isEmpty() or
+                binding.HoraFinalmedico.text.toString().isEmpty() or
+                binding.fechamedico.text.toString().isEmpty() or
+                binding.autoCompleteTextView.text.toString().isEmpty() or
+                client?.nombre.toString().isEmpty() or
+                client?.apellido.toString().isEmpty()
+            ) {
+
+                Toast.makeText(this@MainActivityAsistenciaMedica, "...", Toast.LENGTH_SHORT).show()
+
+            } else {
+                val url =
+                    "https://script.google.com/macros/s/AKfycbwPT3J7U9rA1ucfER--enNAjRsvNXZXzPB0J1Ilu9LPliqOtLWCiAKNzy8N2BF6hidyTQ/exec"
+                val stringRequest = object : StringRequest(Request.Method.POST, url,
+                    Response.Listener {
+                        Toast.makeText(this@MainActivityAsistenciaMedica,
+                            it.toString(),
+                            Toast.LENGTH_SHORT).show()
+
+                    }, Response.ErrorListener {
+                        Toast.makeText(this@MainActivityAsistenciaMedica,
+                            it.toString(),
+                            Toast.LENGTH_SHORT).show()
+
+                    }) {
+                    override fun getParams(): MutableMap<String, String>? {
+                        val params = HashMap<String, String>()
+                        params["nombre"]=client?.nombre.toString()
+                        params["apellido"]=client?.apellido.toString()
+                        params["noEmpleado"]=client?.noEmpleado.toString()
+                        params["area"]=client?.area.toString()
+                        params["incidencia"] = binding.editTextTextPersonName2.text.toString()
+                        params["hora_inicial"] = binding.horaInicialmedico.text.toString()
+                        params["hora_final"] = binding.HoraFinalmedico.text.toString()
+                        params["fecha"] = binding.fechamedico.text.toString()
+                        params["jefeInmediato"] = binding.autoCompleteTextView.text.toString()
+
+                        return params
+
+
+                    }
+                }
+
+                val queue: RequestQueue = Volley.newRequestQueue(this@MainActivityAsistenciaMedica)
+                queue.add(stringRequest)
+
+            }
+        }
+    }
+
+
+
     //Función para abrir el gestor de archivos y buscar un pdf
 
     private fun file(){
@@ -162,8 +247,7 @@ class MainActivityAsistenciaMedica : AppCompatActivity() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             when {
                 ContextCompat.checkSelfPermission(this,
-                    android.Manifest.permission.CAMERA, )
-                        == PackageManager.PERMISSION_GRANTED -> {
+                    android.Manifest.permission.CAMERA, ) == PackageManager.PERMISSION_GRANTED -> {
                     selectImage()
                 }
                 shouldShowRequestPermissionRationale(android.Manifest.permission.CAMERA) -> {
@@ -359,31 +443,28 @@ class MainActivityAsistenciaMedica : AppCompatActivity() {
         startActivity(intent)
     }
 
-    private fun showTimePickerDialog() {
+    private fun hora(){
 
-        val timePicker = TimePickerFragment { time -> onTimeSelected(time) }
-        timePicker.show(supportFragmentManager, "time")
+        val cal = Calendar.getInstance()
+        val timeSetListener = TimePickerDialog.OnTimeSetListener{ timePicker: TimePicker?, hour: Int, minute: Int ->
+            cal.set(Calendar.HOUR_OF_DAY,hour)
+            cal.set(Calendar.MINUTE,minute)
+            binding.horaInicialmedico.setText(SimpleDateFormat("HH:mm").format(cal.time))
+        }
+        TimePickerDialog(this,timeSetListener,  cal.get(Calendar.HOUR_OF_DAY),cal.get(Calendar.MINUTE),false).show()
     }
 
+    private fun hora2(){
 
-    private fun onTimeSelected(time: String) {
-
-        binding.horaInicialmedico.setText(" $time ")
-
+        val cal = Calendar.getInstance()
+        val timeSetListener = TimePickerDialog.OnTimeSetListener{ timePicker: TimePicker?, hour: Int, minute: Int ->
+            cal.set(Calendar.HOUR_OF_DAY,hour)
+            cal.set(Calendar.MINUTE,minute)
+            binding.HoraFinalmedico.setText(SimpleDateFormat("HH:mm").format(cal.time))
+        }
+        TimePickerDialog(this,timeSetListener,  cal.get(Calendar.HOUR_OF_DAY),cal.get(Calendar.MINUTE),false).show()
     }
 
-
-    private fun showTimePickerDialog2() {
-
-        val timePicker = TimePickerFragment { time -> onTimeSelected2(time) }
-        timePicker.show(supportFragmentManager, "time")
-    }
-
-
-    private fun onTimeSelected2(time: String) {
-        binding.HoraFinalmedico.setText(" $time ")
-
-    }
 
 
     private fun showDatePickerDialog() {
@@ -398,6 +479,7 @@ class MainActivityAsistenciaMedica : AppCompatActivity() {
         binding.fechamedico.setText("  $day/$month/$year")
     }
 }
+
 
 
 

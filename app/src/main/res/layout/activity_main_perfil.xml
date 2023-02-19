@@ -292,7 +292,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/subirhorario"
+                    android:id="@+id/keytxt"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="10dp"
@@ -320,7 +320,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/keytxt"
+                    android:id="@+id/deletetxt"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="10dp"
@@ -332,7 +332,7 @@
                         android:background="@drawable/ic_outline_delete_24" />
 
                     <TextView
-                        android:id="@+id/deleteimgtxt"
+
                         android:layout_width="286dp"
                         android:layout_height="match_parent"
                         android:layout_marginStart="15dp"

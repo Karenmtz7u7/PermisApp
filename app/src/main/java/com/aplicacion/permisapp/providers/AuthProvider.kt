@@ -28,6 +28,13 @@ class AuthProvider {
         return auth.currentUser?.uid ?: ""
     }
 
+    fun updatePassword(password : String): Task<Void>? {
+        return auth.currentUser?.updatePassword(password)
+    }
+
+
+
+
 
 
     //Funcion para mantener la sesion activa
@@ -41,5 +48,10 @@ class AuthProvider {
      fun logOut(){
         auth.signOut()
      }
+
+    fun deleteAccount(): Task<Void>? {
+        return auth.currentUser?.delete()
+    }
+
 
 }

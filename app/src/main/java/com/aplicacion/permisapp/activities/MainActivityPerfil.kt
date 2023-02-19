@@ -52,9 +52,10 @@ class MainActivityPerfil : AppCompatActivity() {
         }
         binding.Camerabtn.setOnClickListener {selectImage()}
         binding.keytxt.setOnClickListener {
-
+            passwordFragment()
         }
-        binding.deleteimgtxt.setOnClickListener {
+        binding.deletetxt.setOnClickListener {
+            accountDelete()
         }
         getInformationUser()
     }
@@ -132,6 +133,14 @@ class MainActivityPerfil : AppCompatActivity() {
         }
     }
 
+    private fun passwordFragment(){
+        MainActivityUpdatePassword().show(supportFragmentManager,MainActivityUpdatePassword::class.java.simpleName)
+
+    }
+    private fun accountDelete(){
+        DeleteAccountFragment().show(supportFragmentManager,DeleteAccountFragment::class.java.simpleName)
+
+    }
 
 
 

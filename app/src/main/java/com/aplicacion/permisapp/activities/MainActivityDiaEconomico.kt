@@ -14,6 +14,11 @@ import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
+import com.android.volley.Request
+import com.android.volley.RequestQueue
+import com.android.volley.Response
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
 import com.aplicacion.permisapp.Models.Client
 import com.aplicacion.permisapp.Models.Incidencias
 import com.aplicacion.permisapp.R
@@ -55,9 +60,80 @@ class MainActivityDiaEconomico : AppCompatActivity() {
 
         binding.seleccionarfechaeconomic.setOnClickListener { showDatePickerDialog() }
 
-        binding.button2DE.setOnClickListener { sendSolicitud() }
+        binding.button2DE.setOnClickListener { sendSolicitud()
+            excel()
+        }
 
     }
+
+
+    //Excel
+    private fun excel() {
+
+        clientProvider.getSP(authProvider.getid()).addOnSuccessListener { document ->
+            val client = document.toObject(Client::class.java)
+            val nombre = "${client?.nombre}"
+            val apellido = "${client?.apellido}"
+            val noEmpleado = "${client?.noEmpleado}"
+            val area = "${client?.area}"
+
+            val incidencias = Incidencias(
+
+                nombre = nombre,
+                apellido = apellido,
+                noEmpleado = noEmpleado,
+                area = area)
+
+
+
+            if (binding.editTextTextPersonName.text.toString().isEmpty() or
+                binding.seleccionarfechaeconomic.text.toString().isEmpty() or
+                binding.autoCompleteTextView.text.toString().isEmpty() or
+                client?.nombre.toString().isEmpty() or
+                client?.apellido.toString().isEmpty()
+            ) {
+
+                Toast.makeText(this@MainActivityDiaEconomico, "...", Toast.LENGTH_SHORT).show()
+
+            } else {
+                val url =
+                    "https://script.google.com/macros/s/AKfycbwPT3J7U9rA1ucfER--enNAjRsvNXZXzPB0J1Ilu9LPliqOtLWCiAKNzy8N2BF6hidyTQ/exec"
+                val stringRequest = object : StringRequest(Request.Method.POST, url,
+                    Response.Listener {
+                        Toast.makeText(this@MainActivityDiaEconomico,
+                            it.toString(),
+                            Toast.LENGTH_SHORT).show()
+
+                    }, Response.ErrorListener {
+                        Toast.makeText(this@MainActivityDiaEconomico,
+                            it.toString(),
+                            Toast.LENGTH_SHORT).show()
+
+                    }) {
+                    override fun getParams(): MutableMap<String, String>? {
+                        val params = HashMap<String, String>()
+                        params["nombre"]=client?.nombre.toString()
+                        params["apellido"]=client?.apellido.toString()
+                        params["noEmpleado"]=client?.noEmpleado.toString()
+                        params["area"]=client?.area.toString()
+                        params["incidencia"] = binding.editTextTextPersonName.text.toString()
+                        params["fecha"] = binding.seleccionarfechaeconomic.text.toString()
+                        params["jefeInmediato"] = binding.autoCompleteTextView.text.toString()
+
+                        return params
+
+
+                    }
+                }
+
+                val queue: RequestQueue = Volley.newRequestQueue(this@MainActivityDiaEconomico)
+                queue.add(stringRequest)
+
+            }
+        }
+    }
+
+
     //Habilitar boton para tomar fotos si tiene permisos
 
     private fun solicitarpermiso() {
@@ -190,7 +266,7 @@ class MainActivityDiaEconomico : AppCompatActivity() {
 
                                 incidenciasProvider.create(incidencias).addOnCompleteListener {
                                     if (it.isSuccessful) {
-                                       showMessage()
+                                        showMessage()
                                     } else {
                                         Toast.makeText(this@MainActivityDiaEconomico,
                                             "Hubo un error al procesar la solicitud ${it.exception.toString()}",

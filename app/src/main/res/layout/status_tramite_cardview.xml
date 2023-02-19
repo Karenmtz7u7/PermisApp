@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     app:cardCornerRadius="10dp"
     android:layout_margin="12dp"
     app:cardElevation="10dp">
@@ -81,7 +81,6 @@
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
             android:layout_marginTop="15dp"
-            android:layout_marginBottom="25dp"
             android:orientation="horizontal">
 
             <View
@@ -108,6 +107,140 @@
                 android:layout_marginLeft="25dp"
                 android:textAppearance="@style/nombre_de_u"
                 android:textSize="13sp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="15dp"
+            android:orientation="vertical">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:focusable="true"
+                android:clickable="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/progresscl"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                   android:layout_margin="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.473"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/progresssBar"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="35dp"
+                        app:layout_constraintBaseline_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:progress="25" />
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <CheckBox
+                    android:id="@+id/sendcbx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bgcbx"
+                    android:clickable="false"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    app:layout_constraintEnd_toStartOf="@id/VoBoJIcbx"
+                    app:layout_constraintStart_toStartOf="@+id/progresscl"
+                    app:layout_constraintTop_toTopOf="@id/progresscl" />
+
+                <CheckBox
+                    android:id="@+id/VoBoJIcbx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bgcbx"
+                    android:clickable="false"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    app:layout_constraintStart_toEndOf="@+id/sendcbx"
+                    app:layout_constraintEnd_toStartOf="@id/VoBoSAcbx"
+                    app:layout_constraintTop_toTopOf="@id/progresscl" />
+                <CheckBox
+                    android:id="@+id/VoBoSAcbx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bgcbx"
+                    android:clickable="false"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    app:layout_constraintStart_toEndOf="@+id/VoBoJIcbx"
+                    app:layout_constraintEnd_toStartOf="@id/AcepttRHcbx"
+                    app:layout_constraintTop_toTopOf="@id/progresscl" />
+
+                <CheckBox
+                    android:id="@+id/AcepttRHcbx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bgcbx"
+                    android:clickable="false"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    app:layout_constraintStart_toEndOf="@+id/VoBoSAcbx"
+                    app:layout_constraintEnd_toEndOf="@id/progresscl"
+                    app:layout_constraintTop_toTopOf="@id/progresscl" />
+
+                <TextView
+                    android:id="@+id/sendtxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="Solicitud Enviada"
+                    android:textSize="8sp"
+                    app:layout_constraintEnd_toStartOf="@id/VoBoJIcbx"
+                    app:layout_constraintStart_toStartOf="@+id/progresscl"
+                    app:layout_constraintTop_toBottomOf="@id/sendcbx"  />
+                <TextView
+                    android:id="@+id/JItxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="Vo.Bo. \n Jefe Inmediato"
+                    android:textSize="8sp"
+                    android:textAlignment="center"
+                    app:layout_constraintEnd_toStartOf="@id/VoBoSAcbx"
+                    app:layout_constraintStart_toEndOf="@+id/sendtxt"
+                    app:layout_constraintTop_toBottomOf="@id/VoBoJIcbx"  />
+
+                <TextView
+                    android:id="@+id/SAtxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="Vo.Bo. \n Sub. Academico"
+                    android:textAlignment="center"
+                    android:textSize="8sp"
+                    app:layout_constraintEnd_toStartOf="@id/AcepttRHcbx"
+                    app:layout_constraintStart_toEndOf="@+id/JItxt"
+                    app:layout_constraintTop_toBottomOf="@id/VoBoSAcbx"  />
+
+                <TextView
+                    android:id="@+id/RHtxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="Vo.Bo. \n RRHH"
+                    android:textSize="8sp"
+                    android:textAlignment="center"
+                    app:layout_constraintStart_toEndOf="@+id/VoBoSAcbx"
+                    app:layout_constraintEnd_toEndOf="@id/progresscl"
+                    app:layout_constraintTop_toBottomOf="@id/AcepttRHcbx"/>
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
 

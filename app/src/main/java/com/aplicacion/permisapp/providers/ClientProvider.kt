@@ -86,4 +86,8 @@ class ClientProvider {
         return db.document(id).update(info)
     }
 
+    fun remove(client: Client): Task<Void> {
+        return db.document(client.id!!).delete()
+    }
+
 }

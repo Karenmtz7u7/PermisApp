@@ -18,14 +18,15 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/imageDialog"
             android:layout_marginTop="20dp"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:padding="8dp"
-            android:src="@drawable/ic_check" />
 
+        android:padding="8dp"
+        android:src="@drawable/ic_check" />
         <TextView
+            android:id="@+id/titleDialog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
@@ -41,6 +42,7 @@
 
 
         <TextView
+            android:id="@+id/bodyDialog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"

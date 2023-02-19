@@ -1,22 +1,33 @@
 package com.aplicacion.permisapp.activities
 
 
+import android.Manifest.permission.READ_EXTERNAL_STORAGE
+import android.Manifest.permission.WRITE_EXTERNAL_STORAGE
 import android.annotation.SuppressLint
+import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.pdf.PdfDocument
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Environment
+import android.provider.DocumentsContract
 import android.widget.Toast
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import com.aplicacion.permisapp.Models.Histories
 import com.aplicacion.permisapp.R
 import com.aplicacion.permisapp.databinding.ActivityMainFormatPdfBinding
 import com.aplicacion.permisapp.providers.HistoriesProvider
 import com.bumptech.glide.Glide
+import com.itextpdf.text.pdf.PdfWriter
+import org.w3c.dom.Document
 import java.io.File
 import java.io.FileOutputStream
+import java.io.Writer
 
 
 class MainActivityFormatPDF : AppCompatActivity() {
@@ -28,7 +39,7 @@ class MainActivityFormatPDF : AppCompatActivity() {
         binding = ActivityMainFormatPdfBinding.inflate(layoutInflater)
 
         binding.downloadPDFbtn.setOnClickListener {
-            createPDF()
+           permission()
         }
         setContentView(binding.root)
 
@@ -59,6 +70,53 @@ class MainActivityFormatPDF : AppCompatActivity() {
             }
         }
     }
+
+
+    fun permission(){
+        if (checkpermiss()){
+           createPDF()
+        }else{
+                requestPermissions()
+
+        }
+
+
+    }
+
+    private fun checkpermiss(): Boolean {
+        val write = ContextCompat.checkSelfPermission(applicationContext,WRITE_EXTERNAL_STORAGE)
+        val reading = ContextCompat.checkSelfPermission(applicationContext,READ_EXTERNAL_STORAGE)
+        return write == PackageManager.PERMISSION_GRANTED && reading == PackageManager.PERMISSION_GRANTED
+
+    }
+    private fun requestPermissions(){
+        ActivityCompat.requestPermissions(this,
+            arrayOf(WRITE_EXTERNAL_STORAGE, READ_EXTERNAL_STORAGE),200)
+
+    }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if(requestCode==200){
+            if (grantResults.size > 0){
+                val writeStorage =  grantResults[0] == PackageManager.PERMISSION_GRANTED
+                val readStorage =  grantResults[1] == PackageManager.PERMISSION_GRANTED
+
+                if(writeStorage && readStorage){
+                    createPDF()
+                }
+                else{
+                    Toast.makeText(this, "Los permisos fueron rechazados previamente", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+
+    }
+
 
 
     @SuppressLint("SuspiciousIndentation")
@@ -218,7 +276,6 @@ class MainActivityFormatPDF : AppCompatActivity() {
             canvas.drawLine(25f, 320f,115f, 320f, forLinePaint)
             canvas.drawText("Firma del servidor publico ", 35f, 330f, paint)
 
-
             canvas.drawText("Encargado de la subdireccion", 160f, 278f, paint)
             canvas.drawText("de servicios administrativos", 160f, 285f, paint)
             forLinePaint.style = Paint.Style.STROKE
@@ -228,9 +285,14 @@ class MainActivityFormatPDF : AppCompatActivity() {
 
 
             myDocument.finishPage(myPage)
-            val file = File(this.getExternalFilesDir("/"), "PermisApp.pdf")
+
             try {
-                myDocument.writeTo(FileOutputStream(file))
+                val doc = "${tipoIncidencia}_${noEmpleado}.pdf"
+                val path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).absolutePath
+                val dir =  File(path)
+                val archivo =  File(dir, doc)
+                val fos = FileOutputStream(archivo)
+                myDocument.writeTo(fos)
                 Toast.makeText(this, "Se Descargo Correctamente el PDF",
                     Toast.LENGTH_SHORT).show()
             }catch (e: Exception){

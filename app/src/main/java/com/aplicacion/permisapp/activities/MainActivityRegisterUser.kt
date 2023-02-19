@@ -1,11 +1,21 @@
 package com.aplicacion.permisapp.activities
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.TextureView
+import android.view.View
+import android.widget.ArrayAdapter
+import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
+import androidx.core.content.ContextCompat
 import com.aplicacion.permisapp.Models.Client
 import com.aplicacion.permisapp.Models.Users
+import com.aplicacion.permisapp.R
 import com.aplicacion.permisapp.databinding.ActivityMainRegisterUserBinding
 import com.aplicacion.permisapp.providers.AuthProvider
 import com.aplicacion.permisapp.providers.ClientProvider
@@ -22,11 +32,20 @@ class MainActivityRegisterUser : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        //lista desplegable de jefes
+        val carreras =resources.getStringArray(R.array.carreras)
+        val adapter = ArrayAdapter(
+            this,
+            R.layout.list_item,
+            carreras)
+
+        with(binding.Carreratxt){
+            setAdapter(adapter)
+        }
+
 
         binding.signinbtn.setOnClickListener {
-
             registro()
-
         }
 
         binding.loginbtn.setOnClickListener {
@@ -35,9 +54,47 @@ class MainActivityRegisterUser : AppCompatActivity() {
     }
      //metodos para ir a las demas pantallas
     private fun irlogin() {
-        val i = Intent(this, MainActivityEmailValid::class.java)
+        val i = Intent(this, MainActivity::class.java)
          i.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
         startActivity(i)
+    }
+
+    private fun showMessage(){
+        val view = View.inflate(this, R.layout.dialog_view, null)
+        view.findViewById<TextView>(R.id.titleDialog).text = "Registro Exitoso"
+        view.findViewById<TextView>(R.id.bodyDialog).text = "Bienvenido a PermisApp Precione \n 'Aceptar' para iniciar sesión \n"
+        val builder = AlertDialog.Builder(this)
+        builder.setView(view)
+        val dialog = builder.create()
+        dialog.show()
+        dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+        view.findViewById<Button>(R.id.botonAlert).setOnClickListener {
+            binding.emailusertxt.setText("")
+            binding.passwordtxt.setText("")
+            binding.passwordverifytxt.setText("")
+            irlogin()
+            dialog.dismiss()
+        }
+    }
+    private fun showMessageError(){
+        val view = View.inflate(this, R.layout.dialog_view, null)
+        view.findViewById<ImageView>(R.id.imageDialog).setImageResource(R.drawable.ic_cancel)
+        view.findViewById<TextView>(R.id.titleDialog).text = "¡Error al Registrar!"
+        view.findViewById<TextView>(R.id.bodyDialog).text = "Algo salió mal \n tal vez el correo ya fué registrado \n intenta nuevamente"
+        view.findViewById<Button>(R.id.botonAlert).setText("Reintentar")
+        view.findViewById<Button>(R.id.botonAlert).setBackgroundColor(ContextCompat.getColor(this, R.color.rojo))
+
+        val builder = AlertDialog.Builder(this)
+        builder.setView(view)
+        val dialog = builder.create()
+        dialog.show()
+        dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+        view.findViewById<Button>(R.id.botonAlert).setOnClickListener {
+            binding.emailusertxt.setText("")
+            binding.passwordtxt.setText("")
+            binding.passwordverifytxt.setText("")
+            dialog.dismiss()
+        }
     }
 
     //metodo para validar los campos y registrar a los usuarios
@@ -58,6 +115,7 @@ class MainActivityRegisterUser : AppCompatActivity() {
             authProvider.registrer(email, pass).addOnCompleteListener {
                 //este if registra la informacion del usuario
                 if (it.isSuccessful){
+
                     val client = Client(
                         id = authProvider.getid(),
                         nombre = nombre,
@@ -71,25 +129,40 @@ class MainActivityRegisterUser : AppCompatActivity() {
                     )
                     clientProvider.create(client).addOnCompleteListener {
                         if (it.isSuccessful){
-                            Toast.makeText(this@MainActivityRegisterUser, "Registro exitoso",
-                                Toast.LENGTH_SHORT).show()
+                            showMessage()
+                            binding.usuarionametxt.setText("")
+                            binding.usuarioapellidotxt.setText("")
+                            binding.telphonetxt.setText("")
+                            binding.noemtxt.setText("")
+                            binding.emailusertxt.setText("")
+                            binding.passwordtxt.setText("")
+                            binding.Carreratxt.setText("")
+                            binding.RFCtxt.setText("")
+                            binding.passwordverifytxt.setText("")
 
 
                         }else{
-                            Toast.makeText(this@MainActivityRegisterUser,
-                                "Hubo un error al registrar los datos del usuario ${it.exception.toString()}",
-                                Toast.LENGTH_SHORT).show()
+                            showMessageError()
                         }
                     }
 
+                    binding.usuarionametxt.setText("")
+                    binding.usuarioapellidotxt.setText("")
+                    binding.telphonetxt.setText("")
+                    binding.noemtxt.setText("")
+                    binding.emailusertxt.setText("")
+                    binding.passwordtxt.setText("")
+                    binding.Carreratxt.setText("")
+                    binding.RFCtxt.setText("")
+                    binding.passwordverifytxt.setText("")
+
                 }else{
-                    Toast.makeText(this@MainActivityRegisterUser,
-                        "Error al registrarte ${it.exception.toString()}",
-                        Toast.LENGTH_SHORT).show()
+                    showMessageError()
                 }
             }
         }
     }
+
 
     //esta funcion verifica que los datos ingresados en el txt sean correctos para poder registar a los usuarios
     private fun validacion (nombre:String, apellido:String, tel:String, noEmpleado : String,
@@ -134,4 +207,8 @@ class MainActivityRegisterUser : AppCompatActivity() {
 
 
 
+
 }
+
+
+

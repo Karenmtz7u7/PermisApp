@@ -97,14 +97,6 @@
                         android:textStyle="bold" />
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/folioOTtxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/botonesperfil"
-                    android:clickable="false"
-                    android:focusable="false" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -123,14 +115,13 @@
                 android:orientation="horizontal">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/otrotexto"
+                    android:id="@+id/otrotxt"
                     android:layout_width="0dp"
                     android:layout_height="90dp"
                     android:layout_weight="90"
                     android:ems="10"
                     android:background="@drawable/rectangle_7"
-                    android:clickable="false"
-                    android:focusable="false" />
+                   />
 
             </LinearLayout>
 
@@ -258,7 +249,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/hora_finalotro"
-                    android:layout_width="0dp"
+                    android:layout_width="86dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@drawable/rectangle_7"
@@ -397,7 +388,8 @@
                             android:layout_marginLeft="20dp"
                             android:layout_marginRight="20dp"
                             android:layout_weight="60"
-                            android:background="@drawable/rectangle_7" />
+                            android:background="@drawable/rectangle_7"
+                            />
 
                         <Button
                             android:id="@+id/button"
@@ -413,7 +405,6 @@
                             android:textStyle="bold"
                             app:backgroundTint="@color/botonesperfil" />
                     </LinearLayout>
-
                     <Button
                         android:id="@+id/buttonEnviar"
                         android:layout_width="match_parent"

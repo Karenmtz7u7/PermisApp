@@ -230,12 +230,12 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/Hora_finalmedico"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="88dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@drawable/rectangle_7"
-                    android:drawableRight="@drawable/ic_baseline_access_time_"
                     android:clickable="false"
+                    android:drawableRight="@drawable/ic_baseline_access_time_"
                     android:focusable="false"
                     android:fontFamily="@font/poppins"
                     android:text="Hora final"
@@ -279,7 +279,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/fechamedico"
-                    android:layout_width="0dp"
+                    android:layout_width="5dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="40dp"
                     android:layout_weight="70"

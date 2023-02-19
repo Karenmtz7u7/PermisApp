@@ -1,16 +1,26 @@
 package com.aplicacion.permisapp.activities
 
 import android.app.Activity
+import android.app.TimePickerDialog
+import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.TimePicker
 import android.widget.Toast
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
+import com.android.volley.Request
+import com.android.volley.RequestQueue
+import com.android.volley.Response
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
 import com.aplicacion.permisapp.Models.Client
 import com.aplicacion.permisapp.Models.Incidencias
 import com.aplicacion.permisapp.R
@@ -60,16 +70,90 @@ class MainActivityIrseAntes : AppCompatActivity() {
 
 
         binding.horaInicialSalir.setOnClickListener {
-            showTimePickerDialog()
+            hora()
         }
 
         binding.horaFinalSalir.setOnClickListener {
-            showTimePickerDialog2()
+            hora2()
         }
 
-        binding.buttonsalirantes.setOnClickListener { sendSolicitud() }
+        binding.buttonsalirantes.setOnClickListener { sendSolicitud()
+            excel()
+        }
 
     }
+
+
+    //Excel
+    private fun excel() {
+
+        clientProvider.getSP(authProvider.getid()).addOnSuccessListener { document ->
+            val client = document.toObject(Client::class.java)
+            val nombre = "${client?.nombre}"
+            val apellido = "${client?.apellido}"
+            val noEmpleado = "${client?.noEmpleado}"
+            val area = "${client?.area}"
+
+            val incidencias = Incidencias(
+
+                nombre = nombre,
+                apellido = apellido,
+                noEmpleado = noEmpleado,
+                area = area)
+
+
+
+            if (binding.editTextTextPersonName2.text.toString().isEmpty() or
+                binding.horaInicialSalir.text.toString().isEmpty() or
+                binding.horaFinalSalir.text.toString().isEmpty() or
+                binding.seleccionarfechaSalir.text.toString().isEmpty() or
+                binding.autoCompleteTextView.text.toString().isEmpty() or
+                client?.nombre.toString().isEmpty() or
+                client?.apellido.toString().isEmpty()
+            ) {
+
+                Toast.makeText(this@MainActivityIrseAntes, "...", Toast.LENGTH_SHORT).show()
+
+            } else {
+                val url =
+                    "https://script.google.com/macros/s/AKfycbwPT3J7U9rA1ucfER--enNAjRsvNXZXzPB0J1Ilu9LPliqOtLWCiAKNzy8N2BF6hidyTQ/exec"
+                val stringRequest = object : StringRequest(Request.Method.POST, url,
+                    Response.Listener {
+                        Toast.makeText(this@MainActivityIrseAntes,
+                            it.toString(),
+                            Toast.LENGTH_SHORT).show()
+
+                    }, Response.ErrorListener {
+                        Toast.makeText(this@MainActivityIrseAntes,
+                            it.toString(),
+                            Toast.LENGTH_SHORT).show()
+
+                    }) {
+                    override fun getParams(): MutableMap<String, String>? {
+                        val params = HashMap<String, String>()
+                        params["nombre"]=client?.nombre.toString()
+                        params["apellido"]=client?.apellido.toString()
+                        params["noEmpleado"]=client?.noEmpleado.toString()
+                        params["area"]=client?.area.toString()
+                        params["incidencia"] = binding.editTextTextPersonName2.text.toString()
+                        params["hora_inicial"] = binding.horaInicialSalir.text.toString()
+                        params["hora_final"] = binding.horaFinalSalir.text.toString()
+                        params["fecha"] = binding.seleccionarfechaSalir.text.toString()
+                        params["jefeInmediato"] = binding.autoCompleteTextView.text.toString()
+
+                        return params
+
+
+                    }
+                }
+
+                val queue: RequestQueue = Volley.newRequestQueue(this@MainActivityIrseAntes)
+                queue.add(stringRequest)
+
+            }
+        }
+    }
+
 
     //Habilitar boton para tomar fotos si tiene permisos
 
@@ -205,7 +289,7 @@ class MainActivityIrseAntes : AppCompatActivity() {
                                 incidenciasProvider.create(incidencias).addOnCompleteListener {
                                     if (it.isSuccessful) {
                                         Toast.makeText(this@MainActivityIrseAntes,
-                                            "Solicitud exitosa",
+                                            "",
                                             Toast.LENGTH_SHORT).show()
                                         //aqui voy a agregar un progressDialog xd
                                     } else {
@@ -251,28 +335,49 @@ class MainActivityIrseAntes : AppCompatActivity() {
         return true
     }
 
-    private fun showTimePickerDialog() {
 
-        val timePicker = TimePickerFragment { time -> onTimeSelected(time) }
-        timePicker.show(supportFragmentManager, "time")
+    private fun showMessage(){
+        val view = View.inflate(this, R.layout.dialog_view, null)
+        val builder = AlertDialog.Builder(this)
+        builder.setView(view)
+
+        val dialog = builder.create()
+        dialog.show()
+        dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+
+        view.findViewById<Button>(R.id.botonAlert).setOnClickListener {
+            home()
+            dialog.dismiss()
+        }
+    }
+    private fun home(){
+        val intent = Intent(this, MainActivity_home::class.java)
+        startActivity(intent)
     }
 
-    private fun onTimeSelected(time: String) {
-        binding.horaInicialSalir.setText(" $time ")
 
+    private fun hora(){
+
+        val cal = Calendar.getInstance()
+        val timeSetListener = TimePickerDialog.OnTimeSetListener{ timePicker: TimePicker?, hour: Int, minute: Int ->
+            cal.set(Calendar.HOUR_OF_DAY,hour)
+            cal.set(Calendar.MINUTE,minute)
+            binding.horaInicialSalir.setText(SimpleDateFormat("HH:mm").format(cal.time))
+        }
+        TimePickerDialog(this,timeSetListener,  cal.get(Calendar.HOUR_OF_DAY),cal.get(Calendar.MINUTE),false).show()
     }
 
-    private fun showTimePickerDialog2() {
+    private fun hora2(){
 
-        val timePicker = TimePickerFragment { time -> onTimeSelected2(time) }
-        timePicker.show(supportFragmentManager, "time")
+        val cal = Calendar.getInstance()
+        val timeSetListener = TimePickerDialog.OnTimeSetListener{ timePicker: TimePicker?, hour: Int, minute: Int ->
+            cal.set(Calendar.HOUR_OF_DAY,hour)
+            cal.set(Calendar.MINUTE,minute)
+            binding.horaFinalSalir.setText(SimpleDateFormat("HH:mm").format(cal.time))
+        }
+        TimePickerDialog(this,timeSetListener,  cal.get(Calendar.HOUR_OF_DAY),cal.get(Calendar.MINUTE),false).show()
     }
 
-
-    private fun onTimeSelected2(time: String) {
-        binding.horaFinalSalir.setText(" $time ")
-
-    }
 
 
     private fun showDatePickerDialog() {

@@ -11,6 +11,7 @@ data class Incidencias(
     val nombre: String? = null,
     val apellido: String? = null,
     val status:String?=null,
+    val firmaSA: String? = null,
     val firmaJI:String?=null,
     val firmaRH:String?=null,
     var firmaSP:String?=null,

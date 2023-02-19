@@ -5,9 +5,29 @@
     <string name="horario">Aun no has agregado tu horario \n Pulsa aquí para subirlo</string>
     <string name="guardar_cambios">Guardar cambios</string>
     <string name="default_notification_channel_id">fcm_default_channel</string>
+
+
     <string-array name="jefes">
-        <item>  Jefe 1</item>
-        <item>  Jefe 2</item>
-        <item>  Jefe 3</item>
+        <item>  Víctor Ochoa Luna</item>
+        <item>  Raúl Reyes Aquino</item>
+        <item>  José Rene Bárcenas Ramírez</item>
+        <item>  Martha Amparo Soto Rodríguez</item>
+        <item>  Abigaid Clara Juárez Matias</item>
+        <item>  Jorge Juárez Mata</item>
+        <item>  Pendiente</item>
+    </string-array>
+
+
+
+    <string-array name="carreras">
+
+        <item>Licenciatura en Administración</item>
+        <item>Licenciatura en Gastronomía</item>
+        <item>Ingeniería en Animación Digital y Efectos Visuales</item>
+        <item>Ingeniería en Sistemas Computacionales</item>
+        <item>Ingeniería Mecatrónica</item>
+        <item>Ingeniería Quimíca</item>
+        <item>Ingeniería Industrial</item>
+        <item>Lenguas Extranjeras</item>
     </string-array>
 </resources>

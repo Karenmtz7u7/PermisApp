@@ -161,25 +161,35 @@
                 </LinearLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:id="@+id/textInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins"
-                    android:hint="Área a la que pertenece"
-                    android:layout_marginTop="10dp"
-                    android:inputType="textPersonName"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="15dp"
+                    app:startIconDrawable="@drawable/ic_work"
+                    android:gravity="center"
                     android:lineHeight="18sp"
-                    app:helperText="Obligatorio"
-                    app:startIconDrawable="@drawable/ic_work">
+                    app:helperText="Obligatorio">
 
-                    <com.google.android.material.textfield.TextInputEditText
+
+                    <AutoCompleteTextView
                         android:id="@+id/Carreratxt"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        android:maxLines="1" />
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:hint="Área a la que pertenece"
+                        android:background="@drawable/rectangle_7"
+                        android:backgroundTint="@color/gris"
+                        android:textSize="15sp"
+                        android:inputType="none"
+                        />
+
+
                 </com.google.android.material.textfield.TextInputLayout>
+
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_marginTop="16dp"

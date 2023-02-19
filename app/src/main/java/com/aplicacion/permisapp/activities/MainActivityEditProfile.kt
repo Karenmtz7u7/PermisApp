@@ -51,6 +51,7 @@ class MainActivityEditProfile : AppCompatActivity() {
         }
         binding.Camerabtn.setOnClickListener {selectImage()}
 
+
     }
 
 

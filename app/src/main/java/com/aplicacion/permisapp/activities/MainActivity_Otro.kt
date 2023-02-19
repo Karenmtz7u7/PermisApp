@@ -1,6 +1,7 @@
 package com.aplicacion.permisapp.activities
 
 import android.app.Activity
+import android.app.TimePickerDialog
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -11,11 +12,17 @@ import android.util.Log
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.TimePicker
 import android.widget.Toast
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
+import com.android.volley.Request
+import com.android.volley.RequestQueue
+import com.android.volley.Response
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
 import com.aplicacion.permisapp.Models.Client
 import com.aplicacion.permisapp.Models.Incidencias
 import com.aplicacion.permisapp.R
@@ -67,16 +74,89 @@ class MainActivity_Otro : AppCompatActivity() {
             R.layout.list_item,
             jefes)
 
-            with(binding.autoCompleteTextView){
+        with(binding.autoCompleteTextView){
             setAdapter(adapter)
         }
         binding.fechaotro.setOnClickListener { showDatePickerDialog() }
-        binding.horaInicialotro.setOnClickListener { showTimePickerDialog() }
-        binding.horaFinalotro.setOnClickListener { showTimePickerDialog2() }
-        binding.buttonEnviar.setOnClickListener { sendSolicitud() }
+        binding.horaInicialotro.setOnClickListener { hora() }
+        binding.horaFinalotro.setOnClickListener { hora2() }
+        binding.buttonEnviar.setOnClickListener { sendSolicitud()
+            excel()}
         binding.button.setOnClickListener { solicitarpermiso() }
         binding.button3otro.setOnClickListener { file() }
     }
+
+
+    //Excel
+    private fun excel() {
+
+        clientProvider.getSP(authProvider.getid()).addOnSuccessListener { document ->
+            val client = document.toObject(Client::class.java)
+            val nombre = "${client?.nombre}"
+            val apellido = "${client?.apellido}"
+            val noEmpleado = "${client?.noEmpleado}"
+            val area = "${client?.area}"
+
+            val incidencias = Incidencias(
+
+                nombre = nombre,
+                apellido = apellido,
+                noEmpleado = noEmpleado,
+                area = area)
+
+
+
+            if (binding.otropermiso.text.toString().isEmpty() or
+                binding.fechaotro.text.toString().isEmpty() or
+                binding.autoCompleteTextView.text.toString().isEmpty() or
+                client?.nombre.toString().isEmpty() or
+                client?.apellido.toString().isEmpty()
+            ) {
+
+                Toast.makeText(this@MainActivity_Otro, "...", Toast.LENGTH_SHORT).show()
+
+            } else {
+                val url =
+                    "https://script.google.com/macros/s/AKfycbwPT3J7U9rA1ucfER--enNAjRsvNXZXzPB0J1Ilu9LPliqOtLWCiAKNzy8N2BF6hidyTQ/exec"
+                val stringRequest = object : StringRequest(Request.Method.POST, url,
+                    Response.Listener {
+                        Toast.makeText(this@MainActivity_Otro,
+                            it.toString(),
+                            Toast.LENGTH_SHORT).show()
+
+                    }, Response.ErrorListener {
+                        Toast.makeText(this@MainActivity_Otro,
+                            it.toString(),
+                            Toast.LENGTH_SHORT).show()
+
+                    }) {
+                    override fun getParams(): MutableMap<String, String>? {
+                        val params = HashMap<String, String>()
+                        params["nombre"]=client?.nombre.toString()
+                        params["apellido"]=client?.apellido.toString()
+                        params["noEmpleado"]=client?.noEmpleado.toString()
+                        params["area"]=client?.area.toString()
+                        params["incidencia"] = binding.otropermiso.text.toString()
+                        params["hora_inicial"] = binding.horaInicialotro.text.toString()
+                        params["hora_final"] = binding.horaFinalotro.text.toString()
+                        params["fecha"] = binding.fechaotro.text.toString()
+                        params["jefeInmediato"] = binding.autoCompleteTextView.text.toString()
+
+                        return params
+
+
+                    }
+                }
+
+                val queue: RequestQueue = Volley.newRequestQueue(this@MainActivity_Otro)
+                queue.add(stringRequest)
+
+            }
+        }
+    }
+
+
+
     //Función para abrir el gestor de archivos y buscar un pdf
     private fun file(){
         val intent = Intent(Intent.ACTION_GET_CONTENT)
@@ -230,6 +310,7 @@ class MainActivity_Otro : AppCompatActivity() {
         val horaFinal = binding.horaFinalotro.text.toString()
         val fechaSolictada = binding.fechaotro.text.toString()
         val Jefeinmediato = binding.autoCompleteTextView.text.toString()
+        val razon = binding.otrotxt.text.toString()
 
         val status = "Solicitud enviada"
         //estas variables son para agregar la fecha actual para mostrar cuando se registro/hizo la solictud
@@ -271,6 +352,7 @@ class MainActivity_Otro : AppCompatActivity() {
                     fechaSolicitud = sFecha,
                     status = status,
                     apellido = apellido,
+                    razon = razon,
                     area = area,
                     noEmpleado = noEmpleado,
                 )
@@ -294,7 +376,7 @@ class MainActivity_Otro : AppCompatActivity() {
                                     }
                                 }
                             }
-                    }
+                        }
                 }
             }
         }
@@ -351,27 +433,28 @@ class MainActivity_Otro : AppCompatActivity() {
         startActivity(intent)
     }
 
-    private fun showTimePickerDialog() {
+    private fun hora(){
 
-        val timePicker = TimePickerFragment { onTimeSelected(it) }
-        timePicker.show(supportFragmentManager, "time")
+        val cal = Calendar.getInstance()
+        val timeSetListener = TimePickerDialog.OnTimeSetListener{ timePicker: TimePicker?, hour: Int, minute: Int ->
+            cal.set(Calendar.HOUR_OF_DAY,hour)
+            cal.set(Calendar.MINUTE,minute)
+            binding.horaInicialotro.setText(SimpleDateFormat("HH:mm").format(cal.time))
+        }
+        TimePickerDialog(this,timeSetListener,  cal.get(Calendar.HOUR_OF_DAY),cal.get(Calendar.MINUTE),false).show()
     }
 
-    private fun onTimeSelected(time: String) {
-        binding.horaInicialotro.setText("$time")
+    private fun hora2(){
 
+        val cal = Calendar.getInstance()
+        val timeSetListener = TimePickerDialog.OnTimeSetListener{ timePicker: TimePicker?, hour: Int, minute: Int ->
+            cal.set(Calendar.HOUR_OF_DAY,hour)
+            cal.set(Calendar.MINUTE,minute)
+            binding.horaFinalotro.setText(SimpleDateFormat("HH:mm").format(cal.time))
+        }
+        TimePickerDialog(this,timeSetListener,  cal.get(Calendar.HOUR_OF_DAY),cal.get(Calendar.MINUTE),false).show()
     }
 
-    private fun showTimePickerDialog2() {
-
-        val timePicker = TimePickerFragment { time -> onTimeSelected2(time) }
-        timePicker.show(supportFragmentManager, "time")
-    }
-
-    private fun onTimeSelected2(time: String) {
-        binding.horaFinalotro.setText(" $time ")
-
-    }
 
     private fun showDatePickerDialog() {
 
