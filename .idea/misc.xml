@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
@@ -49,10 +48,23 @@
         <entry key="..\:/Users/anamj/AndroidStudioProjects/aplicacion/app/src/main/res/layout/menuincidencias.xml" value="0.5" />
         <entry key="..\:/Users/anamj/AndroidStudioProjects/aplicacion/app/src/main/res/layout/solicitudes.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/anamj/AndroidStudioProjects/aplicacion/app/src/main/res/menu/bottom_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/anamj/OneDrive/Documentos/PermisApp Residencias/aplicacion/app/src/main/res/drawable/linearlayoutcircle.xml" value="0.163" />
+        <entry key="..\:/Users/anamj/OneDrive/Documentos/PermisApp Residencias/aplicacion/app/src/main/res/layout/activity_main.xml" value="0.12681159420289856" />
+        <entry key="..\:/Users/anamj/OneDrive/Documentos/PermisApp Residencias/aplicacion/app/src/main/res/layout/activity_main_history.xml" value="0.12681159420289856" />
+        <entry key="..\:/Users/anamj/OneDrive/Documentos/PermisApp Residencias/aplicacion/app/src/main/res/layout/activity_main_home.xml" value="0.12681159420289856" />
+        <entry key="..\:/Users/anamj/OneDrive/Documentos/PermisApp Residencias/aplicacion/app/src/main/res/layout/activity_main_perfil.xml" value="0.12681159420289856" />
+        <entry key="..\:/Users/anamj/OneDrive/Documentos/PermisApp Residencias/aplicacion/app/src/main/res/layout/activity_main_splash.xml" value="0.1802536231884058" />
+        <entry key="..\:/Users/anamj/OneDrive/Documentos/PermisApp Residencias/aplicacion/app/src/main/res/layout/bottomsheet_fragment.xml" value="0.1526268115942029" />
+        <entry key="..\:/Users/anamj/OneDrive/Documentos/PermisApp Residencias/aplicacion/app/src/main/res/layout/dialog_progress.xml" value="0.1802536231884058" />
+        <entry key="..\:/Users/anamj/OneDrive/Documentos/PermisApp Residencias/aplicacion/app/src/main/res/layout/dialog_view.xml" value="0.12681159420289856" />
+        <entry key="..\:/Users/anamj/OneDrive/Documentos/PermisApp Residencias/aplicacion/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Users/anamj/OneDrive/Documentos/PermisApp Residencias/aplicacion/app/src/main/res/layout/history_cardview.xml" value="0.1802536231884058" />
+        <entry key="..\:/Users/anamj/OneDrive/Documentos/PermisApp Residencias/aplicacion/app/src/main/res/layout/status_tramite_cardview.xml" value="0.18645833333333334" />
+        <entry key="..\:/Users/anamj/OneDrive/Documentos/PermisApp Residencias/aplicacion/app/src/main/res/menu/bottom_menu.xml" value="0.18645833333333334" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

@@ -2,6 +2,7 @@ package com.aplicacion.permisapp.activities
 
 import android.app.ProgressDialog
 import android.content.Intent
+import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,9 +12,15 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import android.util.Patterns
+import android.view.View
 import android.view.WindowManager
+import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.core.content.ContextCompat
+import com.aplicacion.permisapp.R
 import com.aplicacion.permisapp.databinding.ActivityMainBinding
 import com.aplicacion.permisapp.providers.AuthProvider
 import com.aplicacion.permisapp.providers.ClientProvider
@@ -37,9 +44,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
         binding.signinbtn.setOnClickListener {
-            iraregistro()
+            codigo()
         }
         binding.ingresarbtn.setOnClickListener {
            Login()
@@ -47,7 +53,23 @@ class MainActivity : AppCompatActivity() {
         binding.olvidocontrabtn.setOnClickListener {
             irRestablecer()
         }
+        binding.ayuda.setOnClickListener {
+            ayuda()
+        }
         verificar()
+    }
+
+    //Link para ir al manual de usuario
+    private fun ayuda(){
+        binding.ayuda.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse("https://drive.google.com/file/d/1LLEzuC4avRorOmv3U7inK1cP74srYFLr/view?usp=share_link")
+            startActivity(intent)
+        }
+    }
+    // abre el codigo de acceso al momento de tocar el botón registrar
+    private fun codigo(){
+        Code_access().show(supportFragmentManager,Code_access::class.java.simpleName)
     }
 
     private fun irRestablecer() {
@@ -69,10 +91,9 @@ class MainActivity : AppCompatActivity() {
             //funcion para iniciar sesion
             authProvider.logIn(email, pass).addOnCompleteListener {
                 if (it.isSuccessful) {
-                    setDialog()
+                   showMessage()
                 } else {
-                    Toast.makeText(this@MainActivity, "Inicio de sesion incorrecto",
-                        Toast.LENGTH_SHORT).show()
+                    showMessageError()
                 }
             }
         }
@@ -109,20 +130,40 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun setDialog(){
-        val progressDialog = ProgressDialog(this)
-        progressDialog.setMessage("Iniciando sesion...")
-        progressDialog.setCancelable(false)
-        progressDialog.show()
+
+    private fun showMessage(){
+        val view = View.inflate(this, R.layout.dialog_progress, null)
+        val builder = AlertDialog.Builder(this)
+        builder.setView(view)
+        val dialog = builder.create()
+        dialog.show()
+        dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
         object: CountDownTimer(2000,2000){
             override fun onTick(millisUntilFinished: Long) {
             }
             //Ejecuta la pantalla de Home despues del tiempo asignado
             override fun onFinish() {
-                progressDialog.dismiss()
+                dialog.dismiss()
                 entrarApp()
             }
         }.start()
+    }
+    private fun showMessageError(){
+        val view = View.inflate(this, R.layout.dialog_view, null)
+        view.findViewById<ImageView>(R.id.imageDialog).setImageResource(R.drawable.ic_cancel)
+        view.findViewById<TextView>(R.id.titleDialog).text = "¡Error al Iniciar sesión!"
+        view.findViewById<TextView>(R.id.bodyDialog).text = "Algo salió mal \n las credenciales no son correctas \n intenta nuevamente"
+        view.findViewById<Button>(R.id.botonAlert).setText("Reintentar")
+        view.findViewById<Button>(R.id.botonAlert).setBackgroundColor(ContextCompat.getColor(this, R.color.rojo))
+
+        val builder = AlertDialog.Builder(this)
+        builder.setView(view)
+        val dialog = builder.create()
+        dialog.show()
+        dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+        view.findViewById<Button>(R.id.botonAlert).setOnClickListener {
+            dialog.dismiss()
+        }
     }
 
     //funcion que te lleva a la pagina principal de la app Home

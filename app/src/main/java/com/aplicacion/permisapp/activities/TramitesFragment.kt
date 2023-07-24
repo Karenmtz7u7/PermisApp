@@ -44,12 +44,12 @@ class TramitesFragment : Fragment(R.layout.fragment_tramites) {
     private fun getHistories() {
 
         histories.clear()
-        incidenciasProvider.getLastTramits().get().addOnSuccessListener {
+        incidenciasProvider.getHistories().get().addOnSuccessListener {
 
             for (document in it){
                 val history = document.toObject(Incidencias::class.java)
                 history.id = history.id
-                histories.add(history!!)
+                histories.add(history)
             }
             adapter = HistoriesAdapter(this@TramitesFragment.requireActivity(), histories)
             binding.RecyclerViewHistorial.adapter    = adapter

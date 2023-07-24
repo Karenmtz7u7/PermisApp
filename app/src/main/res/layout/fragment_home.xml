@@ -157,8 +157,7 @@
                                     android:layout_weight="50"
                                     android:background="@drawable/btnmenus"
                                     app:backgroundTint="@color/gris3"
-                                    android:drawableLeft="@drawable/ic_baseline_access_time_"
-                                    android:fontFamily="@font/poppins"
+                                    android:drawableLeft="@drawable/ic_baseline_access_time_" android:fontFamily="@font/poppins"
                                     android:text="Llegar tarde"
                                     android:textColor="@color/black"
                                     android:textAppearance="@style/llegar_tard"
@@ -349,7 +348,7 @@
                                     android:id="@+id/RecyclerViewHome"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    tools:listitem="@layout/home_cardview"
+
                                     android:scrollbars="horizontal"
                                     />
                             </LinearLayout>

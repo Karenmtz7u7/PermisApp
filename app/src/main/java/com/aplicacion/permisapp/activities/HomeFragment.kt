@@ -106,7 +106,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
         val linearLayoutManager = LinearLayoutManager(this@HomeFragment.requireContext(), LinearLayoutManager.HORIZONTAL, false)
         binding.RecyclerViewHome.layoutManager = linearLayoutManager
-        getHistories()
 
         return binding.root
 
@@ -116,6 +115,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     override fun onStart() {
         super.onStart()
         getClient()
+        getHistories()
     }
     private fun getHistories() {
 
@@ -125,7 +125,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             for (document in it){
                 val history = document.toObject(Incidencias::class.java)
                 history.id = history.id
-                histories.add(history!!)
+                histories.add(history)
             }
             adapter = HomeAdapter(this@HomeFragment.requireActivity(), histories)
             binding.RecyclerViewHome.adapter    = adapter

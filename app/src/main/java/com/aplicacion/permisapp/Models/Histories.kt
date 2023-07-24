@@ -2,6 +2,7 @@ package com.aplicacion.permisapp.Models
 
 import com.beust.klaxon.Klaxon
 import com.google.firebase.firestore.Exclude
+import java.util.Date
 
 private val klaxon = Klaxon()
 data class Histories(
@@ -25,6 +26,13 @@ data class Histories(
     var firmaSP:String?=null,
     val hora: String? = null,
     val fecha: String? = null, //fecha de aprobacion
+    val status:String?=null,
+    val firmaSA: String? = null,
+    val firmaJI:String?=null,
+    val evidencia: String?="(No aplica)",
+    val fechaSolicitud: String ?="(No aplica)", ///fecha del día en que se hizo la solicitud
+
+    val email: String ? = null,
     ) { public fun toJson() = klaxon.toJsonString(this)
     override fun equals(other: Any?): Boolean {
         if (this === other) return true

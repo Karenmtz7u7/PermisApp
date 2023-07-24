@@ -4,18 +4,19 @@ import android.app.Activity
 import android.app.TimePickerDialog
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.ArrayAdapter
-import android.widget.Button
-import android.widget.TimePicker
-import android.widget.Toast
+import android.widget.*
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
+import androidx.biometric.BiometricManager
+import androidx.biometric.BiometricPrompt
 import androidx.core.content.ContextCompat
+import androidx.core.view.isVisible
 import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.Response
@@ -27,6 +28,7 @@ import com.aplicacion.permisapp.R
 import com.aplicacion.permisapp.databinding.ActivityMainIrseAntesBinding
 import com.aplicacion.permisapp.providers.AuthProvider
 import com.aplicacion.permisapp.providers.ClientProvider
+import com.aplicacion.permisapp.providers.HistoriesProvider
 import com.aplicacion.permisapp.providers.IncidenciasProvider
 import com.github.dhaval2404.imagepicker.ImagePicker
 import java.io.File
@@ -37,18 +39,13 @@ class MainActivityIrseAntes : AppCompatActivity() {
     private lateinit var binding: ActivityMainIrseAntesBinding
     private val authProvider = AuthProvider()
     val clientProvider = ClientProvider()
+    private val historiesProvider = HistoriesProvider()
     private val incidenciasProvider = IncidenciasProvider()
-    private var imageFile: File? = null
-    var imagebtn : Button?=null
-    private val PERMISO_STORAGE: Int = 99
 
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityMainIrseAntesBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        imagebtn = binding.button
-
-
 
         //lista desplegable de jefes
         val jefes =resources.getStringArray(R.array.jefes)
@@ -61,47 +58,34 @@ class MainActivityIrseAntes : AppCompatActivity() {
             setAdapter(adapter)
         }
 
-        binding.button.setOnClickListener {solicitarpermiso()   }
+        binding.seleccionarfechaSalir.setOnClickListener { showDatePickerDialog() }
 
+        binding.horaInicialSalir.setOnClickListener { hora() }
 
-        binding.seleccionarfechaSalir.setOnClickListener {
-            showDatePickerDialog()
+        binding.horaFinalSalir.setOnClickListener { hora2()}
+
+        binding.buttonsalirantes.setOnClickListener {
+            huellaDigital()
+            authenticate {
+                checkSolicitud()
+            }
         }
-
-
-        binding.horaInicialSalir.setOnClickListener {
-            hora()
-        }
-
-        binding.horaFinalSalir.setOnClickListener {
-            hora2()
-        }
-
-        binding.buttonsalirantes.setOnClickListener { sendSolicitud()
-            excel()
-        }
-
+        messageTramitsCheck()
     }
-
 
     //Excel
     private fun excel() {
-
         clientProvider.getSP(authProvider.getid()).addOnSuccessListener { document ->
             val client = document.toObject(Client::class.java)
             val nombre = "${client?.nombre}"
             val apellido = "${client?.apellido}"
             val noEmpleado = "${client?.noEmpleado}"
             val area = "${client?.area}"
-
             val incidencias = Incidencias(
-
                 nombre = nombre,
                 apellido = apellido,
                 noEmpleado = noEmpleado,
                 area = area)
-
-
 
             if (binding.editTextTextPersonName2.text.toString().isEmpty() or
                 binding.horaInicialSalir.text.toString().isEmpty() or
@@ -111,23 +95,20 @@ class MainActivityIrseAntes : AppCompatActivity() {
                 client?.nombre.toString().isEmpty() or
                 client?.apellido.toString().isEmpty()
             ) {
-
                 Toast.makeText(this@MainActivityIrseAntes, "...", Toast.LENGTH_SHORT).show()
 
             } else {
                 val url =
-                    "https://script.google.com/macros/s/AKfycbwPT3J7U9rA1ucfER--enNAjRsvNXZXzPB0J1Ilu9LPliqOtLWCiAKNzy8N2BF6hidyTQ/exec"
+                    "https://script.google.com/macros/s/AKfycbyMfnB_Dm3noTK8z8aAS0avnbhp6QZXjMCCL3eawYbxiMbUZ3HC0HCUpPmmK7haEAvV/exec"
                 val stringRequest = object : StringRequest(Request.Method.POST, url,
                     Response.Listener {
                         Toast.makeText(this@MainActivityIrseAntes,
                             it.toString(),
                             Toast.LENGTH_SHORT).show()
-
                     }, Response.ErrorListener {
                         Toast.makeText(this@MainActivityIrseAntes,
                             it.toString(),
                             Toast.LENGTH_SHORT).show()
-
                     }) {
                     override fun getParams(): MutableMap<String, String>? {
                         val params = HashMap<String, String>()
@@ -140,13 +121,9 @@ class MainActivityIrseAntes : AppCompatActivity() {
                         params["hora_final"] = binding.horaFinalSalir.text.toString()
                         params["fecha"] = binding.seleccionarfechaSalir.text.toString()
                         params["jefeInmediato"] = binding.autoCompleteTextView.text.toString()
-
                         return params
-
-
                     }
                 }
-
                 val queue: RequestQueue = Volley.newRequestQueue(this@MainActivityIrseAntes)
                 queue.add(stringRequest)
 
@@ -154,82 +131,6 @@ class MainActivityIrseAntes : AppCompatActivity() {
         }
     }
 
-
-    //Habilitar boton para tomar fotos si tiene permisos
-
-    private fun solicitarpermiso() {
-        when {
-            ContextCompat.checkSelfPermission(this,
-                android.Manifest.permission.CAMERA, )
-                    == PackageManager.PERMISSION_GRANTED -> {
-                selectImage()
-            }
-            shouldShowRequestPermissionRationale(android.Manifest.permission.CAMERA) -> {
-                mostrarmensaje("El permiso fue rechazado previamente")
-            }
-            else -> {
-                requestPermissions(arrayOf(android.Manifest.permission.CAMERA),
-                    PERMISO_STORAGE)
-            }
-        }
-    }
-
-    override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<out String>,
-        grantResults: IntArray
-    ) {
-        when(requestCode){
-            PERMISO_STORAGE->{
-                if(grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED){
-                    selectImage()
-                }
-            }
-            else->{
-                super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-            }
-        }
-    }
-
-    private fun mostrarmensaje(mensaje: String) {
-        Toast.makeText(applicationContext, mensaje, Toast.LENGTH_LONG).show()
-    }
-
-
-    //esta funcion guardar la imagen dentro de el textView
-    private val startImageForResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result: ActivityResult ->
-        val resultCode = result.resultCode
-        val data = result.data
-        if (resultCode == Activity.RESULT_OK) {
-            val fileUri = data?.data
-            imageFile = File(fileUri?.path)
-            binding.imageView2.setImageURI(fileUri)
-            Toast.makeText(this,
-                "Firma obtenida correctamente",
-                Toast.LENGTH_LONG).show()
-
-
-        } else if (resultCode == ImagePicker.RESULT_ERROR) {
-            Toast.makeText(this,
-                ImagePicker.getError(data),
-                Toast.LENGTH_LONG).show()
-        } else {
-            Toast.makeText(this, "Tarea cancelada", Toast.LENGTH_LONG)
-                .show()
-        }
-    }
-
-    //esta funcion abre la galeria o la opccion para tomar una foto
-    private fun selectImage() {
-        ImagePicker.with(this)
-            .crop()
-            .compress(1024)
-            .maxResultSize(1080,1080)
-            .createIntent { intent ->
-                startImageForResult.launch(intent)
-            }
-
-    }
     //Esta funcion crea el registro de la solictud
     private fun sendSolicitud() {
         //estas variables son las que pide la pantalla
@@ -255,12 +156,10 @@ class MainActivityIrseAntes : AppCompatActivity() {
             val apellido = "${client?.apellido}"
             val noEmpleado = "${client?.noEmpleado}"
             val area = "${client?.area}"
-
             //este if se encargara de registrar al usuario en firebaseAuthentication una vez que
             //los campos hayan sido validados
             if (validacion(horaInicial, horaFinal, fechaSolictada, Jefeinmediato)) {
                 //este if registra la informacion del usuario
-
                 val incidencias = Incidencias(
                     idSP = authProvider.getid(),
                     //esta variable obtiene el correo directamente desde Authentication
@@ -278,30 +177,16 @@ class MainActivityIrseAntes : AppCompatActivity() {
                     noEmpleado = noEmpleado,
                     hora = sTime,
                 )
-                if (imageFile != null) {
-                    incidenciasProvider.uploadImageFirma(authProvider.getid(), imageFile!!)
-                        .addOnSuccessListener { taskSnapshot ->
-                            incidenciasProvider.getImageUrlFirma().addOnSuccessListener { url ->
-                                val imageUrl = url.toString()
-                                incidencias.firmaSP = imageUrl
-                                Log.d("STORAGE", "$imageUrl")
-
-                                incidenciasProvider.create(incidencias).addOnCompleteListener {
-                                    if (it.isSuccessful) {
-                                        Toast.makeText(this@MainActivityIrseAntes,
-                                            "",
-                                            Toast.LENGTH_SHORT).show()
-                                        //aqui voy a agregar un progressDialog xd
-                                    } else {
-                                        Toast.makeText(this@MainActivityIrseAntes,
-                                            "Hubo un error al procesar la solicitud ${it.exception.toString()}",
-                                            Toast.LENGTH_SHORT).show()
-                                    }
-
-
-                                }
-                            }
-                        }
+                incidenciasProvider.create(incidencias).addOnCompleteListener {
+                    if (it.isSuccessful) {
+                        excel()
+                        showMessage()
+                        //aqui voy a agregar un progressDialog xd
+                    } else {
+                        Toast.makeText(this@MainActivityIrseAntes,
+                            "Hubo un error al procesar la solicitud ${it.exception.toString()}",
+                            Toast.LENGTH_SHORT).show()
+                    }
                 }
             }
         }
@@ -355,9 +240,7 @@ class MainActivityIrseAntes : AppCompatActivity() {
         startActivity(intent)
     }
 
-
     private fun hora(){
-
         val cal = Calendar.getInstance()
         val timeSetListener = TimePickerDialog.OnTimeSetListener{ timePicker: TimePicker?, hour: Int, minute: Int ->
             cal.set(Calendar.HOUR_OF_DAY,hour)
@@ -368,7 +251,6 @@ class MainActivityIrseAntes : AppCompatActivity() {
     }
 
     private fun hora2(){
-
         val cal = Calendar.getInstance()
         val timeSetListener = TimePickerDialog.OnTimeSetListener{ timePicker: TimePicker?, hour: Int, minute: Int ->
             cal.set(Calendar.HOUR_OF_DAY,hour)
@@ -378,19 +260,126 @@ class MainActivityIrseAntes : AppCompatActivity() {
         TimePickerDialog(this,timeSetListener,  cal.get(Calendar.HOUR_OF_DAY),cal.get(Calendar.MINUTE),false).show()
     }
 
-
-
     private fun showDatePickerDialog() {
-
         val datePicker = DatePiker { day, month, year -> onDateSelected(day, month, year) }
         datePicker.show(supportFragmentManager, "datePicker")
-
-
     }
 
     fun onDateSelected(day: Int, month: Int, year: Int) {
         binding.seleccionarfechaSalir.setText("  $day/$month/$year")
     }
 
+    private fun messageTramitsCheck(){
+        historiesProvider.getIncidencias().addOnSuccessListener {  documents ->
+            val currentDate = Calendar.getInstance().time
+            val currentMonth = currentDate.month
+            var recordsThisMonth = 0
+            for (document in documents) {
+                val dateStr = document.get("fecha")
+                val dateFormat = SimpleDateFormat("dd'/'MM'/'yyyy")
+                val date = dateStr?.let { dateFormat.parse(it.toString()) }
+                val calendar = Calendar.getInstance()
+                calendar.time = date
+                val month = calendar.get(Calendar.MONTH)
+
+                if (month == currentMonth) {
+                    recordsThisMonth++
+                }
+            }
+            val view = View.inflate(this, R.layout.dialog_view, null)
+            view.findViewById<ImageView>(R.id.imageDialog).setImageResource(R.drawable.ic_inciden)
+            view.findViewById<TextView>(R.id.titleDialog).text = "¡Estimado servidor publico!"
+            view.findViewById<TextView>(R.id.bodyDialog).text = "Es importante para nosotros recordarte \n que solo puede solicitar 4 Incidencias al mes."
+            view.findViewById<TextView>(R.id.extraDialog).text = "Hasta el momento te han autorizado: \n${recordsThisMonth} \nincidencias este mes."
+            view.findViewById<Button>(R.id.botonAlert).text = "Entendido"
+            val builder = AlertDialog.Builder(this)
+            builder.setView(view)
+            val dialog = builder.create()
+            dialog.show()
+            dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+            view.findViewById<Button>(R.id.botonAlert).setOnClickListener {
+                dialog.dismiss()
+            }
+        }
+    }
+
+    private fun checkSolicitud(){
+        historiesProvider.getIncidencias().addOnSuccessListener {  documents ->
+            val currentDate = Calendar.getInstance().time
+            val currentMonth = currentDate.month
+            var recordsThisMonth = 0
+            for (document in documents) {
+                val dateStr = document.get("fecha")
+                val dateFormat = SimpleDateFormat("dd'/'MM'/'yyyy")
+                val date = dateStr?.let { dateFormat.parse(it.toString()) }
+                val calendar = Calendar.getInstance()
+                calendar.time = date
+                val month = calendar.get(Calendar.MONTH)
+                if (month == currentMonth) {
+                    recordsThisMonth++
+                }
+            }
+
+            if(recordsThisMonth >= 3){
+                val view = View.inflate(this, R.layout.dialog_view, null)
+                view.findViewById<ImageView>(R.id.imageDialog).setImageResource(R.drawable.ic_cancel)
+                view.findViewById<TextView>(R.id.titleDialog).text = "¡Estimado servidor publico!"
+                view.findViewById<TextView>(R.id.bodyDialog).isVisible = false
+                view.findViewById<TextView>(R.id.extraDialog).text = "Lo sentimos mucho \n haz solicitado todas las \n incidencias permitidas este semestre."
+                view.findViewById<Button>(R.id.botonAlert).setBackgroundColor(ContextCompat.getColor(this, R.color.rojo))
+                view.findViewById<Button>(R.id.botonAlert).text = "Entendido"
+                val builder = AlertDialog.Builder(this)
+                builder.setView(view)
+                val dialog = builder.create()
+                dialog.show()
+                dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+                view.findViewById<Button>(R.id.botonAlert).setOnClickListener {
+                    dialog.dismiss()
+                }
+            }else{
+                sendSolicitud()
+            }
+        }
+    }
+
+    //Código para verificar  si el telefono cuenta con datos biometricos
+    private  var canAuthenticate = false
+    private lateinit var promptInfo: BiometricPrompt.PromptInfo
+
+    private fun huellaDigital(){
+        if (BiometricManager.from(this).canAuthenticate(
+                BiometricManager.Authenticators.BIOMETRIC_STRONG
+                        or BiometricManager.Authenticators.DEVICE_CREDENTIAL) ==
+            BiometricManager.BIOMETRIC_SUCCESS){
+
+            canAuthenticate = true
+
+            promptInfo = BiometricPrompt.PromptInfo.Builder()
+                .setTitle("Incidencia: Retirarse Antes")
+                .setSubtitle("¿Autorizas enviar la solicitud?")
+                .setAllowedAuthenticators(BiometricManager.Authenticators.BIOMETRIC_STRONG
+                        or BiometricManager.Authenticators.DEVICE_CREDENTIAL)
+                .build()
+
+        }
+    }
+
+    private fun authenticate(auth: (Auth: Boolean) -> Unit){
+        if (canAuthenticate){
+            BiometricPrompt(this, ContextCompat.getMainExecutor(this),
+                object : BiometricPrompt.AuthenticationCallback(){
+                    override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult) {
+                        super.onAuthenticationSucceeded(result)
+                        auth(true)
+                    }
+
+                })
+
+                .authenticate(promptInfo)
+
+        }else{
+            auth(true)
+        }
+    }
 
 }

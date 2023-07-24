@@ -23,7 +23,7 @@ data class Incidencias(
     val tipoIncidencia:String?="(No aplica)",
     val area: String ? = null,
     val hora: String? = null,
-    val evidencia: String?="(No aplica)",
+    var evidencia: String?="(No aplica)", //pdf para consulta medica y
     val razon: String?="(No aplica)",
     val fecha: String? = "(No aplica)", //fecha de aprobacion
     val fechaSolicitada: String ?="(No aplica)", //fecha que se solicita en la incidencia

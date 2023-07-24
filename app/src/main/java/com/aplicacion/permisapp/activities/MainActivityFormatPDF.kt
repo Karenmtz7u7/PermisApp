@@ -28,6 +28,8 @@ import org.w3c.dom.Document
 import java.io.File
 import java.io.FileOutputStream
 import java.io.Writer
+import java.text.SimpleDateFormat
+import java.util.*
 
 
 class MainActivityFormatPDF : AppCompatActivity() {
@@ -54,7 +56,11 @@ class MainActivityFormatPDF : AppCompatActivity() {
                 if(histories != null){
                     binding.foliochecktxt.setText(histories.folio)
                     binding.areachecktxt.setText(histories.area)
-                    binding.fechaSolicitudchecktxt.setText(histories.fecha)
+                    val date = histories.fecha
+                    val fechaC = SimpleDateFormat("dd'/'MM'/'yyyy")
+                    val sFecha = fechaC.format(date)
+
+                    binding.fechaSolicitudchecktxt.setText(sFecha)
                     binding.incideciachecktxt.setText(histories.tipoIncidencia)
                     binding.horainicialchecktxt.setText(histories.horaInicial)
                     binding.Horafinalchecktxt.setText(histories.horaFinal)
@@ -77,10 +83,7 @@ class MainActivityFormatPDF : AppCompatActivity() {
            createPDF()
         }else{
                 requestPermissions()
-
         }
-
-
     }
 
     private fun checkpermiss(): Boolean {

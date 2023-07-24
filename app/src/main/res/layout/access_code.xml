@@ -18,15 +18,15 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imageDialog"
+            android:id="@+id/imageView4"
             android:layout_marginTop="20dp"
             android:layout_width="60dp"
             android:layout_height="60dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_outline_vpn_key_24"
+            android:backgroundTint="@color/verde1"/>
 
-        android:padding="8dp"
-        android:src="@drawable/ic_check" />
         <TextView
-            android:id="@+id/titleDialog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
@@ -34,28 +34,28 @@
             android:layout_marginRight="15dp"
             android:fontFamily="@font/poppins"
             android:gravity="center_horizontal"
-            android:text="¡La solicitud ha sido enviada!"
+            android:text="¡Ingrese el código de \nacceso para registrarse!"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="17sp"
             android:textStyle="bold" />
 
 
-        <TextView
-            android:id="@+id/bodyDialog"
-            android:layout_width="wrap_content"
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/codeaccess"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="18dp"
-            android:layout_marginRight="16dp"
-            android:fontFamily="@font/poppins"
-            android:gravity="center_horizontal"
-            android:text="Para conocer el proceso de su \nsolicitud revise el apartado \n(Estado de solicitud)"
-            android:textAlignment="center"
-            android:textSize="14sp" />
+            android:layout_marginTop="10dp"
+            android:hint="Código de acceso"
+            android:clickable="true"
+            android:focusable="true"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:background="@drawable/rectangle_5"
+            android:textAlignment="center"/>
 
         <TextView
-            android:id="@+id/extraDialog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
@@ -63,20 +63,26 @@
             android:layout_marginRight="15dp"
             android:fontFamily="@font/poppins"
             android:gravity="center_horizontal"
+            android:text="Si no conce el código\nacuda al departamento\n de informatica."
             android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="16sp" />
-
+            android:textColor="@color/gris"
+            android:textSize="12sp"
+            android:textStyle="bold" />
 
         <Button
-            android:id="@+id/botonAlert"
+            android:id="@+id/botonAcept"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_margin="10dp"
+            android:layout_marginTop="5dp"
             android:fontFamily="@font/poppins"
             android:text="Aceptar"
             android:textAllCaps="false"
             android:textColor="@color/white" />
+
+
+
+
 
 
     </LinearLayout>

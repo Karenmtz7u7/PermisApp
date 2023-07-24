@@ -17,13 +17,11 @@ import com.aplicacion.permisapp.activities.MainActivityHistory
 class TramitsAdapters(val context: Activity, val histories: ArrayList<Histories>):
     RecyclerView.Adapter<TramitsAdapters.TramitsAdaptersViewHolder>() {
 
-
     // Sirve para instanciar la lista que se va a mostrar en el historial
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TramitsAdaptersViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.history_cardview,parent,false)
         return TramitsAdaptersViewHolder(view)
     }
-
 
     // Se establece la información en los textView
     @SuppressLint("SetTextI18n")
@@ -31,7 +29,7 @@ class TramitsAdapters(val context: Activity, val histories: ArrayList<Histories>
 
         val histories = histories[position] //Se obtiene un solo historial
         holder.tipoincidenciaHistorial.text = histories.tipoIncidencia
-        holder.fechaHistorial.text = histories.fecha
+        holder.fechaHistorial.text = histories.fecha.toString()
         holder.horaHistorial.text = histories.hora
 
         holder.cardView.setOnClickListener { v ->
