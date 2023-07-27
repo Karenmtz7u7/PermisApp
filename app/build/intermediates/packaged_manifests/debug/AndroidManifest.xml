@@ -8,6 +8,10 @@
         android:minSdkVersion="21"
         android:targetSdkVersion="32" />
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
@@ -45,88 +49,82 @@
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_icon_icon_round"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/Theme.PermisApp.NoActionBar" >
         <activity
-            android:name="com.aplicacion.permisapp.activities.MainActivityDeleteAccount"
+            android:name="com.aplicacion.permisapp.ui.view.MainActivityDeleteAccount"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="com.aplicacion.permisapp.activities.MainActivityHistory"
+            android:name="com.aplicacion.permisapp.ui.view.MainActivityHistory"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="com.aplicacion.permisapp.activities.MainActivityFormatPDF"
+            android:name="com.aplicacion.permisapp.ui.view.MainActivityFormatPDF"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="com.aplicacion.permisapp.activities.MainActivityEmailValid"
+            android:name="com.aplicacion.permisapp.ui.view.MainActivitySinSueldo"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="com.aplicacion.permisapp.activities.MainActivitySinSueldo"
+            android:name="com.aplicacion.permisapp.ui.view.MainActivityStatusTramites"
+            android:exported="false" />
+        <activity
+            android:name="com.aplicacion.permisapp.ui.view.MainActivityNotofications"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="com.aplicacion.permisapp.activities.MainActivityStatusTramites"
+            android:name="com.aplicacion.permisapp.ui.view.MainActivityRegisterUser"
             android:exported="false" />
         <activity
-            android:name="com.aplicacion.permisapp.activities.MainActivityNotofications"
-            android:exported="false" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name="com.aplicacion.permisapp.activities.MainActivityRegisterUser"
+            android:name="com.aplicacion.permisapp.ui.view.MainActivity_Otro"
             android:exported="false" />
         <activity
-            android:name="com.aplicacion.permisapp.activities.MainActivity_Otro"
+            android:name="com.aplicacion.permisapp.ui.view.MainActivityLactancia"
             android:exported="false" />
         <activity
-            android:name="com.aplicacion.permisapp.activities.MainActivityLactancia"
+            android:name="com.aplicacion.permisapp.ui.view.MainActivityIrseAntes"
             android:exported="false" />
         <activity
-            android:name="com.aplicacion.permisapp.activities.MainActivityIrseAntes"
+            android:name="com.aplicacion.permisapp.ui.view.MainActivityDiaEconomico"
             android:exported="false" />
         <activity
-            android:name="com.aplicacion.permisapp.activities.MainActivityDiaEconomico"
+            android:name="com.aplicacion.permisapp.ui.view.MainActivityAsistenciaMedica"
             android:exported="false" />
         <activity
-            android:name="com.aplicacion.permisapp.activities.MainActivityAsistenciaMedica"
+            android:name="com.aplicacion.permisapp.ui.view.MainActivityLlegarTarde"
             android:exported="false" />
         <activity
-            android:name="com.aplicacion.permisapp.activities.MainActivityLlegarTarde"
+            android:name="com.aplicacion.permisapp.ui.view.MainActivityEditProfile"
             android:exported="false" />
         <activity
-            android:name="com.aplicacion.permisapp.activities.MainActivityEditProfile"
+            android:name="com.aplicacion.permisapp.ui.view.MainActivityPerfil"
             android:exported="false" />
         <activity
-            android:name="com.aplicacion.permisapp.activities.MainActivityPerfil"
+            android:name="com.aplicacion.permisapp.ui.view.MainActivity_home"
             android:exported="false" />
         <activity
-            android:name="com.aplicacion.permisapp.activities.MainActivity_home"
+            android:name="com.aplicacion.permisapp.ui.view.MainActivity_restablecer"
             android:exported="false" />
+        <activity android:name="com.aplicacion.permisapp.ui.view.MainActivity" />
         <activity
-            android:name="com.aplicacion.permisapp.activities.MainActivity_restablecer"
-            android:exported="false" />
-        <activity android:name="com.aplicacion.permisapp.activities.MainActivity" />
-        <activity
-            android:name="com.aplicacion.permisapp.activities.MainActivity_Splash"
+            android:name="com.aplicacion.permisapp.ui.view.MainActivity_Splash"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
