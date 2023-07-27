@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
-import com.aplicacion.permisapp.data.Models.Histories
+import com.aplicacion.permisapp.domain.Models.Histories
 import com.aplicacion.permisapp.R
 import com.aplicacion.permisapp.ui.view.MainActivityFormatPDF
 

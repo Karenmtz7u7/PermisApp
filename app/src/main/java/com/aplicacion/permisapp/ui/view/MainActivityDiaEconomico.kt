@@ -14,24 +14,24 @@ import com.android.volley.RequestQueue
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
-import com.aplicacion.permisapp.data.Models.Client
-import com.aplicacion.permisapp.data.Models.Incidencias
+import com.aplicacion.permisapp.domain.Models.Client
+import com.aplicacion.permisapp.domain.Models.Incidencias
 import com.aplicacion.permisapp.R
 import com.aplicacion.permisapp.databinding.ActivityMainDiaEconomicoBinding
-import com.aplicacion.permisapp.data.providers.AuthProvider
-import com.aplicacion.permisapp.data.providers.ClientProvider
-import com.aplicacion.permisapp.data.providers.HistoriesProvider
-import com.aplicacion.permisapp.data.providers.IncidenciasProvider
+import com.aplicacion.permisapp.domain.repository.AuthRepository
+import com.aplicacion.permisapp.domain.repository.ClientRepository
+import com.aplicacion.permisapp.domain.repository.HistoriesRepository
+import com.aplicacion.permisapp.domain.repository.IncidenciasRepository
 import java.text.SimpleDateFormat
 import java.util.*
 
 class MainActivityDiaEconomico : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainDiaEconomicoBinding
-    private val authProvider = AuthProvider()
-    val clientProvider = ClientProvider()
-    private val incidenciasProvider = IncidenciasProvider()
-    private val historiesProvider = HistoriesProvider()
+    private val authRepository = AuthRepository()
+    val clientRepository = ClientRepository()
+    private val incidenciasRepository = IncidenciasRepository()
+    private val historiesRepository = HistoriesRepository()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityMainDiaEconomicoBinding.inflate(layoutInflater)
@@ -56,7 +56,7 @@ class MainActivityDiaEconomico : AppCompatActivity() {
     }
     //Excel
     private fun excel() {
-        clientProvider.getSP(authProvider.getid()).addOnSuccessListener { document ->
+        clientRepository.getSP(authRepository.getid()).addOnSuccessListener { document ->
             val client = document.toObject(Client::class.java)
             val nombre = "${client?.nombre}"
             val apellido = "${client?.apellido}"
@@ -124,7 +124,7 @@ class MainActivityDiaEconomico : AppCompatActivity() {
 
         //esta funcion manda a llamar los demas datos de la incidencia para guardar en firebase
         //nombre, apellido, noEmpleado, area.
-        clientProvider.getSP(authProvider.getid()).addOnSuccessListener { document ->
+        clientRepository.getSP(authRepository.getid()).addOnSuccessListener { document ->
             val client = document.toObject(Client::class.java)
             val nombre = "${client?.nombre}"
             val apellido = "${client?.apellido}"
@@ -135,9 +135,9 @@ class MainActivityDiaEconomico : AppCompatActivity() {
             if (validacion(fechaSolictada, Jefeinmediato)) {
                 //este if registra la informacion del usuario
                 val incidencias = Incidencias(
-                    idSP = authProvider.getid(),
+                    idSP = authRepository.getid(),
                     //esta variable obtiene el correo directamente desde Authentication
-                    email = authProvider.auth.currentUser?.email.toString(),
+                    email = authRepository.auth.currentUser?.email.toString(),
                     nombre = nombre,
                     tipoIncidencia = tipoIncidencia,
                     hora = sTime,
@@ -149,7 +149,7 @@ class MainActivityDiaEconomico : AppCompatActivity() {
                     area = area,
                     noEmpleado = noEmpleado,
                 )
-                incidenciasProvider.create(incidencias).addOnCompleteListener {
+                incidenciasRepository.create(incidencias).addOnCompleteListener {
                     if (it.isSuccessful) {
                         excel()
                         showMessage()
@@ -220,7 +220,7 @@ class MainActivityDiaEconomico : AppCompatActivity() {
         fechaFinal.set(Calendar.DAY_OF_MONTH, 30) // Día 30
         var noTramits = 0 //periodo 20xx-2
         var tramitstwo = 0 //periodo 20xx-1
-        historiesProvider.getDaysEconomic().addOnSuccessListener { documents ->
+        historiesRepository.getDaysEconomic().addOnSuccessListener { documents ->
             for (document in documents) {
                 val dateStr = document.get("fecha")
                 val dateFormat = SimpleDateFormat("dd'/'MM'/'yyyy")
@@ -300,7 +300,7 @@ class MainActivityDiaEconomico : AppCompatActivity() {
         fechaFinal.set(Calendar.MONTH, 5) // Junio (5)
         fechaFinal.set(Calendar.DAY_OF_MONTH, 30) // Día 30
         var noTramits = 0
-        historiesProvider.getDaysEconomic().addOnSuccessListener { documents ->
+        historiesRepository.getDaysEconomic().addOnSuccessListener { documents ->
             for (document in documents) {
                 val dateStr = document.get("fecha")
                 val dateFormat = SimpleDateFormat("dd'/'MM'/'yyyy")

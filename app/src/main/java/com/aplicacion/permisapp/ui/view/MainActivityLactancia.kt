@@ -15,23 +15,23 @@ import com.android.volley.RequestQueue
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
-import com.aplicacion.permisapp.data.Models.Client
-import com.aplicacion.permisapp.data.Models.Incidencias
+import com.aplicacion.permisapp.domain.Models.Client
+import com.aplicacion.permisapp.domain.Models.Incidencias
 import com.aplicacion.permisapp.R
 import com.aplicacion.permisapp.databinding.ActivityMainLactanciaBinding
-import com.aplicacion.permisapp.data.providers.AuthProvider
-import com.aplicacion.permisapp.data.providers.ClientProvider
-import com.aplicacion.permisapp.data.providers.HistoriesProvider
-import com.aplicacion.permisapp.data.providers.IncidenciasProvider
+import com.aplicacion.permisapp.domain.repository.AuthRepository
+import com.aplicacion.permisapp.domain.repository.ClientRepository
+import com.aplicacion.permisapp.domain.repository.HistoriesRepository
+import com.aplicacion.permisapp.domain.repository.IncidenciasRepository
 import java.text.SimpleDateFormat
 import java.util.*
 
 class MainActivityLactancia : AppCompatActivity() {
     private lateinit var binding: ActivityMainLactanciaBinding
-    private val authProvider = AuthProvider()
-    val clientProvider = ClientProvider()
-    private val incidenciasProvider = IncidenciasProvider()
-    private val historiesProvider = HistoriesProvider()
+    private val authRepository = AuthRepository()
+    val clientRepository = ClientRepository()
+    private val incidenciasRepository = IncidenciasRepository()
+    private val historiesRepository = HistoriesRepository()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -66,7 +66,7 @@ class MainActivityLactancia : AppCompatActivity() {
 
     //Excel
     private fun excel() {
-        clientProvider.getSP(authProvider.getid()).addOnSuccessListener { document ->
+        clientRepository.getSP(authRepository.getid()).addOnSuccessListener { document ->
             val client = document.toObject(Client::class.java)
             val nombre = "${client?.nombre}"
             val apellido = "${client?.apellido}"
@@ -136,7 +136,7 @@ class MainActivityLactancia : AppCompatActivity() {
 
         //esta funcion manda a llamar los demas datos de la incidencia para guardar en firebase
         //nombre, apellido, noEmpleado, area.
-        clientProvider.getSP(authProvider.getid()).addOnSuccessListener { document ->
+        clientRepository.getSP(authRepository.getid()).addOnSuccessListener { document ->
             val client = document.toObject(Client::class.java)
             val nombre = "${client?.nombre}"
             val apellido = "${client?.apellido}"
@@ -149,9 +149,9 @@ class MainActivityLactancia : AppCompatActivity() {
                 //este if registra la informacion del usuario
 
                 val incidencias = Incidencias(
-                    idSP = authProvider.getid(),
+                    idSP = authRepository.getid(),
                     //esta variable obtiene el correo directamente desde Authentication
-                    email = authProvider.auth.currentUser?.email.toString(),
+                    email = authRepository.auth.currentUser?.email.toString(),
                     nombre = nombre,
                     tipoIncidencia = tipoIncidencia,
                     fechaFinal = fechaFinal,
@@ -164,7 +164,7 @@ class MainActivityLactancia : AppCompatActivity() {
                     area = area,
                     noEmpleado = noEmpleado,
                 )
-                incidenciasProvider.create(incidencias).addOnCompleteListener {
+                incidenciasRepository.create(incidencias).addOnCompleteListener {
                     if (it.isSuccessful) {
                         showMessage()
                         excel()
@@ -235,7 +235,7 @@ class MainActivityLactancia : AppCompatActivity() {
     }
 
     private fun messageTramitsCheck(){
-        historiesProvider.getIncidencias().addOnSuccessListener {  documents ->
+        historiesRepository.getIncidencias().addOnSuccessListener { documents ->
             val currentDate = Calendar.getInstance().time
             val currentMonth = currentDate.month
             var recordsThisMonth = 0
@@ -269,7 +269,7 @@ class MainActivityLactancia : AppCompatActivity() {
     }
 
     private fun checkSolicitud(){
-        historiesProvider.getIncidencias().addOnSuccessListener {  documents ->
+        historiesRepository.getIncidencias().addOnSuccessListener { documents ->
             val currentDate = Calendar.getInstance().time
             val currentMonth = currentDate.month
             var recordsThisMonth = 0

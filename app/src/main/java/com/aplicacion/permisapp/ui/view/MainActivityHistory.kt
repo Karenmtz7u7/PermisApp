@@ -3,15 +3,15 @@ package com.aplicacion.permisapp.ui.view
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.aplicacion.permisapp.data.Models.Histories
+import com.aplicacion.permisapp.domain.Models.Histories
 import com.aplicacion.permisapp.ui.adapters.TramitsAdapters
 import com.aplicacion.permisapp.databinding.ActivityMainHistoryBinding
-import com.aplicacion.permisapp.data.providers.HistoriesProvider
+import com.aplicacion.permisapp.domain.repository.HistoriesRepository
 
 class MainActivityHistory : AppCompatActivity() {
     private lateinit var binding: ActivityMainHistoryBinding
     private var tramits = ArrayList<Histories>()
-    private var historyProvider = HistoriesProvider()
+    private var historyProvider = HistoriesRepository()
     private lateinit var adapter: TramitsAdapters
 
     override fun onCreate(savedInstanceState: Bundle?) {

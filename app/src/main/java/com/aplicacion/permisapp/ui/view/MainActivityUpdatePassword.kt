@@ -14,10 +14,10 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.DialogFragment
 import com.aplicacion.permisapp.R
 import com.aplicacion.permisapp.databinding.ActivityUpdatepasswordBinding
-import com.aplicacion.permisapp.data.providers.AuthProvider
+import com.aplicacion.permisapp.domain.repository.AuthRepository
 
 class MainActivityUpdatePassword() : DialogFragment(), DialogInterface.OnShowListener {
-    private val authProvider = AuthProvider()
+    private val authRepository = AuthRepository()
     private lateinit var binding: ActivityUpdatepasswordBinding
     var updateBtn : Button?=null
     var cancel : ImageView?=null
@@ -64,8 +64,8 @@ class MainActivityUpdatePassword() : DialogFragment(), DialogInterface.OnShowLis
             binding.textalert.text = "¡No puedes dejar cajas de texto vacias!"
         }else{
             if (pass == confirmPass){
-                if (authProvider.starSession()){
-                    authProvider.updatePassword(pass)?.addOnCompleteListener { task->
+                if (authRepository.starSession()){
+                    authRepository.updatePassword(pass)?.addOnCompleteListener { task->
                         if (task.isSuccessful){
                             showMessage()
                             dismiss()

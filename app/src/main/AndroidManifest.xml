@@ -3,6 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.aplicacion.permisapp">
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
@@ -21,86 +25,80 @@
         android:theme="@style/Theme.PermisApp.NoActionBar"
         tools:targetApi="31">
         <activity
-            android:name=".activities.MainActivityDeleteAccount"
+            android:name=".ui.view.MainActivityDeleteAccount"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".activities.MainActivityHistory"
+            android:name=".ui.view.MainActivityHistory"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".activities.MainActivityFormatPDF"
+            android:name=".ui.view.MainActivityFormatPDF"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
+            android:name=".ui.view.MainActivitySinSueldo"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".activities.MainActivityEmailValid"
+            android:name=".ui.view.MainActivityStatusTramites"
+            android:exported="false" />
+        <activity
+            android:name=".ui.view.MainActivityNotofications"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".activities.MainActivitySinSueldo"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".activities.MainActivityStatusTramites"
+            android:name=".ui.view.MainActivityRegisterUser"
             android:exported="false" />
         <activity
-            android:name=".activities.MainActivityNotofications"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".activities.MainActivityRegisterUser"
+            android:name=".ui.view.MainActivity_Otro"
             android:exported="false" />
         <activity
-            android:name=".activities.MainActivity_Otro"
+            android:name=".ui.view.MainActivityLactancia"
             android:exported="false" />
         <activity
-            android:name=".activities.MainActivityLactancia"
+            android:name=".ui.view.MainActivityIrseAntes"
             android:exported="false" />
         <activity
-            android:name=".activities.MainActivityIrseAntes"
+            android:name=".ui.view.MainActivityDiaEconomico"
             android:exported="false" />
         <activity
-            android:name=".activities.MainActivityDiaEconomico"
+            android:name=".ui.view.MainActivityAsistenciaMedica"
             android:exported="false" />
         <activity
-            android:name=".activities.MainActivityAsistenciaMedica"
+            android:name=".ui.view.MainActivityLlegarTarde"
             android:exported="false" />
         <activity
-            android:name=".activities.MainActivityLlegarTarde"
+            android:name=".ui.view.MainActivityEditProfile"
             android:exported="false" />
         <activity
-            android:name=".activities.MainActivityEditProfile"
+            android:name=".ui.view.MainActivityPerfil"
             android:exported="false" />
         <activity
-            android:name=".activities.MainActivityPerfil"
+            android:name=".ui.view.MainActivity_home"
             android:exported="false" />
         <activity
-            android:name=".activities.MainActivity_home"
+            android:name=".ui.view.MainActivity_restablecer"
             android:exported="false" />
+        <activity android:name=".ui.view.MainActivity" />
         <activity
-            android:name=".activities.MainActivity_restablecer"
-            android:exported="false" />
-        <activity android:name=".activities.MainActivity" />
-        <activity
-            android:name=".activities.MainActivity_Splash"
+            android:name=".ui.view.MainActivity_Splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

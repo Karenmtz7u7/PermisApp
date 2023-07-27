@@ -22,14 +22,14 @@ import com.android.volley.RequestQueue
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
-import com.aplicacion.permisapp.data.Models.Client
-import com.aplicacion.permisapp.data.Models.Incidencias
+import com.aplicacion.permisapp.domain.Models.Client
+import com.aplicacion.permisapp.domain.Models.Incidencias
 import com.aplicacion.permisapp.R
-import com.aplicacion.permisapp.data.providers.AuthProvider
-import com.aplicacion.permisapp.data.providers.ClientProvider
-import com.aplicacion.permisapp.data.providers.ClientRHProvider
-import com.aplicacion.permisapp.data.providers.HistoriesProvider
-import com.aplicacion.permisapp.data.providers.IncidenciasProvider
+import com.aplicacion.permisapp.domain.repository.AuthRepository
+import com.aplicacion.permisapp.domain.repository.ClientRepository
+import com.aplicacion.permisapp.domain.repository.ClientRHRepository
+import com.aplicacion.permisapp.domain.repository.HistoriesRepository
+import com.aplicacion.permisapp.domain.repository.IncidenciasRepository
 import com.aplicacion.permisapp.databinding.ActivityMainAsistenciaMedicaBinding
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
@@ -42,11 +42,11 @@ import java.util.*
 class MainActivityAsistenciaMedica : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainAsistenciaMedicaBinding
-    private val authProvider = AuthProvider()
-    val clientProvider = ClientProvider()
-    val clientRHProvider = ClientRHProvider()
-    private val historiesProvider = HistoriesProvider()
-    private val incidenciasProvider = IncidenciasProvider()
+    private val authRepository = AuthRepository()
+    val clientRepository = ClientRepository()
+    val clientRHRepository = ClientRHRepository()
+    private val historiesRepository = HistoriesRepository()
+    private val incidenciasRepository = IncidenciasRepository()
     //Código para verificar  si el telefono cuenta con datos biometricos
     private  var canAuthenticate = false
     private lateinit var promptInfo: BiometricPrompt.PromptInfo
@@ -93,7 +93,7 @@ class MainActivityAsistenciaMedica : AppCompatActivity() {
     }
     //Insertar datos en Excel
     private fun excel() {
-        clientProvider.getSP(authProvider.getid()).addOnSuccessListener { document ->
+        clientRepository.getSP(authRepository.getid()).addOnSuccessListener { document ->
             val client = document.toObject(Client::class.java)
             val nombre = "${client?.nombre}"
             val apellido = "${client?.apellido}"
@@ -288,7 +288,7 @@ class MainActivityAsistenciaMedica : AppCompatActivity() {
         val sTime : String = format.format(Date())
         //esta funcion manda a llamar los demas datos de la incidencia para guardar en firebase
         //nombre, apellido, noEmpleado, area.
-        clientProvider.getSP(authProvider.getid()).addOnSuccessListener { document ->
+        clientRepository.getSP(authRepository.getid()).addOnSuccessListener { document ->
             val client = document.toObject(Client::class.java)
             val nombre = "${client?.nombre}"
             val apellido = "${client?.apellido}"
@@ -299,8 +299,8 @@ class MainActivityAsistenciaMedica : AppCompatActivity() {
             if (validacion(horaInicial, horaFinal, fechaSolictada, Jefeinmediato, )) {
                 //este if registra la informacion del usuario
                 val incidencias = Incidencias(
-                    idSP = authProvider.getid(), //esta variable obtiene el correo directamente desde Authentication
-                    email = authProvider.auth.currentUser?.email.toString(),
+                    idSP = authRepository.getid(), //esta variable obtiene el correo directamente desde Authentication
+                    email = authRepository.auth.currentUser?.email.toString(),
                     nombre = nombre,
                     tipoIncidencia = tipoIncidencia,
                     horaFinal = horaFinal,
@@ -315,7 +315,7 @@ class MainActivityAsistenciaMedica : AppCompatActivity() {
                     noEmpleado = noEmpleado,
                     hora = sTime,
                 )
-                            incidenciasProvider.create(incidencias).addOnCompleteListener {
+                            incidenciasRepository.create(incidencias).addOnCompleteListener {
                                 if (it.isSuccessful) {
                                     showMessage()
                                     excel()
@@ -423,7 +423,7 @@ class MainActivityAsistenciaMedica : AppCompatActivity() {
     }
 
     private fun messageTramitsCheck(){
-        historiesProvider.getIncidencias().addOnSuccessListener {  documents ->
+        historiesRepository.getIncidencias().addOnSuccessListener { documents ->
             val currentDate = Calendar.getInstance().time
             val currentMonth = currentDate.month
             var recordsThisMonth = 0
@@ -456,7 +456,7 @@ class MainActivityAsistenciaMedica : AppCompatActivity() {
     }
 
     private fun checkSolicitud(){
-        historiesProvider.getIncidencias().addOnSuccessListener {  documents ->
+        historiesRepository.getIncidencias().addOnSuccessListener { documents ->
             val currentDate = Calendar.getInstance().time
             val currentMonth = currentDate.month
             var recordsThisMonth = 0

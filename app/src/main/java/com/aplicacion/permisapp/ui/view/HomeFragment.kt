@@ -7,24 +7,23 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.aplicacion.permisapp.data.Models.Client
-import com.aplicacion.permisapp.data.Models.Incidencias
+import com.aplicacion.permisapp.domain.Models.Client
+import com.aplicacion.permisapp.domain.Models.Incidencias
 import com.aplicacion.permisapp.R
 import com.aplicacion.permisapp.ui.adapters.HomeAdapter
 import com.aplicacion.permisapp.databinding.FragmentHomeBinding
-import com.aplicacion.permisapp.data.providers.AuthProvider
-import com.aplicacion.permisapp.data.providers.ClientProvider
-import com.aplicacion.permisapp.data.providers.IncidenciasProvider
-import com.aplicacion.permisapp.providers.*
+import com.aplicacion.permisapp.domain.repository.AuthRepository
+import com.aplicacion.permisapp.domain.repository.ClientRepository
+import com.aplicacion.permisapp.domain.repository.IncidenciasRepository
 import com.bumptech.glide.Glide
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
 
     private lateinit var binding: FragmentHomeBinding
-    val clientProvider = ClientProvider()
-    val authProvider = AuthProvider()
+    val clientRepository = ClientRepository()
+    val authRepository = AuthRepository()
     private val modalMenu = com.aplicacion.permisapp.ui.view.BottomSheetFragment()
-    private var incidenciasProvider = IncidenciasProvider()
+    private var incidenciasRepository = IncidenciasRepository()
     private var histories = ArrayList<Incidencias>()
     private lateinit var adapter: HomeAdapter
 
@@ -104,7 +103,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     private fun getHistories() {
 
         histories.clear()
-        incidenciasProvider.getLastTramits().get().addOnSuccessListener {
+        incidenciasRepository.getLastTramits().get().addOnSuccessListener {
 
             for (document in it){
                 val history = document.toObject(Incidencias::class.java)
@@ -118,7 +117,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     }
 
     private fun getClient() {
-        clientProvider.getSP(authProvider.getid()).addOnSuccessListener { document ->
+        clientRepository.getSP(authRepository.getid()).addOnSuccessListener { document ->
             if (document.exists()) {
                 val client = document.toObject(Client::class.java)
                 binding.emaildefaultxt.text = "${client?.nombre} ${client?.apellido}"

@@ -11,15 +11,15 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
-import com.aplicacion.permisapp.data.Models.Client
+import com.aplicacion.permisapp.domain.Models.Client
 import com.aplicacion.permisapp.R
 import com.aplicacion.permisapp.databinding.ActivityMainRegisterUserBinding
-import com.aplicacion.permisapp.data.providers.AuthProvider
-import com.aplicacion.permisapp.data.providers.ClientProvider
+import com.aplicacion.permisapp.domain.repository.AuthRepository
+import com.aplicacion.permisapp.domain.repository.ClientRepository
 
 class MainActivityRegisterUser : AppCompatActivity() {
-    private val authProvider = AuthProvider()
-    private val clientProvider = ClientProvider()
+    private val authRepository = AuthRepository()
+    private val clientRepository = ClientRepository()
     private lateinit var binding: ActivityMainRegisterUserBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -108,12 +108,12 @@ class MainActivityRegisterUser : AppCompatActivity() {
         //este if se encargara de registrar al usuario en firebaseAuthentication una vez que
         //los campos hayan sido validados
         if (validacion(nombre, apellido, tel, noEmpleado, email, area ,pass ,confirmPass )){
-            authProvider.registrer(email, pass).addOnCompleteListener {
+            authRepository.registrer(email, pass).addOnCompleteListener {
                 //este if registra la informacion del usuario
                 if (it.isSuccessful){
 
                     val client = Client(
-                        id = authProvider.getid(),
+                        id = authRepository.getid(),
                         nombre = nombre,
                         apellido = apellido,
                         tel = tel,
@@ -123,7 +123,7 @@ class MainActivityRegisterUser : AppCompatActivity() {
                         email = email
 
                     )
-                    clientProvider.create(client).addOnCompleteListener {
+                    clientRepository.create(client).addOnCompleteListener {
                         if (it.isSuccessful){
                             binding.usuarionametxt.setText("")
                             binding.usuarioapellidotxt.setText("")

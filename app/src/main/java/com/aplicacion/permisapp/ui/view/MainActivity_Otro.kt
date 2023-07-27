@@ -21,14 +21,15 @@ import com.android.volley.RequestQueue
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
-import com.aplicacion.permisapp.data.Models.Client
-import com.aplicacion.permisapp.data.Models.Incidencias
+import com.aplicacion.permisapp.domain.Models.Client
+import com.aplicacion.permisapp.domain.Models.Incidencias
 import com.aplicacion.permisapp.R
 import com.aplicacion.permisapp.databinding.ActivityMainOtroBinding
-import com.aplicacion.permisapp.data.providers.AuthProvider
-import com.aplicacion.permisapp.data.providers.ClientProvider
-import com.aplicacion.permisapp.data.providers.HistoriesProvider
-import com.aplicacion.permisapp.data.providers.IncidenciasProvider
+import com.aplicacion.permisapp.domain.repository.AuthRepository
+import com.aplicacion.permisapp.domain.repository.ClientRepository
+import com.aplicacion.permisapp.domain.repository.HistoriesRepository
+import com.aplicacion.permisapp.domain.repository.IncidenciasRepository
+import com.aplicacion.permisapp.ui.viewmodels.ActivityOtroViewModel
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
@@ -38,13 +39,12 @@ import java.util.*
 
 class MainActivity_Otro : AppCompatActivity() {
 
+    private lateinit var viewModel: ActivityOtroViewModel
     private lateinit var binding: ActivityMainOtroBinding
-    private val authProvider = AuthProvider()
-    val clientProvider = ClientProvider()
-    private val incidenciasProvider = IncidenciasProvider()
-    private val historiesProvider = HistoriesProvider()
-
-
+    private val authRepository = AuthRepository()
+    val clientRepository = ClientRepository()
+    private val incidenciasRepository = IncidenciasRepository()
+    private val historiesRepository = HistoriesRepository()
 
     //Sirven para subir un PDF a storage
     private val fileResult = 1
@@ -90,7 +90,7 @@ class MainActivity_Otro : AppCompatActivity() {
 
     //Excel
     private fun excel() {
-        clientProvider.getSP(authProvider.getid()).addOnSuccessListener { document ->
+        clientRepository.getSP(authRepository.getid()).addOnSuccessListener { document ->
             val client = document.toObject(Client::class.java)
             val nombre = "${client?.nombre}"
             val apellido = "${client?.apellido}"
@@ -227,9 +227,6 @@ class MainActivity_Otro : AppCompatActivity() {
     }
 
     //funcion para obtener el URI y subir el pdf a storage
-
-
-
     private fun fileUpload(mUri : Uri){
         val folder: StorageReference = FirebaseStorage.getInstance().reference.child("PDF")
         val path = mUri.lastPathSegment.toString()
@@ -240,26 +237,19 @@ class MainActivity_Otro : AppCompatActivity() {
                 val urlPDF = url.toString()
                 binding.pdfEvidenciaUrl.text = urlPDF
 
-
                 //Hacer visible la barra de brogreso
                 binding.progressBarPDF.visibility = View.VISIBLE
-
 
                 val hashMap = HashMap<String, String>()
                 hashMap["link"] = java.lang.String.valueOf(url)
 
-
                 myRef.child(myRef.push().key.toString()).setValue(hashMap)
-
 
                 Log.i("message","Receta médica cargada con exito")
 
                 Toast.makeText(this, "Receta médica cargada con exito", Toast.LENGTH_SHORT).show()
-
-
             }
         }
-
             //Mensaje mostrado en la barra de progreso al cargar el pdf a storage
             .addOnProgressListener {
                 val progress = (100 * it.bytesTransferred / it.totalByteCount).toInt()
@@ -272,8 +262,6 @@ class MainActivity_Otro : AppCompatActivity() {
                 Log.i("message","Error al cargar la receta")
             }
     }
-
-
 
     //Esta funcion crea el registro de la solictud
     private fun sendSolicitud() {
@@ -295,7 +283,7 @@ class MainActivity_Otro : AppCompatActivity() {
 
         //esta funcion manda a llamar los demas datos de la incidencia para guardar en firebase
         //nombre, apellido, noEmpleado, area.
-        clientProvider.getSP(authProvider.getid()).addOnSuccessListener { document ->
+        clientRepository.getSP(authRepository.getid()).addOnSuccessListener { document ->
             val client = document.toObject(Client::class.java)
             val nombre = "${client?.nombre}"
             val apellido = "${client?.apellido}"
@@ -308,9 +296,9 @@ class MainActivity_Otro : AppCompatActivity() {
                 //este if registra la informacion del usuario
 
                 val incidencias = Incidencias(
-                    idSP= authProvider.getid(),
+                    idSP= authRepository.getid(),
                     //esta variable obtiene el correo directamente desde Authentication
-                    email = authProvider.auth.currentUser?.email.toString(),
+                    email = authRepository.auth.currentUser?.email.toString(),
                     nombre = nombre,
                     hora = sTime,
                     tipoIncidencia = tipoIncidencia,
@@ -326,11 +314,11 @@ class MainActivity_Otro : AppCompatActivity() {
                     area = area,
                     noEmpleado = noEmpleado,
                 )
-                incidenciasProvider.create(incidencias).addOnCompleteListener {
+                incidenciasRepository.create(incidencias).addOnCompleteListener {
                     if (it.isSuccessful) {
                         showMessage()
                         excel()
-                        //aqui voy a agregar un progressDialog xd
+
                     } else {
                         Toast.makeText(this@MainActivity_Otro,
                             "Hubo un error al procesar la solicitud ${it.exception.toString()}",
@@ -340,7 +328,6 @@ class MainActivity_Otro : AppCompatActivity() {
             }
         }
     }
-
 
     //este formulario valida que no se vayan a meter datos vacios xd
     private fun validacion(
@@ -423,7 +410,7 @@ class MainActivity_Otro : AppCompatActivity() {
         binding.fechaotro.setText("  $day/$month/$year")
     }
     private fun messageTramitsCheck(){
-        historiesProvider.getIncidencias().addOnSuccessListener {  documents ->
+        historiesRepository.getIncidencias().addOnSuccessListener { documents ->
             val currentDate = Calendar.getInstance().time
             val currentMonth = currentDate.month
             var recordsThisMonth = 0
@@ -457,7 +444,7 @@ class MainActivity_Otro : AppCompatActivity() {
     }
 
     private fun checkSolicitud(){
-        historiesProvider.getIncidencias().addOnSuccessListener {  documents ->
+        historiesRepository.getIncidencias().addOnSuccessListener { documents ->
             val currentDate = Calendar.getInstance().time
             val currentMonth = currentDate.month
             var recordsThisMonth = 0
@@ -513,7 +500,6 @@ class MainActivity_Otro : AppCompatActivity() {
                 .setAllowedAuthenticators(BiometricManager.Authenticators.BIOMETRIC_STRONG
                         or BiometricManager.Authenticators.DEVICE_CREDENTIAL)
                 .build()
-
         }
     }
 

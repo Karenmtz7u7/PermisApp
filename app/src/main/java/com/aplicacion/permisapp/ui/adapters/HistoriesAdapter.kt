@@ -5,18 +5,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
-import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.aplicacion.permisapp.data.Models.Incidencias
+import com.aplicacion.permisapp.domain.Models.Incidencias
 import com.aplicacion.permisapp.R
-import com.aplicacion.permisapp.data.providers.IncidenciasProvider
+import com.aplicacion.permisapp.domain.repository.IncidenciasRepository
 import com.google.android.material.progressindicator.LinearProgressIndicator
-import com.google.api.ResourceDescriptor
 
 class HistoriesAdapter(val context: Activity,
                        val histories: ArrayList<Incidencias>,
-                       val incidenciasProvider: IncidenciasProvider = IncidenciasProvider()
+                       val incidenciasRepository: IncidenciasRepository = IncidenciasRepository()
 ):
     RecyclerView.Adapter<HistoriesAdapter.HistoriesAdapterViewHolder>() {
 

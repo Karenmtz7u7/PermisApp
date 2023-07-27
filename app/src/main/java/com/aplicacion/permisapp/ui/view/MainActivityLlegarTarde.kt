@@ -16,15 +16,15 @@ import com.android.volley.RequestQueue
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
-import com.aplicacion.permisapp.data.Models.Client
-import com.aplicacion.permisapp.data.Models.Histories
-import com.aplicacion.permisapp.data.Models.Incidencias
+import com.aplicacion.permisapp.domain.Models.Client
+import com.aplicacion.permisapp.domain.Models.Histories
+import com.aplicacion.permisapp.domain.Models.Incidencias
 import com.aplicacion.permisapp.R
 import com.aplicacion.permisapp.databinding.ActivityMainLlegarTardeBinding
-import com.aplicacion.permisapp.data.providers.AuthProvider
-import com.aplicacion.permisapp.data.providers.ClientProvider
-import com.aplicacion.permisapp.data.providers.HistoriesProvider
-import com.aplicacion.permisapp.data.providers.IncidenciasProvider
+import com.aplicacion.permisapp.domain.repository.AuthRepository
+import com.aplicacion.permisapp.domain.repository.ClientRepository
+import com.aplicacion.permisapp.domain.repository.HistoriesRepository
+import com.aplicacion.permisapp.domain.repository.IncidenciasRepository
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
@@ -32,10 +32,10 @@ import kotlin.collections.ArrayList
 
 class MainActivityLlegarTarde : AppCompatActivity() {
     private lateinit var binding: ActivityMainLlegarTardeBinding
-    private val authProvider = AuthProvider()
-    val clientProvider = ClientProvider()
-    private val incidenciasProvider = IncidenciasProvider()
-    private val historiesProvider = HistoriesProvider()
+    private val authRepository = AuthRepository()
+    val clientRepository = ClientRepository()
+    private val incidenciasRepository = IncidenciasRepository()
+    private val historiesRepository = HistoriesRepository()
     var histories = ArrayList<Histories>()
     private var imageFile: File? = null
     private val PERMISO_STORAGE: Int = 99
@@ -80,7 +80,7 @@ class MainActivityLlegarTarde : AppCompatActivity() {
     //Funcion para insertar datos en excel
     private fun excel() {
         //esta funcion manda a llamar los datos del usuario desde firebase.
-        clientProvider.getSP(authProvider.getid()).addOnSuccessListener { document ->
+        clientRepository.getSP(authRepository.getid()).addOnSuccessListener { document ->
             val client = document.toObject(Client::class.java)
             val nombre = "${client?.nombre}"
             val apellido = "${client?.apellido}"
@@ -156,7 +156,7 @@ class MainActivityLlegarTarde : AppCompatActivity() {
 
         //esta funcion manda a llamar los demas datos de la incidencia para guardar en firebase
         //nombre, apellido, noEmpleado, area.
-        clientProvider.getSP(authProvider.getid()).addOnSuccessListener { document ->
+        clientRepository.getSP(authRepository.getid()).addOnSuccessListener { document ->
             val client = document.toObject(Client::class.java)
             val nombre = "${client?.nombre}"
             val apellido = "${client?.apellido}"
@@ -169,9 +169,9 @@ class MainActivityLlegarTarde : AppCompatActivity() {
                 //este if registra la informacion del usuario
 
                 val incidencias = Incidencias(
-                    idSP = authProvider.getid(),
+                    idSP = authRepository.getid(),
                     //esta variable obtiene el correo directamente desde Authentication
-                    email = authProvider.auth.currentUser?.email.toString(),
+                    email = authRepository.auth.currentUser?.email.toString(),
                     nombre = nombre,
                     tipoIncidencia = tipoIncidencia,
                     horaFinal = horaFinal,
@@ -185,7 +185,7 @@ class MainActivityLlegarTarde : AppCompatActivity() {
                     noEmpleado = noEmpleado,
                     hora = sTime,
                 )
-                incidenciasProvider.create(incidencias).addOnCompleteListener {
+                incidenciasRepository.create(incidencias).addOnCompleteListener {
                     if (it.isSuccessful) {
                         showMessage()
                         excel()
@@ -291,7 +291,7 @@ class MainActivityLlegarTarde : AppCompatActivity() {
     }
 
     private fun messageTramitsCheck() {
-        historiesProvider.getIncidencias().addOnSuccessListener { documents ->
+        historiesRepository.getIncidencias().addOnSuccessListener { documents ->
             val currentDate = Calendar.getInstance().time
             val currentMonth = currentDate.month
             var recordsThisMonth = 0
@@ -327,7 +327,7 @@ class MainActivityLlegarTarde : AppCompatActivity() {
     }
 
     private fun checkSolicitud() {
-        historiesProvider.getIncidencias().addOnSuccessListener { documents ->
+        historiesRepository.getIncidencias().addOnSuccessListener { documents ->
             val currentDate = Calendar.getInstance().time
             val currentMonth = currentDate.month
             var recordsThisMonth = 0

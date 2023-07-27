@@ -7,18 +7,27 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import androidx.lifecycle.ViewModelProvider
 import com.aplicacion.permisapp.*
-import com.aplicacion.permisapp.data.providers.AuthProvider
+
+import com.aplicacion.permisapp.domain.repository.AuthRepository
+import com.aplicacion.permisapp.ui.viewmodels.BottomSheetViewModel
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 
 class BottomSheetFragment() : BottomSheetDialogFragment(){
+
+    private val viewModel: BottomSheetViewModel by lazy {
+        ViewModelProvider(this).get(BottomSheetViewModel::class.java)
+    }
+
+
     var linearLayoutProfile : LinearLayout?=null
     var linearLayoutNotification : LinearLayout?=null
     var linearLayoutHistory: LinearLayout?=null
     var linearLayoutStatus: LinearLayout?=null
     var linearLayoutLogOut: LinearLayout?=null
-    private val authProvider = AuthProvider()
+    private val authRepository = AuthRepository()
 
 
     override fun onCreateView(
@@ -50,7 +59,9 @@ class BottomSheetFragment() : BottomSheetDialogFragment(){
             this.dismiss()
         }
         linearLayoutLogOut?.setOnClickListener { alertdialog() }
+
         return view
+
     }
 
     private fun  alertdialog() {
@@ -58,7 +69,7 @@ class BottomSheetFragment() : BottomSheetDialogFragment(){
         builder.setTitle(getString(R.string.cerrarsesion))
         builder.setMessage(getString(R.string.cerrarpregunta))
         builder.setPositiveButton("Cerrar sesión", { _, _ ->
-            cerrarsesion()
+            cerrarSesion()
         })
         builder.setNegativeButton("Cancelar", {_, _ ->
             this.dismiss()
@@ -68,12 +79,11 @@ class BottomSheetFragment() : BottomSheetDialogFragment(){
         dialog.show()
     }
 
-    private fun cerrarsesion() {
-        authProvider.logOut()
-        val i= Intent(activity, com.aplicacion.permisapp.ui.view.MainActivity::class.java )
+    private fun cerrarSesion() {
+        viewModel.logOut() // Llamar a la función logOut() del ViewModel
+        val i = Intent(activity, com.aplicacion.permisapp.ui.view.MainActivity::class.java)
         i.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(i)
-
     }
 
     private fun profile(){
@@ -92,7 +102,6 @@ class BottomSheetFragment() : BottomSheetDialogFragment(){
         val i = Intent(activity, com.aplicacion.permisapp.ui.view.MainActivityStatusTramites::class.java)
         startActivity(i)
     }
-
 
 }
 

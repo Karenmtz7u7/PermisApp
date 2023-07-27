@@ -17,17 +17,17 @@ import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 import com.aplicacion.permisapp.R
 import com.aplicacion.permisapp.databinding.ActivityMainBinding
-import com.aplicacion.permisapp.data.providers.AuthProvider
-import com.aplicacion.permisapp.data.providers.ClientProvider
-import com.aplicacion.permisapp.data.providers.ClientRHProvider
+import com.aplicacion.permisapp.domain.repository.AuthRepository
+import com.aplicacion.permisapp.domain.repository.ClientRepository
+import com.aplicacion.permisapp.domain.repository.ClientRHRepository
 
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private val authProvider = AuthProvider()
-    private val clientProvider = ClientProvider()
+    private val authRepository = AuthRepository()
+    private val clientRepository = ClientRepository()
     private lateinit var dialog: AlertDialog.Builder
-    private val clientRHProvider = ClientRHProvider()
+    private val clientRHRepository = ClientRHRepository()
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -80,7 +80,7 @@ class MainActivity : AppCompatActivity() {
 
         if (validacion(email,pass)) {
             //funcion para iniciar sesion
-            authProvider.logIn(email, pass).addOnCompleteListener {
+            authRepository.logIn(email, pass).addOnCompleteListener {
                 if (it.isSuccessful) {
                    showMessage()
                 } else {
@@ -169,7 +169,7 @@ class MainActivity : AppCompatActivity() {
     //ciclo de vida para mantener la sesion abierta
     override fun onStart() {
         super.onStart()
-        if (authProvider.starSession()){
+        if (authRepository.starSession()){
             entrarApp()
         }
     }

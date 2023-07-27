@@ -16,10 +16,10 @@ import android.os.Environment
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import com.aplicacion.permisapp.data.Models.Histories
+import com.aplicacion.permisapp.domain.Models.Histories
 import com.aplicacion.permisapp.R
 import com.aplicacion.permisapp.databinding.ActivityMainFormatPdfBinding
-import com.aplicacion.permisapp.data.providers.HistoriesProvider
+import com.aplicacion.permisapp.domain.repository.HistoriesRepository
 import com.bumptech.glide.Glide
 import java.io.File
 import java.io.FileOutputStream
@@ -30,7 +30,7 @@ import java.util.*
 class MainActivityFormatPDF : AppCompatActivity() {
     private lateinit var binding : ActivityMainFormatPdfBinding
     private var histories: Histories? = null
-    var historiesProvider = HistoriesProvider()
+    var historiesRepository = HistoriesRepository()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainFormatPdfBinding.inflate(layoutInflater)
@@ -45,7 +45,7 @@ class MainActivityFormatPDF : AppCompatActivity() {
 
     private fun getInfo() {
         val id = intent.getStringExtra("id")
-        historiesProvider.getDoc(id.toString()).addOnSuccessListener { document->
+        historiesRepository.getDoc(id.toString()).addOnSuccessListener { document->
             if (document.exists()){
                 val histories = document.toObject(Histories::class.java)
                 if(histories != null){
@@ -121,7 +121,7 @@ class MainActivityFormatPDF : AppCompatActivity() {
     fun createPDF() {
 
         val id = intent.getStringExtra("id")
-        historiesProvider.getDoc(id.toString()).addOnSuccessListener { document ->
+        historiesRepository.getDoc(id.toString()).addOnSuccessListener { document ->
             val histories = document.toObject(Histories::class.java)
             val folio = histories?.folio
             val area = histories?.area

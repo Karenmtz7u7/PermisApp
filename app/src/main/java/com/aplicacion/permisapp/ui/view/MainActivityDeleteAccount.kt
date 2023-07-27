@@ -10,17 +10,17 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
-import com.aplicacion.permisapp.data.Models.Client
+import com.aplicacion.permisapp.domain.Models.Client
 import com.aplicacion.permisapp.R
 import com.aplicacion.permisapp.databinding.ActivityMainDeleteAccountBinding
-import com.aplicacion.permisapp.data.providers.AuthProvider
-import com.aplicacion.permisapp.data.providers.ClientProvider
+import com.aplicacion.permisapp.domain.repository.AuthRepository
+import com.aplicacion.permisapp.domain.repository.ClientRepository
 
 class MainActivityDeleteAccount : AppCompatActivity() {
     private lateinit var binding : ActivityMainDeleteAccountBinding
 
-    private val authProvider = AuthProvider()
-    private val clientProvider = ClientProvider()
+    private val authRepository = AuthRepository()
+    private val clientRepository = ClientRepository()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityMainDeleteAccountBinding.inflate(layoutInflater)
@@ -39,14 +39,14 @@ class MainActivityDeleteAccount : AppCompatActivity() {
 
     private fun deleteAccount() {
         val email = binding.emailusertxt.text.toString()
-        if (authProvider.auth.currentUser != null){
-            val verifyEmail = authProvider.auth.currentUser!!.email
+        if (authRepository.auth.currentUser != null){
+            val verifyEmail = authRepository.auth.currentUser!!.email
             if(verifyEmail == email){
                 val client = Client(
-                    id = authProvider.getid()
+                    id = authRepository.getid()
                 )
-                clientProvider.remove(client).addOnSuccessListener {
-                    authProvider.deleteAccount()?.addOnCompleteListener { task ->
+                clientRepository.remove(client).addOnSuccessListener {
+                    authRepository.deleteAccount()?.addOnCompleteListener { task ->
                         if (task.isSuccessful) {
                             setDialog()
                         } else {
@@ -83,7 +83,7 @@ class MainActivityDeleteAccount : AppCompatActivity() {
     }
 
     private fun cerrarsesion() {
-        authProvider.logOut()
+        authRepository.logOut()
         val i= Intent(this, MainActivity::class.java )
         i.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(i)

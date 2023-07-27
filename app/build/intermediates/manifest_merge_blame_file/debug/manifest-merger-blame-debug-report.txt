@@ -262,8 +262,8 @@
 137
 138        <service
 138-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:112:9-118:19
-139            android:name="com.aplicacion.permisapp.services.MyFirebaseMessagingClient"
-139-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:113:13-63
+139            android:name="com.aplicacion.permisapp.data.services.MyFirebaseMessagingClient"
+139-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:113:13-68
 140            android:exported="false" >
 140-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:114:13-37
 141            <intent-filter>

@@ -5,14 +5,14 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.aplicacion.permisapp.R
 import com.aplicacion.permisapp.databinding.ActivityMainHomeBinding
-import com.aplicacion.permisapp.data.providers.AuthProvider
-import com.aplicacion.permisapp.data.providers.ClientProvider
+import com.aplicacion.permisapp.domain.repository.AuthRepository
+import com.aplicacion.permisapp.domain.repository.ClientRepository
 
 
 class MainActivity_home : AppCompatActivity() {
     private lateinit var binding: ActivityMainHomeBinding
-    private val authProvider = AuthProvider()
-    private val clientProvider = ClientProvider()
+    private val authRepository = AuthRepository()
+    private val clientRepository = ClientRepository()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -70,7 +70,7 @@ class MainActivity_home : AppCompatActivity() {
 //    }
 
     private fun createToken(){
-        clientProvider.createToken(authProvider.getid())
+        clientRepository.createToken(authRepository.getid())
     }
 
 

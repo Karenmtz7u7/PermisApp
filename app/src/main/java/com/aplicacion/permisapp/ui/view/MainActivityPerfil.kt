@@ -9,10 +9,10 @@ import android.util.Log
 import android.widget.Toast
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
-import com.aplicacion.permisapp.data.Models.Client
+import com.aplicacion.permisapp.domain.Models.Client
 import com.aplicacion.permisapp.databinding.ActivityMainPerfilBinding
-import com.aplicacion.permisapp.data.providers.AuthProvider
-import com.aplicacion.permisapp.data.providers.ClientProvider
+import com.aplicacion.permisapp.domain.repository.AuthRepository
+import com.aplicacion.permisapp.domain.repository.ClientRepository
 import com.bumptech.glide.Glide
 import com.github.dhaval2404.imagepicker.ImagePicker
 
@@ -23,8 +23,8 @@ import java.io.File
 class MainActivityPerfil : AppCompatActivity() {
     private lateinit var binding: ActivityMainPerfilBinding
     private var imageFile: File? = null
-    val clientProvider = ClientProvider()
-    val authProvider = AuthProvider()
+    val clientRepository = ClientRepository()
+    val authRepository = AuthRepository()
 
     @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -81,15 +81,15 @@ class MainActivityPerfil : AppCompatActivity() {
     }
     private fun updateInfo(){
         val client = Client(
-            id = authProvider.getid()
+            id = authRepository.getid()
         )
         if (imageFile != null) {
-            clientProvider.uploadImage(authProvider.getid(), imageFile!!)
+            clientRepository.uploadImage(authRepository.getid(), imageFile!!)
                 .addOnSuccessListener { taskSnapshot ->
-                    clientProvider.getImageUrl().addOnSuccessListener { url ->
+                    clientRepository.getImageUrl().addOnSuccessListener { url ->
                         val imageUrl = url.toString()
                         client.image = imageUrl
-                        clientProvider.updateImage(client).addOnCompleteListener {
+                        clientRepository.updateImage(client).addOnCompleteListener {
                             if (it.isSuccessful) {
                                 Toast.makeText(this,
                                     "Imagen actualizada correctamente",
@@ -107,7 +107,7 @@ class MainActivityPerfil : AppCompatActivity() {
     }
     //esta funcion obtiene los datos ingresados en FireStore
     private fun getInformationUser() {
-        clientProvider.getSP(authProvider.getid()).addOnSuccessListener { document ->
+        clientRepository.getSP(authRepository.getid()).addOnSuccessListener { document ->
             if (document.exists()) {
                 val client = document.toObject(Client::class.java)
                 binding.nameusertxt.text = "${client?.nombre} ${client?.apellido}"

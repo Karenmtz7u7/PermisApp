@@ -6,16 +6,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.aplicacion.permisapp.data.Models.Incidencias
+import com.aplicacion.permisapp.domain.Models.Incidencias
 import com.aplicacion.permisapp.R
 import com.aplicacion.permisapp.ui.adapters.HistoriesAdapter
 import com.aplicacion.permisapp.databinding.FragmentTramitesBinding
-import com.aplicacion.permisapp.data.providers.IncidenciasProvider
+import com.aplicacion.permisapp.domain.repository.IncidenciasRepository
 
 
 class TramitesFragment : Fragment(R.layout.fragment_tramites) {
     private lateinit var binding: FragmentTramitesBinding
-    private var incidenciasProvider = IncidenciasProvider()
+    private var incidenciasRepository = IncidenciasRepository()
     private var histories  = ArrayList <Incidencias>()
     private lateinit var adapter: HistoriesAdapter
 
@@ -37,7 +37,7 @@ class TramitesFragment : Fragment(R.layout.fragment_tramites) {
     private fun getHistories() {
 
         histories.clear()
-        incidenciasProvider.getHistories().get().addOnSuccessListener {
+        incidenciasRepository.getHistories().get().addOnSuccessListener {
 
             for (document in it){
                 val history = document.toObject(Incidencias::class.java)
