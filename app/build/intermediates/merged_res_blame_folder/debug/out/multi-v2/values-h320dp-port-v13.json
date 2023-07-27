@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.aplicacion.permisapp-mergeDebugResources-41:/values-h320dp-port-v13/values-h320dp-port-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\anamj\\.gradle\\caches\\transforms-3\\1612d89bd043b83068a8e1a7592e17db\\transformed\\material-1.7.0\\res\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "75",
+                        "endOffsets": "126"
+                    }
+                }
+            ]
+        }
+    ]
+}

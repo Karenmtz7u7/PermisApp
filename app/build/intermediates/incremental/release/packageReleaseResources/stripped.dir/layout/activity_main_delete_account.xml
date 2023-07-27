@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivityDeleteAccount">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/backbtn"
+                android:layout_width="35dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_baseline_keyboard_backspace_24" />
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_margin="17dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/privacy_pol"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:src="@drawable/delete_acountt" />
+                <TextView
+                    android:id="@+id/recuperarcontra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_marginTop="10dp"
+                    android:textAppearance="@style/recuperar_c"
+                    android:fontFamily="@font/poppins"
+                    android:lineHeight="20sp"
+                    android:text="Eliminar cuenta"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="16dp">
+                    <TextView
+                        android:id="@+id/ingresa_el_"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center_horizontal|top"
+                        android:text="¡Es una lastima que te vayas! \n Para eliminar tu cuenta ingresa el correo electrónico asociado a tu cuenta"
+                        android:textAppearance="@style/ingresa_el_"
+                        />
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_marginTop="25dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:startIconDrawable="@drawable/ic_email_"
+                        android:fontFamily="@font/poppins"
+                        android:hint="Correo electrónico"
+                        app:helperText="Obligatorio"
+                        android:inputType="textEmailAddress"
+                        android:lineHeight="18sp">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/emailusertxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1"
+                            tools:layout_editor_absoluteX="15dp"
+                            tools:layout_editor_absoluteY="417dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <TextView
+                        android:id="@+id/textalert"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_horizontal|top"
+                        android:textColor="@color/rojo"
+                        android:textAppearance="@style/ingresa_el_"
+                        android:fontFamily="@font/poppins"
+                        />
+
+                </LinearLayout>
+                <Button
+                    android:id="@+id/deleteAccountbtn"
+                    android:layout_width="280dp"
+                    android:layout_height="60dp"
+
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppins"
+                    android:lineHeight="38sp"
+                    android:text="Eliminar cuenta"
+                    app:backgroundTint="@color/verde1"
+                    android:textStyle="bold"
+                    tools:ignore="MissingConstraints" />
+
+            </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="carreras">
+
+        <item>Licenciatura en Administración</item>
+        <item>Licenciatura en Gastronomía</item>
+        <item>Ingeniería en Animación Digital y Efectos Visuales</item>
+        <item>Ingeniería en Sistemas Computacionales</item>
+        <item>Ingeniería Mecatrónica</item>
+        <item>Ingeniería Quimíca</item>
+        <item>Ingeniería Industrial</item>
+    </string-array>
+    <string-array name="jefes">
+        <item>  Víctor Ochoa Luna</item>
+        <item>  Raúl Reyes Aquino</item>
+        <item>  José Rene Bárcenas Ramírez</item>
+        <item>  Martha Amparo Soto Rodríguez</item>
+        <item>  Abigaid Clara Juárez Matias</item>
+        <item>  Jorge Juárez Mata</item>
+        <item>  Pendiente</item>
+    </string-array>
+    <color name="black">#FF000000</color>
+    <color name="botonesperfil">#171F1D</color>
+    <color name="cafe">#1E0907</color>
+    <color name="gris">#A9A0A0</color>
+    <color name="gris2">#DDD8D4</color>
+    <color name="gris3">#D9D9D9</color>
+    <color name="grischido">#F6F6F6</color>
+    <color name="grismaschido">#F1F1F1</color>
+    <color name="ic_icon_icon_background">#FFFFFF</color>
+    <color name="nocolor">#00FFFFFF</color>
+    <color name="rojo">#E33C3C</color>
+    <color name="rojo2">#DA7676</color>
+    <color name="verde">#3B912D</color>
+    <color name="verde1">#3B5E2C</color>
+    <color name="verde2">#DDAD3B</color>
+    <color name="verde3">#246C2D</color>
+    <color name="white">#FFFFFFFF</color>
+    <dimen name="common_padding_default">12dp</dimen>
+    <string name="app_name">PermisApp</string>
+    <string name="cerrarpregunta">¿Deseas cerrar sesión?</string>
+    <string name="cerrarsesion">Cerrar sesión</string>
+    <string name="default_notification_channel_id">fcm_default_channel</string>
+    <string name="default_web_client_id" translatable="false">705438412342-3uglmqpklh1crfj2ms6d4l8le7vu8836.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">705438412342</string>
+    <string name="google_api_key" translatable="false">AIzaSyBd1D3Db-oRvq739S5Iw9sBWPd8RPMp9i0</string>
+    <string name="google_app_id" translatable="false">1:705438412342:android:a602c25f1526577166b297</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBd1D3Db-oRvq739S5Iw9sBWPd8RPMp9i0</string>
+    <string name="google_storage_bucket" translatable="false">dbpermisapp.appspot.com</string>
+    <string name="guardar_cambios">Guardar cambios</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="horario">Aun no has agregado tu horario \n Pulsa aquí para subirlo</string>
+    <string name="project_id" translatable="false">dbpermisapp</string>
+    <style name="Theme.PermisApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        
+        <item name="colorPrimary">@color/verde1</item>
+        <item name="colorPrimaryVariant">@color/gris</item>
+        <item name="colorOnPrimary">@color/white</item>
+        
+        <item name="colorSecondary">@color/verde3</item>
+        <item name="colorSecondaryVariant">@color/verde</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        
+    </style>
+    <style name="Theme.PermisApp.NoActionBar">
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="asistencia_"><item name="android:textSize">13sp</item><item name="android:textColor">#000000</item></style>
+    <style name="dia_economi"><item name="android:textSize">15sp</item><item name="android:textColor">#000000</item></style>
+    <style name="hola_"><item name="android:textSize">18sp</item><item name="android:textColor">#000000</item></style>
+    <style name="icon"><item name="android:textColor">#000000</item></style>
+    <style name="informaci_n"><item name="android:textSize">18sp</item><item name="background">@color/gris2</item><item name="android:textColor">#000000</item></style>
+    <style name="ingresa_el_"><item name="android:textSize">16sp</item><item name="android:textColor">#635C5C</item></style>
+    <style name="iniciar_ses"><item name="android:textSize">24sp</item><item name="android:textColor">#000000</item></style>
+    <style name="lactancia"><item name="android:textSize">15sp</item><item name="android:textColor">#000000</item></style>
+    <style name="llegar_tard"><item name="android:textColor">#000000</item></style>
+    <style name="nombre_de_u"><item name="android:textSize">14sp</item><item name="android:textColor">#000000</item></style>
+    <style name="olvid_su_co"><item name="android:textSize">11sp</item><item name="android:textColor">#635C5C</item></style>
+    <style name="otro"><item name="android:textSize">15sp</item><item name="android:textColor">#000000</item></style>
+    <style name="perfil"><item name="android:textSize">18sp</item><item name="android:textColor">#FFFFFF</item></style>
+    <style name="permiso_sin"><item name="android:textSize">15sp</item><item name="android:textColor">#000000</item></style>
+    <style name="recuperar_c"><item name="android:textSize">24sp</item><item name="android:textColor">#000000</item></style>
+    <style name="retirarse_a"><item name="android:textSize">13sp</item><item name="android:textColor">#000000</item></style>
+    <style name="user_defaul"><item name="android:textSize">13sp</item><item name="android:textColor">#635C5C</item></style>
+</resources>

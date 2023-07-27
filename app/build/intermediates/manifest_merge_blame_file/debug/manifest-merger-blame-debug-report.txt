@@ -1,0 +1,607 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.aplicacion.permisapp"
+4    android:versionCode="2"
+5    android:versionName="2.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="32" />
+9-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+11-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:6:5-81
+11-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:6:22-78
+12    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+12-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:7:5-80
+12-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:7:22-77
+13    <uses-permission android:name="android.permission.CAMERA" />
+13-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:8:5-65
+13-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:8:22-62
+14    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+14-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:9:5-85
+14-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:9:22-82
+15
+16    <queries>
+16-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\anamj\.gradle\caches\transforms-3\ca4824877a13520bdc442115fc8a30af\transformed\imagepicker-2.1\AndroidManifest.xml:9:5-19:15
+17
+18        <!-- Query Camera Packages -->
+19        <intent>
+19-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\anamj\.gradle\caches\transforms-3\ca4824877a13520bdc442115fc8a30af\transformed\imagepicker-2.1\AndroidManifest.xml:12:9-14:18
+20            <action android:name="android.media.action.IMAGE_CAPTURE" />
+20-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\anamj\.gradle\caches\transforms-3\ca4824877a13520bdc442115fc8a30af\transformed\imagepicker-2.1\AndroidManifest.xml:13:13-73
+20-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\anamj\.gradle\caches\transforms-3\ca4824877a13520bdc442115fc8a30af\transformed\imagepicker-2.1\AndroidManifest.xml:13:21-70
+21        </intent>
+22        <!-- Query Open Document -->
+23        <intent>
+23-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\anamj\.gradle\caches\transforms-3\ca4824877a13520bdc442115fc8a30af\transformed\imagepicker-2.1\AndroidManifest.xml:16:9-18:18
+24            <action android:name="android.intent.action.OPEN_DOCUMENT_TREE" />
+24-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\anamj\.gradle\caches\transforms-3\ca4824877a13520bdc442115fc8a30af\transformed\imagepicker-2.1\AndroidManifest.xml:17:13-79
+24-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\anamj\.gradle\caches\transforms-3\ca4824877a13520bdc442115fc8a30af\transformed\imagepicker-2.1\AndroidManifest.xml:17:21-76
+25        </intent>
+26    </queries>
+27
+28    <uses-permission android:name="android.permission.USE_BIOMETRIC" /> <!-- suppress DeprecatedClassUsageInspection -->
+28-->[androidx.biometric:biometric:1.1.0] C:\Users\anamj\.gradle\caches\transforms-3\cf1c7a06072baa4cbbd4f22893764acf\transformed\biometric-1.1.0\AndroidManifest.xml:24:5-72
+28-->[androidx.biometric:biometric:1.1.0] C:\Users\anamj\.gradle\caches\transforms-3\cf1c7a06072baa4cbbd4f22893764acf\transformed\biometric-1.1.0\AndroidManifest.xml:24:22-69
+29    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+29-->[androidx.biometric:biometric:1.1.0] C:\Users\anamj\.gradle\caches\transforms-3\cf1c7a06072baa4cbbd4f22893764acf\transformed\biometric-1.1.0\AndroidManifest.xml:27:5-74
+29-->[androidx.biometric:biometric:1.1.0] C:\Users\anamj\.gradle\caches\transforms-3\cf1c7a06072baa4cbbd4f22893764acf\transformed\biometric-1.1.0\AndroidManifest.xml:27:22-71
+30    <uses-permission android:name="android.permission.INTERNET" />
+30-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:23:5-67
+30-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:23:22-64
+31    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+31-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:24:5-79
+31-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:24:22-76
+32    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+32-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\anamj\.gradle\caches\transforms-3\6f092c7077aa1f0c90a103261e6e9be7\transformed\firebase-messaging-23.1.0\AndroidManifest.xml:25:5-77
+32-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\anamj\.gradle\caches\transforms-3\6f092c7077aa1f0c90a103261e6e9be7\transformed\firebase-messaging-23.1.0\AndroidManifest.xml:25:22-74
+33    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+33-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\anamj\.gradle\caches\transforms-3\6f092c7077aa1f0c90a103261e6e9be7\transformed\firebase-messaging-23.1.0\AndroidManifest.xml:26:5-68
+33-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\anamj\.gradle\caches\transforms-3\6f092c7077aa1f0c90a103261e6e9be7\transformed\firebase-messaging-23.1.0\AndroidManifest.xml:26:22-65
+34    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+34-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\anamj\.gradle\caches\transforms-3\6f092c7077aa1f0c90a103261e6e9be7\transformed\firebase-messaging-23.1.0\AndroidManifest.xml:28:5-82
+34-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\anamj\.gradle\caches\transforms-3\6f092c7077aa1f0c90a103261e6e9be7\transformed\firebase-messaging-23.1.0\AndroidManifest.xml:28:22-79
+35
+36    <application
+36-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:11:5-129:19
+37        android:allowBackup="true"
+37-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:12:9-35
+38        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+38-->[androidx.core:core:1.8.0] C:\Users\anamj\.gradle\caches\transforms-3\c2fa8dfcebef2bb345389f86a3bee624\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
+39        android:dataExtractionRules="@xml/data_extraction_rules"
+39-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:13:9-65
+40        android:debuggable="true"
+41        android:fullBackupContent="@xml/backup_rules"
+41-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:14:9-54
+42        android:hardwareAccelerated="true"
+42-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:15:9-43
+43        android:icon="@mipmap/ic_icon_icon"
+43-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:16:9-44
+44        android:label="@string/app_name"
+44-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:17:9-41
+45        android:requestLegacyExternalStorage="true"
+45-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:18:9-52
+46        android:roundIcon="@mipmap/ic_icon_icon_round"
+46-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:19:9-55
+47        android:supportsRtl="true"
+47-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:20:9-35
+48        android:theme="@style/Theme.PermisApp.NoActionBar" >
+48-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:21:9-59
+49        <activity
+49-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:23:9-29:20
+50            android:name="com.aplicacion.permisapp.activities.MainActivityDeleteAccount"
+50-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:24:13-65
+51            android:exported="false" >
+51-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:25:13-37
+52            <meta-data
+52-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:26:13-28:36
+53                android:name="android.app.lib_name"
+53-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:27:17-52
+54                android:value="" />
+54-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:28:17-33
+55        </activity>
+56        <activity
+56-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:30:9-36:20
+57            android:name="com.aplicacion.permisapp.activities.MainActivityHistory"
+57-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:31:13-59
+58            android:exported="false" >
+58-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:32:13-37
+59            <meta-data
+59-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:26:13-28:36
+60                android:name="android.app.lib_name"
+60-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:27:17-52
+61                android:value="" />
+61-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:28:17-33
+62        </activity>
+63        <activity
+63-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:37:9-43:20
+64            android:name="com.aplicacion.permisapp.activities.MainActivityFormatPDF"
+64-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:38:13-61
+65            android:exported="false" >
+65-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:39:13-37
+66            <meta-data
+66-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:26:13-28:36
+67                android:name="android.app.lib_name"
+67-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:27:17-52
+68                android:value="" />
+68-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:28:17-33
+69        </activity>
+70        <activity
+70-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:44:9-50:20
+71            android:name="com.aplicacion.permisapp.activities.MainActivityEmailValid"
+71-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:45:13-62
+72            android:exported="false" >
+72-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:46:13-37
+73            <meta-data
+73-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:26:13-28:36
+74                android:name="android.app.lib_name"
+74-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:27:17-52
+75                android:value="" />
+75-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:28:17-33
+76        </activity>
+77        <activity
+77-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:51:9-57:20
+78            android:name="com.aplicacion.permisapp.activities.MainActivitySinSueldo"
+78-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:52:13-61
+79            android:exported="false" >
+79-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:53:13-37
+80            <meta-data
+80-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:26:13-28:36
+81                android:name="android.app.lib_name"
+81-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:27:17-52
+82                android:value="" />
+82-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:28:17-33
+83        </activity>
+84        <activity
+84-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:58:9-60:40
+85            android:name="com.aplicacion.permisapp.activities.MainActivityStatusTramites"
+85-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:59:13-66
+86            android:exported="false" />
+86-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:60:13-37
+87        <activity
+87-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:61:9-67:20
+88            android:name="com.aplicacion.permisapp.activities.MainActivityNotofications"
+88-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:62:13-65
+89            android:exported="false" >
+89-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:63:13-37
+90            <meta-data
+90-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:26:13-28:36
+91                android:name="android.app.lib_name"
+91-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:27:17-52
+92                android:value="" />
+92-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:28:17-33
+93        </activity>
+94        <activity
+94-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:68:9-70:40
+95            android:name="com.aplicacion.permisapp.activities.MainActivityRegisterUser"
+95-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:69:13-64
+96            android:exported="false" />
+96-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:70:13-37
+97        <activity
+97-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:71:9-73:40
+98            android:name="com.aplicacion.permisapp.activities.MainActivity_Otro"
+98-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:72:13-57
+99            android:exported="false" />
+99-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:73:13-37
+100        <activity
+100-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:74:9-76:40
+101            android:name="com.aplicacion.permisapp.activities.MainActivityLactancia"
+101-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:75:13-61
+102            android:exported="false" />
+102-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:76:13-37
+103        <activity
+103-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:77:9-79:40
+104            android:name="com.aplicacion.permisapp.activities.MainActivityIrseAntes"
+104-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:78:13-61
+105            android:exported="false" />
+105-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:79:13-37
+106        <activity
+106-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:80:9-82:40
+107            android:name="com.aplicacion.permisapp.activities.MainActivityDiaEconomico"
+107-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:81:13-64
+108            android:exported="false" />
+108-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:82:13-37
+109        <activity
+109-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:83:9-85:40
+110            android:name="com.aplicacion.permisapp.activities.MainActivityAsistenciaMedica"
+110-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:84:13-68
+111            android:exported="false" />
+111-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:85:13-37
+112        <activity
+112-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:86:9-88:40
+113            android:name="com.aplicacion.permisapp.activities.MainActivityLlegarTarde"
+113-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:87:13-63
+114            android:exported="false" />
+114-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:88:13-37
+115        <activity
+115-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:89:9-91:40
+116            android:name="com.aplicacion.permisapp.activities.MainActivityEditProfile"
+116-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:90:13-63
+117            android:exported="false" />
+117-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:91:13-37
+118        <activity
+118-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:92:9-94:40
+119            android:name="com.aplicacion.permisapp.activities.MainActivityPerfil"
+119-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:93:13-58
+120            android:exported="false" />
+120-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:94:13-37
+121        <activity
+121-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:95:9-97:40
+122            android:name="com.aplicacion.permisapp.activities.MainActivity_home"
+122-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:96:13-57
+123            android:exported="false" />
+123-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:97:13-37
+124        <activity
+124-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:98:9-100:40
+125            android:name="com.aplicacion.permisapp.activities.MainActivity_restablecer"
+125-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:99:13-64
+126            android:exported="false" />
+126-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:100:13-37
+127        <activity android:name="com.aplicacion.permisapp.activities.MainActivity" />
+127-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:101:9-61
+127-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:101:19-58
+128        <activity
+128-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:102:9-110:20
+129            android:name="com.aplicacion.permisapp.activities.MainActivity_Splash"
+129-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:103:13-59
+130            android:exported="true" >
+130-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:104:13-36
+131            <intent-filter>
+131-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:105:13-109:29
+132                <action android:name="android.intent.action.MAIN" />
+132-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:106:17-69
+132-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:106:25-66
+133
+134                <category android:name="android.intent.category.LAUNCHER" />
+134-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:108:17-77
+134-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:108:27-74
+135            </intent-filter>
+136        </activity>
+137
+138        <service
+138-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:112:9-118:19
+139            android:name="com.aplicacion.permisapp.services.MyFirebaseMessagingClient"
+139-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:113:13-63
+140            android:exported="false" >
+140-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:114:13-37
+141            <intent-filter>
+141-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:115:13-117:29
+142                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+142-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:116:17-78
+142-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:116:25-75
+143            </intent-filter>
+144        </service>
+145
+146        <meta-data
+146-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:120:9-122:55
+147            android:name="com.google.firebase.messaging.default_notification_icon"
+147-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:121:13-83
+148            android:resource="@mipmap/ic_icon_icon" />
+148-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:122:13-52
+149        <meta-data
+149-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:123:9-125:47
+150            android:name="com.google.firebase.messaging.default_notification_color"
+150-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:124:13-84
+151            android:resource="@color/verde" />
+151-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:125:13-44
+152        <meta-data
+152-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:126:9-128:71
+153            android:name="com.google.firebase.messaging.default_notification_channel_id"
+153-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:127:13-89
+154            android:value="@string/default_notification_channel_id" />
+154-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:128:13-68
+155
+156        <service
+156-->[com.google.firebase:firebase-auth-ktx:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\801cb660e75b4cac8fc23fc2aedd11dd\transformed\firebase-auth-ktx-21.1.0\AndroidManifest.xml:8:9-14:19
+157            android:name="com.google.firebase.components.ComponentDiscoveryService"
+157-->[com.google.firebase:firebase-auth-ktx:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\801cb660e75b4cac8fc23fc2aedd11dd\transformed\firebase-auth-ktx-21.1.0\AndroidManifest.xml:9:13-84
+158            android:directBootAware="true"
+158-->[com.google.firebase:firebase-common:20.2.0] C:\Users\anamj\.gradle\caches\transforms-3\480e69e252ded41fe341533cf1bf1c4f\transformed\firebase-common-20.2.0\AndroidManifest.xml:34:13-43
+159            android:exported="false" >
+159-->[com.google.firebase:firebase-auth-ktx:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\801cb660e75b4cac8fc23fc2aedd11dd\transformed\firebase-auth-ktx-21.1.0\AndroidManifest.xml:10:13-37
+160            <meta-data
+160-->[com.google.firebase:firebase-auth-ktx:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\801cb660e75b4cac8fc23fc2aedd11dd\transformed\firebase-auth-ktx-21.1.0\AndroidManifest.xml:11:13-13:85
+161                android:name="com.google.firebase.components:com.google.firebase.auth.ktx.FirebaseAuthKtxRegistrar"
+161-->[com.google.firebase:firebase-auth-ktx:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\801cb660e75b4cac8fc23fc2aedd11dd\transformed\firebase-auth-ktx-21.1.0\AndroidManifest.xml:12:17-116
+162                android:value="com.google.firebase.components.ComponentRegistrar" />
+162-->[com.google.firebase:firebase-auth-ktx:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\801cb660e75b4cac8fc23fc2aedd11dd\transformed\firebase-auth-ktx-21.1.0\AndroidManifest.xml:13:17-82
+163            <meta-data
+163-->[com.google.firebase:firebase-storage-ktx:20.1.0] C:\Users\anamj\.gradle\caches\transforms-3\75671d51ed2760b58b2d9683207089cc\transformed\firebase-storage-ktx-20.1.0\AndroidManifest.xml:14:13-16:85
+164                android:name="com.google.firebase.components:com.google.firebase.storage.ktx.FirebaseStorageKtxRegistrar"
+164-->[com.google.firebase:firebase-storage-ktx:20.1.0] C:\Users\anamj\.gradle\caches\transforms-3\75671d51ed2760b58b2d9683207089cc\transformed\firebase-storage-ktx-20.1.0\AndroidManifest.xml:15:17-122
+165                android:value="com.google.firebase.components.ComponentRegistrar" />
+165-->[com.google.firebase:firebase-storage-ktx:20.1.0] C:\Users\anamj\.gradle\caches\transforms-3\75671d51ed2760b58b2d9683207089cc\transformed\firebase-storage-ktx-20.1.0\AndroidManifest.xml:16:17-82
+166            <meta-data
+166-->[com.google.firebase:firebase-firestore-ktx:24.4.0] C:\Users\anamj\.gradle\caches\transforms-3\745ed87a89b0c3435b829a0ffb8403cb\transformed\firebase-firestore-ktx-24.4.0\AndroidManifest.xml:14:13-16:85
+167                android:name="com.google.firebase.components:com.google.firebase.firestore.ktx.FirebaseFirestoreKtxRegistrar"
+167-->[com.google.firebase:firebase-firestore-ktx:24.4.0] C:\Users\anamj\.gradle\caches\transforms-3\745ed87a89b0c3435b829a0ffb8403cb\transformed\firebase-firestore-ktx-24.4.0\AndroidManifest.xml:15:17-126
+168                android:value="com.google.firebase.components.ComponentRegistrar" />
+168-->[com.google.firebase:firebase-firestore-ktx:24.4.0] C:\Users\anamj\.gradle\caches\transforms-3\745ed87a89b0c3435b829a0ffb8403cb\transformed\firebase-firestore-ktx-24.4.0\AndroidManifest.xml:16:17-82
+169            <meta-data
+169-->[com.google.firebase:firebase-database-ktx:20.1.0] C:\Users\anamj\.gradle\caches\transforms-3\77a9d29e4dcd31ecd97ce3954d81e92b\transformed\firebase-database-ktx-20.1.0\AndroidManifest.xml:14:13-16:85
+170                android:name="com.google.firebase.components:com.google.firebase.database.ktx.FirebaseDatabaseKtxRegistrar"
+170-->[com.google.firebase:firebase-database-ktx:20.1.0] C:\Users\anamj\.gradle\caches\transforms-3\77a9d29e4dcd31ecd97ce3954d81e92b\transformed\firebase-database-ktx-20.1.0\AndroidManifest.xml:15:17-124
+171                android:value="com.google.firebase.components.ComponentRegistrar" />
+171-->[com.google.firebase:firebase-database-ktx:20.1.0] C:\Users\anamj\.gradle\caches\transforms-3\77a9d29e4dcd31ecd97ce3954d81e92b\transformed\firebase-database-ktx-20.1.0\AndroidManifest.xml:16:17-82
+172            <meta-data
+172-->[com.google.firebase:firebase-messaging-ktx:23.1.0] C:\Users\anamj\.gradle\caches\transforms-3\19be113aa4188c8c583649e852ab8a55\transformed\firebase-messaging-ktx-23.1.0\AndroidManifest.xml:28:13-30:85
+173                android:name="com.google.firebase.components:com.google.firebase.messaging.ktx.FirebaseMessagingKtxRegistrar"
+173-->[com.google.firebase:firebase-messaging-ktx:23.1.0] C:\Users\anamj\.gradle\caches\transforms-3\19be113aa4188c8c583649e852ab8a55\transformed\firebase-messaging-ktx-23.1.0\AndroidManifest.xml:29:17-126
+174                android:value="com.google.firebase.components.ComponentRegistrar" />
+174-->[com.google.firebase:firebase-messaging-ktx:23.1.0] C:\Users\anamj\.gradle\caches\transforms-3\19be113aa4188c8c583649e852ab8a55\transformed\firebase-messaging-ktx-23.1.0\AndroidManifest.xml:30:17-82
+175            <meta-data
+175-->[com.google.firebase:firebase-common-ktx:20.2.0] C:\Users\anamj\.gradle\caches\transforms-3\e8f35ba2ca019363395f509980cd6468\transformed\firebase-common-ktx-20.2.0\AndroidManifest.xml:14:13-16:85
+176                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar"
+176-->[com.google.firebase:firebase-common-ktx:20.2.0] C:\Users\anamj\.gradle\caches\transforms-3\e8f35ba2ca019363395f509980cd6468\transformed\firebase-common-ktx-20.2.0\AndroidManifest.xml:15:17-113
+177                android:value="com.google.firebase.components.ComponentRegistrar" />
+177-->[com.google.firebase:firebase-common-ktx:20.2.0] C:\Users\anamj\.gradle\caches\transforms-3\e8f35ba2ca019363395f509980cd6468\transformed\firebase-common-ktx-20.2.0\AndroidManifest.xml:16:17-82
+178            <meta-data
+178-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:67:13-69:85
+179                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+179-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:68:17-109
+180                android:value="com.google.firebase.components.ComponentRegistrar" />
+180-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:69:17-82
+181            <meta-data
+181-->[com.google.firebase:firebase-storage:20.1.0] C:\Users\anamj\.gradle\caches\transforms-3\37ca51c5a894b9f68d990ceeffd3c9e3\transformed\firebase-storage-20.1.0\AndroidManifest.xml:32:13-34:85
+182                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+182-->[com.google.firebase:firebase-storage:20.1.0] C:\Users\anamj\.gradle\caches\transforms-3\37ca51c5a894b9f68d990ceeffd3c9e3\transformed\firebase-storage-20.1.0\AndroidManifest.xml:33:17-107
+183                android:value="com.google.firebase.components.ComponentRegistrar" />
+183-->[com.google.firebase:firebase-storage:20.1.0] C:\Users\anamj\.gradle\caches\transforms-3\37ca51c5a894b9f68d990ceeffd3c9e3\transformed\firebase-storage-20.1.0\AndroidManifest.xml:34:17-82
+184            <meta-data
+184-->[com.google.firebase:firebase-firestore:24.4.0] C:\Users\anamj\.gradle\caches\transforms-3\2dd581a9b55905f22d37d2017a71dcca\transformed\firebase-firestore-24.4.0\AndroidManifest.xml:19:13-21:85
+185                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+185-->[com.google.firebase:firebase-firestore:24.4.0] C:\Users\anamj\.gradle\caches\transforms-3\2dd581a9b55905f22d37d2017a71dcca\transformed\firebase-firestore-24.4.0\AndroidManifest.xml:20:17-111
+186                android:value="com.google.firebase.components.ComponentRegistrar" />
+186-->[com.google.firebase:firebase-firestore:24.4.0] C:\Users\anamj\.gradle\caches\transforms-3\2dd581a9b55905f22d37d2017a71dcca\transformed\firebase-firestore-24.4.0\AndroidManifest.xml:21:17-82
+187            <meta-data
+187-->[com.google.firebase:firebase-database:20.1.0] C:\Users\anamj\.gradle\caches\transforms-3\e193799b44598ec6965aec4e0fc2cd02\transformed\firebase-database-20.1.0\AndroidManifest.xml:31:13-33:85
+188                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+188-->[com.google.firebase:firebase-database:20.1.0] C:\Users\anamj\.gradle\caches\transforms-3\e193799b44598ec6965aec4e0fc2cd02\transformed\firebase-database-20.1.0\AndroidManifest.xml:32:17-109
+189                android:value="com.google.firebase.components.ComponentRegistrar" />
+189-->[com.google.firebase:firebase-database:20.1.0] C:\Users\anamj\.gradle\caches\transforms-3\e193799b44598ec6965aec4e0fc2cd02\transformed\firebase-database-20.1.0\AndroidManifest.xml:33:17-82
+190            <meta-data
+190-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\anamj\.gradle\caches\transforms-3\6f092c7077aa1f0c90a103261e6e9be7\transformed\firebase-messaging-23.1.0\AndroidManifest.xml:55:13-57:85
+191                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+191-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\anamj\.gradle\caches\transforms-3\6f092c7077aa1f0c90a103261e6e9be7\transformed\firebase-messaging-23.1.0\AndroidManifest.xml:56:17-119
+192                android:value="com.google.firebase.components.ComponentRegistrar" />
+192-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\anamj\.gradle\caches\transforms-3\6f092c7077aa1f0c90a103261e6e9be7\transformed\firebase-messaging-23.1.0\AndroidManifest.xml:57:17-82
+193            <meta-data
+193-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\anamj\.gradle\caches\transforms-3\86a2aefaa2f2a4fc9d63a963c8724a29\transformed\firebase-datatransport-18.1.7\AndroidManifest.xml:27:13-29:85
+194                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+194-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\anamj\.gradle\caches\transforms-3\86a2aefaa2f2a4fc9d63a963c8724a29\transformed\firebase-datatransport-18.1.7\AndroidManifest.xml:28:17-115
+195                android:value="com.google.firebase.components.ComponentRegistrar" />
+195-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\anamj\.gradle\caches\transforms-3\86a2aefaa2f2a4fc9d63a963c8724a29\transformed\firebase-datatransport-18.1.7\AndroidManifest.xml:29:17-82
+196            <meta-data
+196-->[com.google.firebase:firebase-installations:17.1.0] C:\Users\anamj\.gradle\caches\transforms-3\88e74e5e87b72d3b1f68b1022002f61c\transformed\firebase-installations-17.1.0\AndroidManifest.xml:17:13-19:85
+197                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+197-->[com.google.firebase:firebase-installations:17.1.0] C:\Users\anamj\.gradle\caches\transforms-3\88e74e5e87b72d3b1f68b1022002f61c\transformed\firebase-installations-17.1.0\AndroidManifest.xml:18:17-127
+198                android:value="com.google.firebase.components.ComponentRegistrar" />
+198-->[com.google.firebase:firebase-installations:17.1.0] C:\Users\anamj\.gradle\caches\transforms-3\88e74e5e87b72d3b1f68b1022002f61c\transformed\firebase-installations-17.1.0\AndroidManifest.xml:19:17-82
+199        </service>
+200
+201        <activity
+201-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\anamj\.gradle\caches\transforms-3\ca4824877a13520bdc442115fc8a30af\transformed\imagepicker-2.1\AndroidManifest.xml:22:9-25:68
+202            android:name="com.github.dhaval2404.imagepicker.ImagePickerActivity"
+202-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\anamj\.gradle\caches\transforms-3\ca4824877a13520bdc442115fc8a30af\transformed\imagepicker-2.1\AndroidManifest.xml:23:13-81
+203            android:screenOrientation="unspecified"
+203-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\anamj\.gradle\caches\transforms-3\ca4824877a13520bdc442115fc8a30af\transformed\imagepicker-2.1\AndroidManifest.xml:24:13-52
+204            android:theme="@style/Theme.Transparent.ImagePicker" />
+204-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\anamj\.gradle\caches\transforms-3\ca4824877a13520bdc442115fc8a30af\transformed\imagepicker-2.1\AndroidManifest.xml:25:13-65
+205        <activity
+205-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\anamj\.gradle\caches\transforms-3\ca4824877a13520bdc442115fc8a30af\transformed\imagepicker-2.1\AndroidManifest.xml:26:9-29:72
+206            android:name="com.yalantis.ucrop.UCropActivity"
+206-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\anamj\.gradle\caches\transforms-3\ca4824877a13520bdc442115fc8a30af\transformed\imagepicker-2.1\AndroidManifest.xml:27:13-60
+207            android:screenOrientation="portrait"
+207-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\anamj\.gradle\caches\transforms-3\ca4824877a13520bdc442115fc8a30af\transformed\imagepicker-2.1\AndroidManifest.xml:28:13-49
+208            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+208-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\anamj\.gradle\caches\transforms-3\ca4824877a13520bdc442115fc8a30af\transformed\imagepicker-2.1\AndroidManifest.xml:29:13-69
+209
+210        <provider
+210-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\anamj\.gradle\caches\transforms-3\ca4824877a13520bdc442115fc8a30af\transformed\imagepicker-2.1\AndroidManifest.xml:31:9-39:20
+211            android:name="com.github.dhaval2404.imagepicker.ImagePickerFileProvider"
+211-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\anamj\.gradle\caches\transforms-3\ca4824877a13520bdc442115fc8a30af\transformed\imagepicker-2.1\AndroidManifest.xml:32:13-85
+212            android:authorities="com.aplicacion.permisapp.imagepicker.provider"
+212-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\anamj\.gradle\caches\transforms-3\ca4824877a13520bdc442115fc8a30af\transformed\imagepicker-2.1\AndroidManifest.xml:33:13-72
+213            android:exported="false"
+213-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\anamj\.gradle\caches\transforms-3\ca4824877a13520bdc442115fc8a30af\transformed\imagepicker-2.1\AndroidManifest.xml:34:13-37
+214            android:grantUriPermissions="true" >
+214-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\anamj\.gradle\caches\transforms-3\ca4824877a13520bdc442115fc8a30af\transformed\imagepicker-2.1\AndroidManifest.xml:35:13-47
+215            <meta-data
+215-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\anamj\.gradle\caches\transforms-3\ca4824877a13520bdc442115fc8a30af\transformed\imagepicker-2.1\AndroidManifest.xml:36:13-38:71
+216                android:name="android.support.FILE_PROVIDER_PATHS"
+216-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\anamj\.gradle\caches\transforms-3\ca4824877a13520bdc442115fc8a30af\transformed\imagepicker-2.1\AndroidManifest.xml:37:17-67
+217                android:resource="@xml/image_picker_provider_paths" />
+217-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\anamj\.gradle\caches\transforms-3\ca4824877a13520bdc442115fc8a30af\transformed\imagepicker-2.1\AndroidManifest.xml:38:17-68
+218        </provider>
+219
+220        <activity
+220-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:27:9-44:20
+221            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+221-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:28:13-80
+222            android:excludeFromRecents="true"
+222-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:29:13-46
+223            android:exported="true"
+223-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:30:13-36
+224            android:launchMode="singleTask"
+224-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:31:13-44
+225            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+225-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:32:13-72
+226            <intent-filter>
+226-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:33:13-43:29
+227                <action android:name="android.intent.action.VIEW" />
+227-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:34:17-69
+227-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:34:25-66
+228
+229                <category android:name="android.intent.category.DEFAULT" />
+229-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:36:17-76
+229-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:36:27-73
+230                <category android:name="android.intent.category.BROWSABLE" />
+230-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:37:17-78
+230-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:37:27-75
+231
+232                <data
+232-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:39:17-42:51
+233                    android:host="firebase.auth"
+233-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:40:21-49
+234                    android:path="/"
+234-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:41:21-37
+235                    android:scheme="genericidp" />
+235-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:42:21-48
+236            </intent-filter>
+237        </activity>
+238        <activity
+238-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:45:9-62:20
+239            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+239-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:46:13-79
+240            android:excludeFromRecents="true"
+240-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:47:13-46
+241            android:exported="true"
+241-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:48:13-36
+242            android:launchMode="singleTask"
+242-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:49:13-44
+243            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+243-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:50:13-72
+244            <intent-filter>
+244-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:51:13-61:29
+245                <action android:name="android.intent.action.VIEW" />
+245-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:34:17-69
+245-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:34:25-66
+246
+247                <category android:name="android.intent.category.DEFAULT" />
+247-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:36:17-76
+247-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:36:27-73
+248                <category android:name="android.intent.category.BROWSABLE" />
+248-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:37:17-78
+248-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:37:27-75
+249
+250                <data
+250-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:39:17-42:51
+251                    android:host="firebase.auth"
+251-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:40:21-49
+252                    android:path="/"
+252-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:41:21-37
+253                    android:scheme="recaptcha" />
+253-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\anamj\.gradle\caches\transforms-3\dafff45d0eb775561725a4166ef70a22\transformed\firebase-auth-21.1.0\AndroidManifest.xml:42:21-48
+254            </intent-filter>
+255        </activity>
+256
+257        <receiver
+257-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\anamj\.gradle\caches\transforms-3\6f092c7077aa1f0c90a103261e6e9be7\transformed\firebase-messaging-23.1.0\AndroidManifest.xml:31:9-38:20
+258            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+258-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\anamj\.gradle\caches\transforms-3\6f092c7077aa1f0c90a103261e6e9be7\transformed\firebase-messaging-23.1.0\AndroidManifest.xml:32:13-78
+259            android:exported="true"
+259-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\anamj\.gradle\caches\transforms-3\6f092c7077aa1f0c90a103261e6e9be7\transformed\firebase-messaging-23.1.0\AndroidManifest.xml:33:13-36
+260            android:permission="com.google.android.c2dm.permission.SEND" >
+260-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\anamj\.gradle\caches\transforms-3\6f092c7077aa1f0c90a103261e6e9be7\transformed\firebase-messaging-23.1.0\AndroidManifest.xml:34:13-73
+261            <intent-filter>
+261-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\anamj\.gradle\caches\transforms-3\6f092c7077aa1f0c90a103261e6e9be7\transformed\firebase-messaging-23.1.0\AndroidManifest.xml:35:13-37:29
+262                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+262-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\anamj\.gradle\caches\transforms-3\6f092c7077aa1f0c90a103261e6e9be7\transformed\firebase-messaging-23.1.0\AndroidManifest.xml:36:17-81
+262-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\anamj\.gradle\caches\transforms-3\6f092c7077aa1f0c90a103261e6e9be7\transformed\firebase-messaging-23.1.0\AndroidManifest.xml:36:25-78
+263            </intent-filter>
+264        </receiver>
+265        <!--
+266             FirebaseMessagingService performs security checks at runtime,
+267             but set to not exported to explicitly avoid allowing another app to call it.
+268        -->
+269        <service
+269-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\anamj\.gradle\caches\transforms-3\6f092c7077aa1f0c90a103261e6e9be7\transformed\firebase-messaging-23.1.0\AndroidManifest.xml:44:9-51:19
+270            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+270-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\anamj\.gradle\caches\transforms-3\6f092c7077aa1f0c90a103261e6e9be7\transformed\firebase-messaging-23.1.0\AndroidManifest.xml:45:13-82
+271            android:directBootAware="true"
+271-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\anamj\.gradle\caches\transforms-3\6f092c7077aa1f0c90a103261e6e9be7\transformed\firebase-messaging-23.1.0\AndroidManifest.xml:46:13-43
+272            android:exported="false" >
+272-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\anamj\.gradle\caches\transforms-3\6f092c7077aa1f0c90a103261e6e9be7\transformed\firebase-messaging-23.1.0\AndroidManifest.xml:47:13-37
+273            <intent-filter android:priority="-500" >
+273-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:115:13-117:29
+274                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+274-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:116:17-78
+274-->C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\AndroidManifest.xml:116:25-75
+275            </intent-filter>
+276        </service>
+277
+278        <provider
+278-->[com.google.firebase:firebase-common:20.2.0] C:\Users\anamj\.gradle\caches\transforms-3\480e69e252ded41fe341533cf1bf1c4f\transformed\firebase-common-20.2.0\AndroidManifest.xml:25:9-30:39
+279            android:name="com.google.firebase.provider.FirebaseInitProvider"
+279-->[com.google.firebase:firebase-common:20.2.0] C:\Users\anamj\.gradle\caches\transforms-3\480e69e252ded41fe341533cf1bf1c4f\transformed\firebase-common-20.2.0\AndroidManifest.xml:26:13-77
+280            android:authorities="com.aplicacion.permisapp.firebaseinitprovider"
+280-->[com.google.firebase:firebase-common:20.2.0] C:\Users\anamj\.gradle\caches\transforms-3\480e69e252ded41fe341533cf1bf1c4f\transformed\firebase-common-20.2.0\AndroidManifest.xml:27:13-72
+281            android:directBootAware="true"
+281-->[com.google.firebase:firebase-common:20.2.0] C:\Users\anamj\.gradle\caches\transforms-3\480e69e252ded41fe341533cf1bf1c4f\transformed\firebase-common-20.2.0\AndroidManifest.xml:28:13-43
+282            android:exported="false"
+282-->[com.google.firebase:firebase-common:20.2.0] C:\Users\anamj\.gradle\caches\transforms-3\480e69e252ded41fe341533cf1bf1c4f\transformed\firebase-common-20.2.0\AndroidManifest.xml:29:13-37
+283            android:initOrder="100" />
+283-->[com.google.firebase:firebase-common:20.2.0] C:\Users\anamj\.gradle\caches\transforms-3\480e69e252ded41fe341533cf1bf1c4f\transformed\firebase-common-20.2.0\AndroidManifest.xml:30:13-36
+284
+285        <activity
+285-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\anamj\.gradle\caches\transforms-3\0fa04b5c816d13eeec35b5641bbb11ae\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+286            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+286-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\anamj\.gradle\caches\transforms-3\0fa04b5c816d13eeec35b5641bbb11ae\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+287            android:exported="false"
+287-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\anamj\.gradle\caches\transforms-3\0fa04b5c816d13eeec35b5641bbb11ae\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+288            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+288-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\anamj\.gradle\caches\transforms-3\0fa04b5c816d13eeec35b5641bbb11ae\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+289
+290        <meta-data
+290-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\anamj\.gradle\caches\transforms-3\afa5aa2fefc42333b8dabb8fb6a5888d\transformed\play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+291            android:name="com.google.android.gms.version"
+291-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\anamj\.gradle\caches\transforms-3\afa5aa2fefc42333b8dabb8fb6a5888d\transformed\play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+292            android:value="@integer/google_play_services_version" />
+292-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\anamj\.gradle\caches\transforms-3\afa5aa2fefc42333b8dabb8fb6a5888d\transformed\play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+293
+294        <provider
+294-->[androidx.emoji2:emoji2:1.2.0] C:\Users\anamj\.gradle\caches\transforms-3\319bbb3acbf72d081d099f348d97e578\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+295            android:name="androidx.startup.InitializationProvider"
+295-->[androidx.emoji2:emoji2:1.2.0] C:\Users\anamj\.gradle\caches\transforms-3\319bbb3acbf72d081d099f348d97e578\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+296            android:authorities="com.aplicacion.permisapp.androidx-startup"
+296-->[androidx.emoji2:emoji2:1.2.0] C:\Users\anamj\.gradle\caches\transforms-3\319bbb3acbf72d081d099f348d97e578\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+297            android:exported="false" >
+297-->[androidx.emoji2:emoji2:1.2.0] C:\Users\anamj\.gradle\caches\transforms-3\319bbb3acbf72d081d099f348d97e578\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+298            <meta-data
+298-->[androidx.emoji2:emoji2:1.2.0] C:\Users\anamj\.gradle\caches\transforms-3\319bbb3acbf72d081d099f348d97e578\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+299                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+299-->[androidx.emoji2:emoji2:1.2.0] C:\Users\anamj\.gradle\caches\transforms-3\319bbb3acbf72d081d099f348d97e578\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+300                android:value="androidx.startup" />
+300-->[androidx.emoji2:emoji2:1.2.0] C:\Users\anamj\.gradle\caches\transforms-3\319bbb3acbf72d081d099f348d97e578\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+301            <meta-data
+301-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\anamj\.gradle\caches\transforms-3\e0d43177a75a7253d2539fbc80046af5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+302                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+302-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\anamj\.gradle\caches\transforms-3\e0d43177a75a7253d2539fbc80046af5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+303                android:value="androidx.startup" />
+303-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\anamj\.gradle\caches\transforms-3\e0d43177a75a7253d2539fbc80046af5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+304        </provider>
+305
+306        <service
+306-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\anamj\.gradle\caches\transforms-3\ea52ec149e1ca1ef9a3cfe9a4ca5c33c\transformed\transport-backend-cct-3.1.8\AndroidManifest.xml:28:9-34:19
+307            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+307-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\anamj\.gradle\caches\transforms-3\ea52ec149e1ca1ef9a3cfe9a4ca5c33c\transformed\transport-backend-cct-3.1.8\AndroidManifest.xml:29:13-103
+308            android:exported="false" >
+308-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\anamj\.gradle\caches\transforms-3\ea52ec149e1ca1ef9a3cfe9a4ca5c33c\transformed\transport-backend-cct-3.1.8\AndroidManifest.xml:30:13-37
+309            <meta-data
+309-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\anamj\.gradle\caches\transforms-3\ea52ec149e1ca1ef9a3cfe9a4ca5c33c\transformed\transport-backend-cct-3.1.8\AndroidManifest.xml:31:13-33:39
+310                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+310-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\anamj\.gradle\caches\transforms-3\ea52ec149e1ca1ef9a3cfe9a4ca5c33c\transformed\transport-backend-cct-3.1.8\AndroidManifest.xml:32:17-94
+311                android:value="cct" />
+311-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\anamj\.gradle\caches\transforms-3\ea52ec149e1ca1ef9a3cfe9a4ca5c33c\transformed\transport-backend-cct-3.1.8\AndroidManifest.xml:33:17-36
+312        </service>
+313        <service
+313-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\anamj\.gradle\caches\transforms-3\9c62295d6ab554723db17602b34f954d\transformed\transport-runtime-3.1.8\AndroidManifest.xml:26:9-30:19
+314            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+314-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\anamj\.gradle\caches\transforms-3\9c62295d6ab554723db17602b34f954d\transformed\transport-runtime-3.1.8\AndroidManifest.xml:27:13-117
+315            android:exported="false"
+315-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\anamj\.gradle\caches\transforms-3\9c62295d6ab554723db17602b34f954d\transformed\transport-runtime-3.1.8\AndroidManifest.xml:28:13-37
+316            android:permission="android.permission.BIND_JOB_SERVICE" >
+316-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\anamj\.gradle\caches\transforms-3\9c62295d6ab554723db17602b34f954d\transformed\transport-runtime-3.1.8\AndroidManifest.xml:29:13-69
+317        </service>
+318
+319        <receiver
+319-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\anamj\.gradle\caches\transforms-3\9c62295d6ab554723db17602b34f954d\transformed\transport-runtime-3.1.8\AndroidManifest.xml:32:9-34:40
+320            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+320-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\anamj\.gradle\caches\transforms-3\9c62295d6ab554723db17602b34f954d\transformed\transport-runtime-3.1.8\AndroidManifest.xml:33:13-132
+321            android:exported="false" />
+321-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\anamj\.gradle\caches\transforms-3\9c62295d6ab554723db17602b34f954d\transformed\transport-runtime-3.1.8\AndroidManifest.xml:34:13-37
+322    </application>
+323
+324</manifest>
