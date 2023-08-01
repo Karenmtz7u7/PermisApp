@@ -77,6 +77,7 @@ array hide_fingerprint_instantly_prefixes
 array jefes
 attr SharedValue
 attr SharedValueId
+attr action
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -128,6 +129,7 @@ attr animationMode
 attr appBarLayoutStyle
 attr applyMotionScene
 attr arcMode
+attr argType
 attr arrowHeadLength
 attr arrowShaftLength
 attr attributeName
@@ -398,6 +400,8 @@ attr customNavigationLayout
 attr customPixelDimension
 attr customReference
 attr customStringValue
+attr data
+attr dataPattern
 attr dayInvalidStyle
 attr daySelectedStyle
 attr dayStyle
@@ -408,6 +412,7 @@ attr defaultState
 attr deltaPolarAngle
 attr deltaPolarRadius
 attr deriveConstraintsFrom
+attr destination
 attr dialogCornerRadius
 attr dialogPreferredPadding
 attr dialogTheme
@@ -458,6 +463,7 @@ attr endIconTintMode
 attr enforceMaterialTheme
 attr enforceTextAppearance
 attr ensureMinTouchTargetSize
+attr enterAnim
 attr errorAccessibilityLabel
 attr errorContentDescription
 attr errorEnabled
@@ -467,6 +473,7 @@ attr errorIconTintMode
 attr errorShown
 attr errorTextAppearance
 attr errorTextColor
+attr exitAnim
 attr expandActivityOverflowButtonDrawable
 attr expanded
 attr expandedHintEnabled
@@ -552,6 +559,7 @@ attr framePosition
 attr gapBetweenBars
 attr gestureInsetBottomIgnored
 attr goIcon
+attr graph
 attr guidelineUseRtl
 attr haloColor
 attr haloRadius
@@ -643,6 +651,7 @@ attr labelStyle
 attr labelVisibilityMode
 attr lastBaselineToBottomHeight
 attr lastItemDecorated
+attr launchSingleTop
 attr layout
 attr layoutDescription
 attr layoutDuringTransition
@@ -801,6 +810,7 @@ attr menu
 attr menuAlignmentMode
 attr menuGravity
 attr methodName
+attr mimeType
 attr minHeight
 attr minHideDelay
 attr minSeparation
@@ -859,6 +869,7 @@ attr motion_postLayoutCollision
 attr motion_triggerOnCollision
 attr moveWhenScrollAtTop
 attr multiChoiceItemLayout
+attr navGraph
 attr navigationContentDescription
 attr navigationIcon
 attr navigationIconTint
@@ -868,6 +879,7 @@ attr navigationViewStyle
 attr nestedScrollFlags
 attr nestedScrollViewStyle
 attr nestedScrollable
+attr nullable
 attr number
 attr numericModifiers
 attr onCross
@@ -908,6 +920,11 @@ attr placeholderTextAppearance
 attr placeholderTextColor
 attr placeholder_emptyVisibility
 attr polarRelativeTo
+attr popEnterAnim
+attr popExitAnim
+attr popUpTo
+attr popUpToInclusive
+attr popUpToSaveState
 attr popupMenuBackground
 attr popupMenuStyle
 attr popupTheme
@@ -940,11 +957,13 @@ attr region_heightMoreThan
 attr region_widthLessThan
 attr region_widthMoreThan
 attr removeEmbeddedFabElevation
+attr restoreState
 attr reverseLayout
 attr rippleColor
 attr rotationCenterId
 attr round
 attr roundPercent
+attr route
 attr saturation
 attr scaleFromTextSize
 attr scopeUris
@@ -1006,6 +1025,7 @@ attr springStopThreshold
 attr srcCompat
 attr stackFromEnd
 attr staggered
+attr startDestination
 attr startIconCheckable
 attr startIconContentDescription
 attr startIconDrawable
@@ -1073,6 +1093,7 @@ attr tabTextAppearance
 attr tabTextColor
 attr tabUnboundedRipple
 attr targetId
+attr targetPackage
 attr telltales_tailColor
 attr telltales_tailScale
 attr telltales_velocityMode
@@ -1230,6 +1251,7 @@ attr ucrop_show_frame
 attr ucrop_show_grid
 attr ucrop_show_oval_crop_frame
 attr upDuration
+attr uri
 attr useCompatPadding
 attr useMaterialThemeColors
 attr values
@@ -1898,6 +1920,7 @@ color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
 color tooltip_background_dark
 color tooltip_background_light
+color triangle_color
 color ucrop_color_active_aspect_ratio
 color ucrop_color_active_controls_color
 color ucrop_color_black
@@ -1923,6 +1946,8 @@ color ucrop_color_widget_rotate_angle
 color ucrop_color_widget_rotate_mid_line
 color ucrop_color_widget_text
 color ucrop_scale_text_view_selector
+color vector_tint_color
+color vector_tint_theme_color
 color verde
 color verde1
 color verde2
@@ -2947,6 +2972,7 @@ id aligned
 id all
 id allStates
 id always
+id androidx_compose_ui_view_composition_context
 id animateToEnd
 id animateToStart
 id antiClockwise
@@ -3017,6 +3043,7 @@ id clockwise
 id closest
 id codeaccess
 id collapseActionView
+id compose_view_saveable_id_tag
 id compress
 id confirm_button
 id constraint
@@ -3031,6 +3058,7 @@ id controls_shadow
 id controls_wrapper
 id coordinator
 id correoelectronicotxt
+id correoelectronicotxtL
 id correoetxt
 id cos
 id counterclockwise
@@ -3142,6 +3170,7 @@ id grouping
 id groups
 id guideline
 id header_title
+id hide_in_inspector_tag
 id hideable
 id historialsolibtn
 id hola
@@ -3186,6 +3215,7 @@ id infopltxt
 id ingresa_el_
 id ingresarbtn
 id iniciar_ses
+id inspection_slot_table_set
 id invisible
 id inward
 id irseantesbtn
@@ -3284,6 +3314,7 @@ id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
 id nameusertxt
+id nav_controller_view_tag
 id nav_inicio
 id nav_notificacion
 id nav_tramites
@@ -3538,6 +3569,7 @@ id withinBounds
 id wrap
 id wrap_content
 id wrap_content_constrained
+id wrapped_composition_tag
 id wrapper_controls
 id wrapper_reset_rotate
 id wrapper_rotate_by_angle
@@ -3836,6 +3868,8 @@ string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
 string clear_text_end_icon_content_description
+string close_drawer
+string close_sheet
 string common_google_play_services_enable_button
 string common_google_play_services_enable_text
 string common_google_play_services_enable_title
@@ -3856,9 +3890,12 @@ string common_signin_button_text
 string common_signin_button_text_long
 string confirm_device_credential_password
 string copy_toast_msg
+string default_error_message
 string default_error_msg
 string default_notification_channel_id
+string default_popup_window_title
 string default_web_client_id
+string dropdown_menu
 string error_a11y_label
 string error_camera_app_not_found
 string error_failed_pick_gallery_image
@@ -3895,6 +3932,8 @@ string hide_bottom_view_on_scroll_behavior
 string horario
 string icon_content_description
 string image_picker_provider_authority_suffix
+string in_progress
+string indeterminate
 string item_view_role_description
 string m3_sys_motion_easing_emphasized
 string m3_sys_motion_easing_emphasized_accelerate
@@ -3983,6 +4022,10 @@ string mtrl_switch_track_decoration_path
 string mtrl_switch_track_path
 string mtrl_timepicker_cancel
 string mtrl_timepicker_confirm
+string navigation_menu
+string not_selected
+string off
+string on
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
@@ -3991,7 +4034,10 @@ string path_password_strike_through
 string permission_camera_denied
 string project_id
 string search_menu_title
+string selected
 string status_bar_notification_info_overflow
+string tab
+string template_percent
 string title_camera
 string title_choose_image_provider
 string title_gallery
@@ -4276,6 +4322,7 @@ style Base_Widget_MaterialComponents_TextView
 style CardView
 style CardView_Dark
 style CardView_Light
+style DialogWindowTheme
 style MaterialAlertDialog_Material3
 style MaterialAlertDialog_Material3_Body_Text
 style MaterialAlertDialog_Material3_Body_Text_CenterStacked
@@ -5085,6 +5132,7 @@ styleable ActionMenuItemView android_minWidth
 styleable ActionMenuView
 styleable ActionMode background backgroundSplit closeItemLayout height subtitleTextStyle titleTextStyle
 styleable ActivityChooserView expandActivityOverflowButtonDrawable initialActivityCount
+styleable ActivityNavigator android_name action data dataPattern targetPackage
 styleable AlertDialog android_layout buttonIconDimen buttonPanelSideLayout listItemLayout listLayout multiChoiceItemLayout showTitle singleChoiceItemLayout
 styleable AnimatedStateListDrawableCompat android_dither android_visible android_variablePadding android_constantSize android_enterFadeDuration android_exitFadeDuration
 styleable AnimatedStateListDrawableItem android_id android_drawable
@@ -5185,10 +5233,17 @@ styleable MotionLabel android_textSize android_typeface android_textStyle androi
 styleable MotionLayout applyMotionScene currentState layoutDescription motionDebug motionProgress showPaths
 styleable MotionScene defaultDuration layoutDuringTransition
 styleable MotionTelltales telltales_tailColor telltales_tailScale telltales_velocityMode
+styleable NavAction android_id destination enterAnim exitAnim launchSingleTop popEnterAnim popExitAnim popUpTo popUpToInclusive popUpToSaveState restoreState
+styleable NavArgument android_name android_defaultValue argType nullable
+styleable NavDeepLink android_autoVerify action mimeType uri
+styleable NavGraphNavigator startDestination
+styleable NavHost navGraph
+styleable NavInclude graph
 styleable NavigationBarActiveIndicator android_height android_width android_color marginHorizontal shapeAppearance
 styleable NavigationBarView backgroundTint elevation itemActiveIndicatorStyle itemBackground itemIconSize itemIconTint itemPaddingBottom itemPaddingTop itemRippleColor itemTextAppearanceActive itemTextAppearanceInactive itemTextColor labelVisibilityMode menu
 styleable NavigationRailView headerLayout itemMinHeight menuGravity paddingBottomSystemWindowInsets paddingTopSystemWindowInsets
 styleable NavigationView android_layout_gravity android_background android_fitsSystemWindows android_maxWidth bottomInsetScrimEnabled dividerInsetEnd dividerInsetStart drawerLayoutCornerSize elevation headerLayout itemBackground itemHorizontalPadding itemIconPadding itemIconSize itemIconTint itemMaxLines itemRippleColor itemShapeAppearance itemShapeAppearanceOverlay itemShapeFillColor itemShapeInsetBottom itemShapeInsetEnd itemShapeInsetStart itemShapeInsetTop itemTextAppearance itemTextColor itemVerticalPadding menu shapeAppearance shapeAppearanceOverlay subheaderColor subheaderInsetEnd subheaderInsetStart subheaderTextAppearance topInsetScrimEnabled
+styleable Navigator android_label android_id route
 styleable OnClick clickAction targetId
 styleable OnSwipe autoCompleteMode dragDirection dragScale dragThreshold limitBoundsTo maxAcceleration maxVelocity moveWhenScrollAtTop nestedScrollFlags onTouchUp rotationCenterId springBoundary springDamping springMass springStiffness springStopThreshold touchAnchorId touchAnchorSide touchRegionId
 styleable PopupWindow android_popupBackground android_popupAnimationStyle overlapAnchor

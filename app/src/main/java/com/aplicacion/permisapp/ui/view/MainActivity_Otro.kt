@@ -29,7 +29,6 @@ import com.aplicacion.permisapp.domain.repository.AuthRepository
 import com.aplicacion.permisapp.domain.repository.ClientRepository
 import com.aplicacion.permisapp.domain.repository.HistoriesRepository
 import com.aplicacion.permisapp.domain.repository.IncidenciasRepository
-import com.aplicacion.permisapp.ui.viewmodels.ActivityOtroViewModel
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage

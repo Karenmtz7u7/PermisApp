@@ -10,9 +10,9 @@ import com.aplicacion.permisapp.domain.Models.Incidencias
 import com.aplicacion.permisapp.R
 import com.google.api.ResourceDescriptor
 
-class HomeAdapter(val context: Activity, val histories: ArrayList<Incidencias>):
+class HomeAdapter(val context: Activity):
     RecyclerView.Adapter<HomeAdapter.HomeAdapterViewHolder>() {
-
+    val histories = ArrayList<Incidencias>()
 
     // Sirve para instanciar la lista que se va a mostrar en el historial
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeAdapterViewHolder {
@@ -23,6 +23,8 @@ class HomeAdapter(val context: Activity, val histories: ArrayList<Incidencias>):
 
     // Se establece la información en los textView
     override fun onBindViewHolder(holder: HomeAdapterViewHolder, position: Int) {
+
+
 
         val incidencias = histories[position] //Se obtiene un solo historial
         holder.tipoincidenciaHistorial.text = incidencias.tipoIncidencia

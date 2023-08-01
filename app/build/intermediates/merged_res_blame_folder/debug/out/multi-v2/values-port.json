@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.aplicacion.permisapp-mergeDebugResources-41:/values-port/values-port.xml",
+            "outputFile": "com.aplicacion.permisapp-mergeDebugResources-68:/values-port/values-port.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\anamj\\.gradle\\caches\\transforms-3\\05a910282058716b7a32007770d33299\\transformed\\appcompat-1.5.1\\res\\values-port\\values-port.xml",
+                    "source": "C:\\Users\\anamj\\.gradle\\caches\\transforms-3\\ac910ccaa31aa4d9053ab16502e20de5\\transformed\\appcompat-1.5.1\\res\\values-port\\values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

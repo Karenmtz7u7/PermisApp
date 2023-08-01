@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.aplicacion.permisapp-mergeDebugResources-41:/values-v22/values-v22.xml",
+            "outputFile": "com.aplicacion.permisapp-mergeDebugResources-68:/values-v22/values-v22.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\anamj\\.gradle\\caches\\transforms-3\\05a910282058716b7a32007770d33299\\transformed\\appcompat-1.5.1\\res\\values-v22\\values-v22.xml",
+                    "source": "C:\\Users\\anamj\\.gradle\\caches\\transforms-3\\ac910ccaa31aa4d9053ab16502e20de5\\transformed\\appcompat-1.5.1\\res\\values-v22\\values-v22.xml",
                     "from": {
                         "startLines": "2,3,4,9",
                         "startColumns": "4,4,4,4",

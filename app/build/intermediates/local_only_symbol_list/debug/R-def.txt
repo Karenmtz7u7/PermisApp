@@ -121,6 +121,7 @@ id codeaccess
 id consultabtn
 id containerView
 id correoelectronicotxt
+id correoelectronicotxtL
 id correoetxt
 id cuentatxt
 id daycashbtn

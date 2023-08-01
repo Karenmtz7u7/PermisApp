@@ -48,6 +48,7 @@
                 android:gravity="center"
                 android:layout_margin="15dp">
                 <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/correoelectronicotxtL"
                     android:layout_marginTop="16dp"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                     android:layout_width="match_parent"

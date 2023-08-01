@@ -36,6 +36,8 @@
     <string name="character_counter_content_description">%1$d/%2$d ta belgi kiritildi</string>
     <string name="character_counter_overflowed_content_description">Harflar soni (%1$d) cheklovdan (%2$d) oshib ketdi</string>
     <string name="clear_text_end_icon_content_description">Matnni tozalash</string>
+    <string msgid="406453423630273620" name="close_drawer">"Navigatsiya menyusini yopish"</string>
+    <string msgid="7573152094250666567" name="close_sheet">"Varaqni yopish"</string>
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Yoqish</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">Google Play xizmatlari yoqilmaguncha, %1$s ishlamaydi.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Google Play xizmatlarini yoqish</string>
@@ -56,7 +58,10 @@
     <string name="common_signin_button_text_long">Google orqali kirish</string>
     <string msgid="5912733858573823945" name="confirm_device_credential_password">"Paroldan foydalanish"</string>
     <string msgid="3260749812566568062" name="copy_toast_msg">"Havoladan vaqtinchalik xotiraga nusxa olindi"</string>
+    <string msgid="8038256446254964252" name="default_error_message">"Kiritilgan axborot xato"</string>
     <string msgid="4776854077120974966" name="default_error_msg">"Notanish xato"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"Qalqib chiquvchi oyna"</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"Pastga ochiluvchi menyu"</string>
     <string name="error_camera_app_not_found">Kamera uchun dastur topilmadi</string>
     <string name="error_failed_pick_gallery_image">Galereyadan rasm tanlashda xatolik yuz berdi</string>
     <string name="error_failed_to_compress_image">Rasmni zichlashda xatolik yuz berdi</string>
@@ -79,6 +84,8 @@
     <string msgid="1807436368654974044" name="generic_error_no_keyguard">"Bu qurilmada PIN kod, grafik kalit va parol ishlamaydi."</string>
     <string msgid="7309881387583143581" name="generic_error_user_canceled">"Autentifikatsiya foydalanuvchi tomonidan bekor qilindi"</string>
     <string name="icon_content_description">Muloqot ikonkasi</string>
+    <string msgid="6827826412747255547" name="in_progress">"Bajarilmoqda"</string>
+    <string msgid="2486394087603402002" name="indeterminate">"Belgilanmagan va belgi olib tashlanmagan"</string>
     <string name="item_view_role_description">Tab : Varaq</string>
     <string name="material_clock_toggle_content_description">Tushdan oldin yoki keyinligini tanlang</string>
     <string name="material_hour_selection">Soatni tanlang</string>
@@ -128,11 +135,18 @@
     <string name="mtrl_picker_toggle_to_year_selection">Yilni tanlash uchun bosing</string>
     <string name="mtrl_timepicker_cancel">Bekor qilish</string>
     <string name="mtrl_timepicker_confirm">OK</string>
+    <string msgid="542007171693138492" name="navigation_menu">"Navigatsiya menyusi"</string>
+    <string msgid="6610465462668679431" name="not_selected">"Tanlanmagan"</string>
+    <string msgid="875452955155264703" name="off">"Oʻchiq"</string>
+    <string msgid="8655164131929253426" name="on">"Yoniq"</string>
     <string name="password_toggle_content_description">Parol ochiq tursin</string>
     <string name="permission_camera_denied">
         <![CDATA[Rasmga olish uchun kameradan foydalanishga ruhsat berilishi kerak. Iltimos sozlamalardan ushbu ruhsatni amalga oshiring Sozlamalar > Ruhsatlar.]]></string>
     <string msgid="6264217191555673260" name="search_menu_title">"Qidiruv"</string>
+    <string msgid="6043586758067023" name="selected">"Tanlangan"</string>
     <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="1672349317127674378" name="tab">"Varaq"</string>
+    <string msgid="5946805113151406391" name="template_percent">"<ns1:g id="PERCENTAGE">%1$d</ns1:g> foiz."</string>
     <string name="title_camera">Kamera</string>
     <string name="title_choose_image_provider">Tanlang</string>
     <string name="title_gallery">Galereya</string>

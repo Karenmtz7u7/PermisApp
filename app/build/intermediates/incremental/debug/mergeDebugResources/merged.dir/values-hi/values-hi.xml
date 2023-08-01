@@ -36,6 +36,8 @@
     <string name="character_counter_content_description">%2$d वर्णों में से %1$d वर्ण दर्ज किए गए</string>
     <string name="character_counter_overflowed_content_description">अभी %1$d वर्ण हैं जबकि %2$d से ज़्यादा नहीं होने चाहिए</string>
     <string name="clear_text_end_icon_content_description">टेक्स्ट मिटाएं</string>
+    <string msgid="406453423630273620" name="close_drawer">"नेविगेशन मेन्यू बंद करें"</string>
+    <string msgid="7573152094250666567" name="close_sheet">"शीट बंद करें"</string>
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">चालू करें</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">जब तक आप Google Play सेवाएं चालू नहीं करते, %1$s काम नहीं करेगा.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Google Play सेवाएं चालू करें</string>
@@ -56,7 +58,10 @@
     <string name="common_signin_button_text_long">Google के ज़रिए साइन इन करें</string>
     <string msgid="5912733858573823945" name="confirm_device_credential_password">"पासवर्ड का इस्तेमाल करें"</string>
     <string msgid="3260749812566568062" name="copy_toast_msg">"लिंक क्लिपबोर्ड पर कॉपी किया गया"</string>
+    <string msgid="8038256446254964252" name="default_error_message">"अमान्य इनपुट"</string>
     <string msgid="4776854077120974966" name="default_error_msg">"अनजान गड़बड़ी"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"पॉप-अप विंडो"</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"ड्रॉपडाउन मेन्यू"</string>
     <string name="error_camera_app_not_found">कैमरा ऐप नहीं मिला</string>
     <string name="error_failed_pick_gallery_image">गैलरी की तस्वीर लेने में विफल</string>
     <string name="error_failed_to_compress_image">छवि को संपीड़ित करने में विफल</string>
@@ -79,6 +84,8 @@
     <string msgid="1807436368654974044" name="generic_error_no_keyguard">"इस डिवाइस को पिन, पैटर्न या पासवर्ड की मदद से लॉक/अनलॉक नहीं किया जा सकता."</string>
     <string msgid="7309881387583143581" name="generic_error_user_canceled">"उपयोगकर्ता ने पुष्टि करने की प्रक्रिया रद्द की."</string>
     <string name="icon_content_description">डायलॉग का आइकॉन</string>
+    <string msgid="6827826412747255547" name="in_progress">"जारी है"</string>
+    <string msgid="2486394087603402002" name="indeterminate">"चेकबॉक्स पर न तो सही का निशान लगाया गया, न ही पहले से लगा सही का निशान हटाया गया"</string>
     <string name="item_view_role_description">टैब</string>
     <string name="material_clock_toggle_content_description">AM या PM चुनें</string>
     <string name="material_hour_selection">घंटा चुनें</string>
@@ -128,11 +135,18 @@
     <string name="mtrl_picker_toggle_to_year_selection">\'साल चुनना\' पर स्विच करने के लिए टैप करें</string>
     <string name="mtrl_timepicker_cancel">रद्द करें</string>
     <string name="mtrl_timepicker_confirm">ठीक है</string>
+    <string msgid="542007171693138492" name="navigation_menu">"नेविगेशन मेन्यू"</string>
+    <string msgid="6610465462668679431" name="not_selected">"नहीं चुना गया"</string>
+    <string msgid="875452955155264703" name="off">"बंद है"</string>
+    <string msgid="8655164131929253426" name="on">"चालू है"</string>
     <string name="password_toggle_content_description">पासवर्ड दिखाएं</string>
     <string name="permission_camera_denied">
         <![CDATA[चित्र लेने के लिए संग्रहण अनुमति की आवश्यकता होती है। कृपया सेटिंग्स> अनुमतियों से भंडारण की अनुमति दें।]]></string>
     <string msgid="6264217191555673260" name="search_menu_title">"खोजें"</string>
+    <string msgid="6043586758067023" name="selected">"चुना गया"</string>
     <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="1672349317127674378" name="tab">"टैब"</string>
+    <string msgid="5946805113151406391" name="template_percent">"<ns1:g id="PERCENTAGE">%1$d</ns1:g> प्रतिशत."</string>
     <string name="title_camera">कैमरा</string>
     <string name="title_choose_image_provider">चुनें</string>
     <string name="title_gallery">गेलरी</string>

@@ -14,6 +14,7 @@ import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.aplicacion.permisapp.R;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -27,6 +28,9 @@ public final class ActivityMainBinding implements ViewBinding {
 
   @NonNull
   public final TextInputEditText correoelectronicotxt;
+
+  @NonNull
+  public final TextInputLayout correoelectronicotxtL;
 
   @NonNull
   public final Button ingresarbtn;
@@ -47,13 +51,15 @@ public final class ActivityMainBinding implements ViewBinding {
   public final Button signinbtn;
 
   private ActivityMainBinding(@NonNull ScrollView rootView, @NonNull TextView ayuda,
-      @NonNull TextInputEditText correoelectronicotxt, @NonNull Button ingresarbtn,
+      @NonNull TextInputEditText correoelectronicotxt,
+      @NonNull TextInputLayout correoelectronicotxtL, @NonNull Button ingresarbtn,
       @NonNull TextView iniciarSes, @NonNull TextView olvidocontrabtn,
       @NonNull TextInputEditText passwordtxt, @NonNull ImageView privacyPol,
       @NonNull Button signinbtn) {
     this.rootView = rootView;
     this.ayuda = ayuda;
     this.correoelectronicotxt = correoelectronicotxt;
+    this.correoelectronicotxtL = correoelectronicotxtL;
     this.ingresarbtn = ingresarbtn;
     this.iniciarSes = iniciarSes;
     this.olvidocontrabtn = olvidocontrabtn;
@@ -101,6 +107,12 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.correoelectronicotxtL;
+      TextInputLayout correoelectronicotxtL = ViewBindings.findChildViewById(rootView, id);
+      if (correoelectronicotxtL == null) {
+        break missingId;
+      }
+
       id = R.id.ingresarbtn;
       Button ingresarbtn = ViewBindings.findChildViewById(rootView, id);
       if (ingresarbtn == null) {
@@ -138,7 +150,8 @@ public final class ActivityMainBinding implements ViewBinding {
       }
 
       return new ActivityMainBinding((ScrollView) rootView, ayuda, correoelectronicotxt,
-          ingresarbtn, iniciarSes, olvidocontrabtn, passwordtxt, privacyPol, signinbtn);
+          correoelectronicotxtL, ingresarbtn, iniciarSes, olvidocontrabtn, passwordtxt, privacyPol,
+          signinbtn);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

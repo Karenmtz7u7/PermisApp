@@ -12,18 +12,22 @@ import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.DialogFragment
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import com.aplicacion.permisapp.R
 import com.aplicacion.permisapp.databinding.ActivityUpdatepasswordBinding
 import com.aplicacion.permisapp.domain.repository.AuthRepository
+import com.aplicacion.permisapp.ui.viewmodels.MainActivityViewModel
+import com.aplicacion.permisapp.ui.viewmodels.UpdatePasswordViewModel
 
 class MainActivityUpdatePassword() : DialogFragment(), DialogInterface.OnShowListener {
     private val authRepository = AuthRepository()
+
     private lateinit var binding: ActivityUpdatepasswordBinding
-    var updateBtn : Button?=null
-    var cancel : ImageView?=null
+    private lateinit var viewModel: UpdatePasswordViewModel
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        activity?.let { activity->
+        activity?.let { activity ->
             binding = ActivityUpdatepasswordBinding.inflate(LayoutInflater.from(context))
 
             binding.let {
@@ -33,23 +37,29 @@ class MainActivityUpdatePassword() : DialogFragment(), DialogInterface.OnShowLis
                 val dialog = builder.create()
                 dialog.setOnShowListener(this)
 
-                return dialog
+                viewModel = ViewModelProvider(this).get(UpdatePasswordViewModel::class.java)
 
+                viewModel.messageLiveData.observe(this, Observer { message ->
+                    handleMessage(message)
+                })
+
+                return dialog
             }
         }
 
         return super.onCreateDialog(savedInstanceState)
     }
 
-    @SuppressLint("SuspiciousIndentation")
     override fun onShow(dialogInterface: DialogInterface?) {
         val dialog = dialog as? AlertDialog
         dialog?.let {
-            updateBtn = it.findViewById(R.id.updatePassbtn)
-            cancel = it.findViewById(R.id.cancelbtn)
-                updateBtn?.setOnClickListener {
-                    passupdate()
-                }
+            val updateBtn = it.findViewById<Button>(R.id.updatePassbtn)
+            val cancel = it.findViewById<ImageView>(R.id.cancelbtn)
+            updateBtn?.setOnClickListener {
+                val pass = binding.passwordtxt.text.toString()
+                val confirmPass = binding.passwordverifytxt.text.toString()
+                viewModel.updatePassword(pass, confirmPass)
+            }
 
             cancel?.setOnClickListener {
                 dismiss()
@@ -57,36 +67,18 @@ class MainActivityUpdatePassword() : DialogFragment(), DialogInterface.OnShowLis
         }
     }
 
-    private fun passupdate(){
-        val pass = binding.passwordtxt.text.toString()
-        val confirmPass = binding.passwordverifytxt.text.toString()
-        if (pass.isEmpty() || confirmPass.isEmpty()){
-            binding.textalert.text = "¡No puedes dejar cajas de texto vacias!"
-        }else{
-            if (pass == confirmPass){
-                if (authRepository.starSession()){
-                    authRepository.updatePassword(pass)?.addOnCompleteListener { task->
-                        if (task.isSuccessful){
-                            showMessage()
-                            dismiss()
-                        }else{
-                            showMessageError()
-                            dismiss()
-                        }
-                    }
-                }
-            }
-            else{
-                binding.textalert.text = "¡Las contraseñas no coinciden!"
-                binding.passwordverifytxt.setText("")
-            }
+    private fun handleMessage(message: UpdatePasswordViewModel.Message) {
+        when (message) {
+            is UpdatePasswordViewModel.Message.Success -> showMessage(message.message)
+            is UpdatePasswordViewModel.Message.Error -> showMessageError(message.message)
         }
     }
 
-    private fun showMessage(){
+
+    private fun showMessage(message : String){
         val view = View.inflate(requireContext(), R.layout.dialog_view, null)
         view.findViewById<TextView>(R.id.titleDialog).text = "¡La contraseña se ha cambiado!"
-        view.findViewById<TextView>(R.id.bodyDialog).text = "Se cambio exitosamente la contraseña"
+        view.findViewById<TextView>(R.id.bodyDialog).text = message
         val builder = AlertDialog.Builder(requireContext())
         builder.setView(view)
         val dialog = builder.create()
@@ -98,11 +90,11 @@ class MainActivityUpdatePassword() : DialogFragment(), DialogInterface.OnShowLis
             dialog.dismiss()
         }
     }
-    private fun showMessageError(){
+    private fun showMessageError(message : String){
         val view = View.inflate(requireContext(), R.layout.dialog_view, null)
         view.findViewById<ImageView>(R.id.imageDialog).setImageResource(R.drawable.ic_cancel)
         view.findViewById<TextView>(R.id.titleDialog).text = "¡Error al cambiar contraseña!"
-        view.findViewById<TextView>(R.id.bodyDialog).text = "Algo salió mal, intenta nuevamente"
+        view.findViewById<TextView>(R.id.bodyDialog).text = message
         view.findViewById<Button>(R.id.botonAlert).text = "Reintentar"
         view.findViewById<Button>(R.id.botonAlert).setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.rojo))
         val builder = AlertDialog.Builder(requireContext())
@@ -116,10 +108,5 @@ class MainActivityUpdatePassword() : DialogFragment(), DialogInterface.OnShowLis
             dialog.dismiss()
         }
     }
-
-
-
-
-
 
 }

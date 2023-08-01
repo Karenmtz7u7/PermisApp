@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.aplicacion.permisapp-mergeDebugResources-41:/values-zh/values-zh.xml",
+            "outputFile": "com.aplicacion.permisapp-mergeDebugResources-68:/values-zh/values-zh.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\anamj\\.gradle\\caches\\transforms-3\\8967ba88491ca1c96bf6b65e3a1856af\\transformed\\ucrop-2.2.6\\res\\values-zh\\values-zh.xml",
+                    "source": "C:\\Users\\anamj\\.gradle\\caches\\transforms-3\\bffafdbfe6e68343b48b2f3a3e1c8391\\transformed\\ucrop-2.2.6\\res\\values-zh\\values-zh.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",

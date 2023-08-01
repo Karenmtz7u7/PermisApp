@@ -6,27 +6,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.aplicacion.permisapp.domain.Models.Client
 import com.aplicacion.permisapp.domain.Models.Incidencias
 import com.aplicacion.permisapp.R
 import com.aplicacion.permisapp.ui.adapters.HomeAdapter
 import com.aplicacion.permisapp.databinding.FragmentHomeBinding
-import com.aplicacion.permisapp.domain.repository.AuthRepository
-import com.aplicacion.permisapp.domain.repository.ClientRepository
-import com.aplicacion.permisapp.domain.repository.IncidenciasRepository
+import com.aplicacion.permisapp.ui.viewmodels.HomeFragmentViewModel
 import com.bumptech.glide.Glide
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
-
     private lateinit var binding: FragmentHomeBinding
-    val clientRepository = ClientRepository()
-    val authRepository = AuthRepository()
-    private val modalMenu = com.aplicacion.permisapp.ui.view.BottomSheetFragment()
-    private var incidenciasRepository = IncidenciasRepository()
-    private var histories = ArrayList<Incidencias>()
+    private lateinit var viewModel: HomeFragmentViewModel
     private lateinit var adapter: HomeAdapter
-
+    private val histories = MutableLiveData<List<Incidencias>>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -34,6 +28,53 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentHomeBinding.inflate(layoutInflater)
+        viewModel = ViewModelProvider(this).get(HomeFragmentViewModel::class.java)
+
+        setupClickListeners()
+        setupRecyclerView()
+
+
+        val bottomSheetFragment = com.aplicacion.permisapp.ui.view.BottomSheetFragment()
+        binding.menubtn.setOnClickListener {
+            fragmentManager?.let { it1 -> bottomSheetFragment.show(it1, "BottomSheetDialog") }
+
+        }
+
+        val linearLayoutManager = LinearLayoutManager(this@HomeFragment.requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        binding.RecyclerViewHome.layoutManager = linearLayoutManager
+
+        return binding.root
+
+    }
+
+    private fun setupRecyclerView() {
+        val linearLayoutManager = LinearLayoutManager(this@HomeFragment.requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        binding.RecyclerViewHome.layoutManager = linearLayoutManager
+        adapter = HomeAdapter(this@HomeFragment.requireActivity())
+        binding.RecyclerViewHome.adapter = adapter
+    }
+
+
+
+    override fun onStart() {
+        super.onStart()
+        viewModel.getClientInfo().observe(viewLifecycleOwner, { clientInfo ->
+            binding.emaildefaultxt.text = clientInfo
+        })
+
+        viewModel.getClientImage().observe(viewLifecycleOwner, { clientImage ->
+            if (clientImage != null) {
+                if (clientImage.isNotEmpty()) {
+                    Glide.with(this).load(clientImage).centerCrop().into(binding.userimagetxt)
+                }
+            }
+        })
+
+        viewModel.getHistories()
+    }
+
+
+    private fun setupClickListeners() {
 
         binding.iconPerson.setOnClickListener {
             val intent = Intent(activity, MainActivityPerfil::class.java)
@@ -79,58 +120,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                 Intent(activity, MainActivitySinSueldo::class.java)
             startActivity(intent)
         }
-
-
-        val bottomSheetFragment = com.aplicacion.permisapp.ui.view.BottomSheetFragment()
-        binding.menubtn.setOnClickListener {
-            fragmentManager?.let { it1 -> bottomSheetFragment.show(it1, "BottomSheetDialog") }
-
-        }
-
-        val linearLayoutManager = LinearLayoutManager(this@HomeFragment.requireContext(), LinearLayoutManager.HORIZONTAL, false)
-        binding.RecyclerViewHome.layoutManager = linearLayoutManager
-
-        return binding.root
-
     }
-
-
-    override fun onStart() {
-        super.onStart()
-        getClient()
-        getHistories()
-    }
-    private fun getHistories() {
-
-        histories.clear()
-        incidenciasRepository.getLastTramits().get().addOnSuccessListener {
-
-            for (document in it){
-                val history = document.toObject(Incidencias::class.java)
-                history.id = history.id
-                histories.add(history)
-            }
-            adapter = HomeAdapter(this@HomeFragment.requireActivity(), histories)
-            binding.RecyclerViewHome.adapter    = adapter
-
-        }
-    }
-
-    private fun getClient() {
-        clientRepository.getSP(authRepository.getid()).addOnSuccessListener { document ->
-            if (document.exists()) {
-                val client = document.toObject(Client::class.java)
-                binding.emaildefaultxt.text = "${client?.nombre} ${client?.apellido}"
-
-                if (client?.image != null) {
-                    if (client.image != "") {
-                        Glide.with(this).load(client.image).centerCrop().into(binding.userimagetxt)
-                    }
-                }
-            }
-        }
-    }
-
 
 }
 
