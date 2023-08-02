@@ -1,5 +1,52 @@
 package com.aplicacion.permisapp.ui.viewmodels
 
+import android.Manifest
+import android.app.TimePickerDialog
+import android.content.Intent
+import android.content.pm.PackageManager
+import android.net.Uri
+import android.os.Bundle
+import android.util.Log
+import android.view.View
+import android.widget.ArrayAdapter
+import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
+import android.widget.TimePicker
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
+import androidx.biometric.BiometricManager
+import androidx.biometric.BiometricPrompt
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
+import androidx.core.view.isVisible
+import com.android.volley.Request
+import com.android.volley.RequestQueue
+import com.android.volley.Response
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
+import com.aplicacion.permisapp.R
+import com.aplicacion.permisapp.databinding.ActivityMainAsistenciaMedicaBinding
+import com.aplicacion.permisapp.domain.Models.Client
+import com.aplicacion.permisapp.domain.Models.Incidencias
+import com.aplicacion.permisapp.domain.repository.AuthRepository
+import com.aplicacion.permisapp.domain.repository.ClientRHRepository
+import com.aplicacion.permisapp.domain.repository.ClientRepository
+import com.aplicacion.permisapp.domain.repository.HistoriesRepository
+import com.aplicacion.permisapp.domain.repository.IncidenciasRepository
+import com.aplicacion.permisapp.ui.view.DatePiker
+import com.aplicacion.permisapp.ui.view.MainActivity_home
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
+import java.io.File
+import java.text.SimpleDateFormat
+import java.util.Calendar
+import java.util.Date
+import java.util.HashMap
+
 class MainActivityAsistenciaMedica : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainAsistenciaMedicaBinding
@@ -125,7 +172,8 @@ class MainActivityAsistenciaMedica : AppCompatActivity() {
     }
     private fun requestPermissions(){
         ActivityCompat.requestPermissions(this,
-            arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE,
+            arrayOf(
+                Manifest.permission.WRITE_EXTERNAL_STORAGE,
                 Manifest.permission.READ_EXTERNAL_STORAGE),200)
 
     }
@@ -464,7 +512,8 @@ class MainActivityAsistenciaMedica : AppCompatActivity() {
             promptInfo = BiometricPrompt.PromptInfo.Builder()
                 .setTitle("Incidencia: Consulta Médica")
                 .setSubtitle("¿Autorizas enviar la solicitud?")
-                .setAllowedAuthenticators(BiometricManager.Authenticators.BIOMETRIC_STRONG
+                .setAllowedAuthenticators(
+                    BiometricManager.Authenticators.BIOMETRIC_STRONG
                         or BiometricManager.Authenticators.DEVICE_CREDENTIAL)
                 .build()
         }
