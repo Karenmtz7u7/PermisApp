@@ -39,6 +39,7 @@
     <string name="clear_text_end_icon_content_description">מחיקת הטקסט</string>
     <string msgid="406453423630273620" name="close_drawer">"סגירת תפריט הניווט"</string>
     <string msgid="7573152094250666567" name="close_sheet">"סגירת הגיליון"</string>
+    <string msgid="5389587048670450460" name="collapsed">"מכווץ"</string>
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">הפעל</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">‏האפליקציה %1$s לא תפעל אם לא תפעיל את שירותי Google Play.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">‏הפעל את שירותי Google Play</string>
@@ -62,8 +63,10 @@
     <string msgid="8038256446254964252" name="default_error_message">"הקלט לא תקין"</string>
     <string msgid="4776854077120974966" name="default_error_msg">"שגיאה לא ידועה"</string>
     <string msgid="6312721426453364202" name="default_popup_window_title">"חלון קופץ"</string>
+    <string msgid="4057925834421392736" name="dialog">"תיבת דו-שיח"</string>
     <string msgid="1890207353314751437" name="dropdown_menu">"תפריט נפתח"</string>
     <string name="error_icon_content_description">שגיאה</string>
+    <string msgid="5974471714631304645" name="expanded">"מורחב"</string>
     <string name="exposed_dropdown_menu_content_description">הצגת התפריט הנפתח</string>
     <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"העתקת הקישור"</string>
     <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"פתיחה בדפדפן"</string>
@@ -80,7 +83,7 @@
     <string msgid="7309881387583143581" name="generic_error_user_canceled">"האימות בוטל על ידי המשתמש."</string>
     <string name="icon_content_description">סמל לתיבת דו-שיח</string>
     <string msgid="6827826412747255547" name="in_progress">"בתהליך"</string>
-    <string msgid="2486394087603402002" name="indeterminate">"עם סימון ובלי סימון"</string>
+    <string msgid="7933458017204019916" name="indeterminate">"מסומנת חלקית"</string>
     <string name="item_view_role_description">מקש Tab</string>
     <string name="material_clock_toggle_content_description">יש לבחור ב-AM או ב-PM</string>
     <string name="material_hour_selection">בחר שעה</string>
@@ -135,6 +138,8 @@
     <string msgid="875452955155264703" name="off">"כבוי"</string>
     <string msgid="8655164131929253426" name="on">"פועל"</string>
     <string name="password_toggle_content_description">הצגת סיסמה</string>
+    <string msgid="5941395253238309765" name="range_end">"סוף הטווח"</string>
+    <string msgid="7097486360902471446" name="range_start">"תחילת הטווח"</string>
     <string msgid="6264217191555673260" name="search_menu_title">"חיפוש"</string>
     <string msgid="6043586758067023" name="selected">"נבחר"</string>
     <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>

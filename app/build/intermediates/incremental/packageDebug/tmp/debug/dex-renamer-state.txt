@@ -1,4 +1,4 @@
-#Mon Jul 31 11:28:28 CST 2023
+#Mon Aug 07 11:31:31 CST 2023
 base.0=C\:\\Users\\anamj\\OneDrive\\Documentos\\PermisApp Residencias\\aplicacion\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\anamj\\OneDrive\\Documentos\\PermisApp Residencias\\aplicacion\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.10=C\:\\Users\\anamj\\OneDrive\\Documentos\\PermisApp Residencias\\aplicacion\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex

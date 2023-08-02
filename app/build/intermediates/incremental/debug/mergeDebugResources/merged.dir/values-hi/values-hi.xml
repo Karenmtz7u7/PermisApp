@@ -38,6 +38,7 @@
     <string name="clear_text_end_icon_content_description">टेक्स्ट मिटाएं</string>
     <string msgid="406453423630273620" name="close_drawer">"नेविगेशन मेन्यू बंद करें"</string>
     <string msgid="7573152094250666567" name="close_sheet">"शीट बंद करें"</string>
+    <string msgid="5389587048670450460" name="collapsed">"छोटा किया गया"</string>
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">चालू करें</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">जब तक आप Google Play सेवाएं चालू नहीं करते, %1$s काम नहीं करेगा.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Google Play सेवाएं चालू करें</string>
@@ -61,6 +62,7 @@
     <string msgid="8038256446254964252" name="default_error_message">"अमान्य इनपुट"</string>
     <string msgid="4776854077120974966" name="default_error_msg">"अनजान गड़बड़ी"</string>
     <string msgid="6312721426453364202" name="default_popup_window_title">"पॉप-अप विंडो"</string>
+    <string msgid="4057925834421392736" name="dialog">"डायलॉग"</string>
     <string msgid="1890207353314751437" name="dropdown_menu">"ड्रॉपडाउन मेन्यू"</string>
     <string name="error_camera_app_not_found">कैमरा ऐप नहीं मिला</string>
     <string name="error_failed_pick_gallery_image">गैलरी की तस्वीर लेने में विफल</string>
@@ -69,6 +71,7 @@
     <string name="error_failed_to_crop_image">चित्र को काटना में विफल</string>
     <string name="error_icon_content_description">गड़बड़ी</string>
     <string name="error_task_cancelled">कार्य रद्द कर दिया गया</string>
+    <string msgid="5974471714631304645" name="expanded">"बड़ा किया गया"</string>
     <string name="exposed_dropdown_menu_content_description">ड्रॉपडाउन मेन्यू दिखाएं</string>
     <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"लिंक कॉपी करें"</string>
     <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"ब्राउज़र में खोलें"</string>
@@ -85,7 +88,7 @@
     <string msgid="7309881387583143581" name="generic_error_user_canceled">"उपयोगकर्ता ने पुष्टि करने की प्रक्रिया रद्द की."</string>
     <string name="icon_content_description">डायलॉग का आइकॉन</string>
     <string msgid="6827826412747255547" name="in_progress">"जारी है"</string>
-    <string msgid="2486394087603402002" name="indeterminate">"चेकबॉक्स पर न तो सही का निशान लगाया गया, न ही पहले से लगा सही का निशान हटाया गया"</string>
+    <string msgid="7933458017204019916" name="indeterminate">"कुछ विकल्पों को चुना गया"</string>
     <string name="item_view_role_description">टैब</string>
     <string name="material_clock_toggle_content_description">AM या PM चुनें</string>
     <string name="material_hour_selection">घंटा चुनें</string>
@@ -142,6 +145,8 @@
     <string name="password_toggle_content_description">पासवर्ड दिखाएं</string>
     <string name="permission_camera_denied">
         <![CDATA[चित्र लेने के लिए संग्रहण अनुमति की आवश्यकता होती है। कृपया सेटिंग्स> अनुमतियों से भंडारण की अनुमति दें।]]></string>
+    <string msgid="5941395253238309765" name="range_end">"रेंज की सीमा"</string>
+    <string msgid="7097486360902471446" name="range_start">"रेंज की शुरुआत"</string>
     <string msgid="6264217191555673260" name="search_menu_title">"खोजें"</string>
     <string msgid="6043586758067023" name="selected">"चुना गया"</string>
     <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>

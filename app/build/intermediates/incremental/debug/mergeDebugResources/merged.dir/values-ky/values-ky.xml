@@ -37,6 +37,7 @@
     <string name="clear_text_end_icon_content_description">Текстти тазалоо</string>
     <string msgid="406453423630273620" name="close_drawer">"Чабыттоо менюсун жабуу"</string>
     <string msgid="7573152094250666567" name="close_sheet">"Баракты жабуу"</string>
+    <string msgid="5389587048670450460" name="collapsed">"Жыйыштырылды"</string>
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Иштетүү</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">Google Play кызматтарын иштетмейиңизче %1$s иштебейт.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Google Play кызматтарын иштетүү</string>
@@ -60,8 +61,10 @@
     <string msgid="8038256446254964252" name="default_error_message">"Киргизилген маалымат жараксыз"</string>
     <string msgid="4776854077120974966" name="default_error_msg">"Белгисиз ката"</string>
     <string msgid="6312721426453364202" name="default_popup_window_title">"Калкыма терезе"</string>
+    <string msgid="4057925834421392736" name="dialog">"Диалог"</string>
     <string msgid="1890207353314751437" name="dropdown_menu">"Түрүлмө меню"</string>
     <string name="error_icon_content_description">Ката</string>
+    <string msgid="5974471714631304645" name="expanded">"Жайылып көрсөтүлдү"</string>
     <string name="exposed_dropdown_menu_content_description">Түрүлмө менюну көрсөтүү</string>
     <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"Шилтемени көчүрүү"</string>
     <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"Серепчиден ачуу"</string>
@@ -78,7 +81,7 @@
     <string msgid="7309881387583143581" name="generic_error_user_canceled">"Аутентификацияны колдонуучу жокко чыгарды."</string>
     <string name="icon_content_description">Диалог сүрөтчөсү</string>
     <string msgid="6827826412747255547" name="in_progress">"Аткарылууда"</string>
-    <string msgid="2486394087603402002" name="indeterminate">"Белгиленген же белгиленбеген эмес"</string>
+    <string msgid="7933458017204019916" name="indeterminate">"Жарым-жартылай текшерилди"</string>
     <string name="item_view_role_description">Өтмөк</string>
     <string name="material_clock_toggle_content_description">Тандоо: AM же PM</string>
     <string name="material_hour_selection">Саат тандоо</string>
@@ -133,6 +136,8 @@
     <string msgid="875452955155264703" name="off">"Өчүк"</string>
     <string msgid="8655164131929253426" name="on">"Күйүк"</string>
     <string name="password_toggle_content_description">Сырсөздү көрсөтүү</string>
+    <string msgid="5941395253238309765" name="range_end">"Диапазондун аягы"</string>
+    <string msgid="7097486360902471446" name="range_start">"Диапазондун башы"</string>
     <string msgid="6264217191555673260" name="search_menu_title">"Издөө"</string>
     <string msgid="6043586758067023" name="selected">"Тандалды"</string>
     <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>

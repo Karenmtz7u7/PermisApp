@@ -922,7 +922,6 @@
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
     <color name="tooltip_background_dark">#e6616161</color>
     <color name="tooltip_background_light">#e6FFFFFF</color>
-    <color name="triangle_color">#FF0000</color>
     <color name="ucrop_color_active_aspect_ratio">@color/ucrop_color_widget_active</color>
     <color name="ucrop_color_active_controls_color">@color/ucrop_color_widget_active</color>
     <color name="ucrop_color_black">#000</color>
@@ -1640,6 +1639,7 @@
     <item name="action_menu_presenter" type="id"/>
     <item name="androidx_compose_ui_view_composition_context" type="id"/>
     <item name="compose_view_saveable_id_tag" type="id"/>
+    <item name="consume_window_insets_tag" type="id"/>
     <item name="fragment_container_view_tag" type="id"/>
     <item name="ghost_view" type="id"/>
     <item name="ghost_view_holder" type="id"/>
@@ -1647,6 +1647,7 @@
     <item name="hide_in_inspector_tag" type="id"/>
     <item name="home" type="id"/>
     <item name="inspection_slot_table_set" type="id"/>
+    <item name="is_pooling_container_tag" type="id"/>
     <item name="item_touch_helper_previous_elevation" type="id"/>
     <item name="line1" type="id"/>
     <item name="line3" type="id"/>
@@ -1667,6 +1668,7 @@
     <item name="navigation_bar_item_large_label_view" type="id"/>
     <item name="navigation_bar_item_small_label_view" type="id"/>
     <item name="parent_matrix" type="id"/>
+    <item name="pooling_container_listener_holder_tag" type="id"/>
     <item name="progress_circular" type="id"/>
     <item name="progress_horizontal" type="id"/>
     <item name="row_index_key" type="id"/>
@@ -1841,6 +1843,7 @@
     <string name="clear_text_end_icon_content_description">Clear text</string>
     <string name="close_drawer">"Close navigation menu"</string>
     <string name="close_sheet">"Close sheet"</string>
+    <string name="collapsed">Collapsed</string>
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Enable</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text"><ns2:g id="app_name">%1$s</ns2:g> won\'t work unless you enable Google Play services.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Enable Google Play services</string>
@@ -1866,6 +1869,7 @@
     <string name="default_notification_channel_id">fcm_default_channel</string>
     <string name="default_popup_window_title" ns1:ignore="ExtraTranslation">"Pop-Up Window"</string>
     <string name="default_web_client_id" translatable="false">705438412342-3uglmqpklh1crfj2ms6d4l8le7vu8836.apps.googleusercontent.com</string>
+    <string name="dialog">"Dialog"</string>
     <string name="dropdown_menu">"Dropdown menu"</string>
     <string description="Screen reader announcement for when a checkbox is on error. [CHAR LIMIT=NONE]" name="error_a11y_label">
     Error: invalid
@@ -1877,6 +1881,7 @@
     <string name="error_failed_to_crop_image">Failed to crop image</string>
     <string name="error_icon_content_description">Error</string>
     <string name="error_task_cancelled">Task Cancelled</string>
+    <string name="expanded">Expanded</string>
     <string name="exposed_dropdown_menu_content_description">Show dropdown menu</string>
     <string name="fab_transformation_scrim_behavior" translatable="false">com.google.android.material.transformation.FabTransformationScrimBehavior</string>
     <string name="fab_transformation_sheet_behavior" translatable="false">com.google.android.material.transformation.FabTransformationSheetBehavior</string>
@@ -1906,7 +1911,7 @@
     <string description="Content description for an icon that appears in the title area of a dialog" name="icon_content_description">Dialog Icon</string>
     <string name="image_picker_provider_authority_suffix" translatable="false">.imagepicker.provider</string>
     <string name="in_progress">In progress</string>
-    <string name="indeterminate">Neither checked nor unchecked</string>
+    <string name="indeterminate">Partially checked</string>
     <string name="item_view_role_description">Tab</string>
     <string name="m3_sys_motion_easing_emphasized" translatable="false">path(M 0,0 C 0.05, 0, 0.133333, 0.06, 0.166666, 0.4 C 0.208333, 0.82, 0.25, 1, 1, 1)</string>
     <string name="m3_sys_motion_easing_emphasized_accelerate" translatable="false">cubic-bezier(0.3, 0.0, 0.8, 0.2)</string>
@@ -2013,6 +2018,8 @@
     <string name="permission_camera_denied">
         <![CDATA[Camera permission is needed to take a picture. Please allow permission from Settings > Permissions.]]></string>
     <string name="project_id" translatable="false">dbpermisapp</string>
+    <string name="range_end">"Range end"</string>
+    <string name="range_start">"Range start"</string>
     <string name="search_menu_title">Search</string>
     <string name="selected">Selected</string>
     <string name="status_bar_notification_info_overflow">999+</string>
@@ -2021,6 +2028,7 @@
     <string name="title_camera">Camera</string>
     <string name="title_choose_image_provider">Choose</string>
     <string name="title_gallery">Gallery</string>
+    <string name="toggle_password_visibility">Toggle Password Visibility</string>
     <string name="ucrop_crop">Crop</string>
     <string name="ucrop_error_input_data_is_absent" translatable="false">Both input and output Uri must be specified</string>
     <string name="ucrop_label_edit_photo">Edit Photo</string>
@@ -5242,6 +5250,13 @@
     </style>
     <style name="DialogWindowTheme">
         <item name="android:windowClipToOutline">false</item>
+    </style>
+    <style name="FloatingDialogTheme">
+        <item name="android:windowIsFloating">false</item>
+    </style>
+    <style name="FloatingDialogWindowTheme">
+        <item name="android:windowClipToOutline">false</item>
+        <item name="android:dialogTheme">@style/FloatingDialogTheme</item>
     </style>
     <style name="MaterialAlertDialog.Material3" parent="MaterialAlertDialog.MaterialComponents">
     <item name="enforceMaterialTheme">true</item>

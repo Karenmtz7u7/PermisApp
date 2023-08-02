@@ -1,130 +1,130 @@
 [
     {
-        "merged": "com.aplicacion.permisapp-mergeDebugResources-69:/layout/activity_main_register_user.xml",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main_register_user.xml"
+        "merged": "com.aplicacion.permisapp-mergeDebugResources-74:/layout/status_tramite_cardview.xml",
+        "source": "com.aplicacion.permisapp-main-77:/layout/status_tramite_cardview.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-mergeDebugResources-69:/layout/status_tramite_cardview.xml",
-        "source": "com.aplicacion.permisapp-main-72:/layout/status_tramite_cardview.xml"
+        "merged": "com.aplicacion.permisapp-mergeDebugResources-74:/layout/dialog_view.xml",
+        "source": "com.aplicacion.permisapp-main-77:/layout/dialog_view.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-mergeDebugResources-69:/layout/activity_main_lactancia.xml",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main_lactancia.xml"
+        "merged": "com.aplicacion.permisapp-mergeDebugResources-74:/layout/activity_main_splash.xml",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main_splash.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-mergeDebugResources-69:/layout/fragment_tramites.xml",
-        "source": "com.aplicacion.permisapp-main-72:/layout/fragment_tramites.xml"
+        "merged": "com.aplicacion.permisapp-mergeDebugResources-74:/layout/fragment_tramites.xml",
+        "source": "com.aplicacion.permisapp-main-77:/layout/fragment_tramites.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-mergeDebugResources-69:/layout/bottomsheet_fragment.xml",
-        "source": "com.aplicacion.permisapp-main-72:/layout/bottomsheet_fragment.xml"
+        "merged": "com.aplicacion.permisapp-mergeDebugResources-74:/layout/activity_main_sin_sueldo.xml",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main_sin_sueldo.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-mergeDebugResources-69:/layout/dialog_progress.xml",
-        "source": "com.aplicacion.permisapp-main-72:/layout/dialog_progress.xml"
+        "merged": "com.aplicacion.permisapp-mergeDebugResources-74:/layout/activity_main_restablecer.xml",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main_restablecer.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-mergeDebugResources-69:/layout/activity_main_asistencia_medica.xml",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main_asistencia_medica.xml"
+        "merged": "com.aplicacion.permisapp-mergeDebugResources-74:/layout/activity_main_notofications.xml",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main_notofications.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-mergeDebugResources-69:/layout/activity_main_irse_antes.xml",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main_irse_antes.xml"
+        "merged": "com.aplicacion.permisapp-mergeDebugResources-74:/layout/activity_main_email_valid.xml",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main_email_valid.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-mergeDebugResources-69:/layout/fragment_notify.xml",
-        "source": "com.aplicacion.permisapp-main-72:/layout/fragment_notify.xml"
+        "merged": "com.aplicacion.permisapp-mergeDebugResources-74:/layout/list_item.xml",
+        "source": "com.aplicacion.permisapp-main-77:/layout/list_item.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-mergeDebugResources-69:/layout/dialog_view.xml",
-        "source": "com.aplicacion.permisapp-main-72:/layout/dialog_view.xml"
+        "merged": "com.aplicacion.permisapp-mergeDebugResources-74:/layout/activity_updatepassword.xml",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_updatepassword.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-mergeDebugResources-69:/layout/activity_main_status_tramites.xml",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main_status_tramites.xml"
+        "merged": "com.aplicacion.permisapp-mergeDebugResources-74:/layout/home_cardview.xml",
+        "source": "com.aplicacion.permisapp-main-77:/layout/home_cardview.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-mergeDebugResources-69:/layout/activity_main_delete_account.xml",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main_delete_account.xml"
+        "merged": "com.aplicacion.permisapp-mergeDebugResources-74:/layout/activity_main.xml",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-mergeDebugResources-69:/layout/history_cardview.xml",
-        "source": "com.aplicacion.permisapp-main-72:/layout/history_cardview.xml"
+        "merged": "com.aplicacion.permisapp-mergeDebugResources-74:/layout/activity_main_edit_profile.xml",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main_edit_profile.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-mergeDebugResources-69:/layout/activity_main_otro.xml",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main_otro.xml"
+        "merged": "com.aplicacion.permisapp-mergeDebugResources-74:/layout/activity_main_irse_antes.xml",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main_irse_antes.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-mergeDebugResources-69:/layout/activity_updatepassword.xml",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_updatepassword.xml"
+        "merged": "com.aplicacion.permisapp-mergeDebugResources-74:/layout/activity_main_asistencia_medica.xml",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main_asistencia_medica.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-mergeDebugResources-69:/layout/activity_main_sin_sueldo.xml",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main_sin_sueldo.xml"
+        "merged": "com.aplicacion.permisapp-mergeDebugResources-74:/layout/activity_main_delete_account.xml",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main_delete_account.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-mergeDebugResources-69:/layout/activity_main_notofications.xml",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main_notofications.xml"
+        "merged": "com.aplicacion.permisapp-mergeDebugResources-74:/layout/activity_main_dia_economico.xml",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main_dia_economico.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-mergeDebugResources-69:/layout/access_code.xml",
-        "source": "com.aplicacion.permisapp-main-72:/layout/access_code.xml"
+        "merged": "com.aplicacion.permisapp-mergeDebugResources-74:/layout/access_code.xml",
+        "source": "com.aplicacion.permisapp-main-77:/layout/access_code.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-mergeDebugResources-69:/layout/list_item.xml",
-        "source": "com.aplicacion.permisapp-main-72:/layout/list_item.xml"
+        "merged": "com.aplicacion.permisapp-mergeDebugResources-74:/layout/activity_main_llegar_tarde.xml",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main_llegar_tarde.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-mergeDebugResources-69:/layout/activity_main_email_valid.xml",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main_email_valid.xml"
+        "merged": "com.aplicacion.permisapp-mergeDebugResources-74:/layout/fragment_notify.xml",
+        "source": "com.aplicacion.permisapp-main-77:/layout/fragment_notify.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-mergeDebugResources-69:/layout/activity_main_restablecer.xml",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main_restablecer.xml"
+        "merged": "com.aplicacion.permisapp-mergeDebugResources-74:/layout/activity_main_register_user.xml",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main_register_user.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-mergeDebugResources-69:/layout/fragment_home.xml",
-        "source": "com.aplicacion.permisapp-main-72:/layout/fragment_home.xml"
+        "merged": "com.aplicacion.permisapp-mergeDebugResources-74:/layout/bottomsheet_fragment.xml",
+        "source": "com.aplicacion.permisapp-main-77:/layout/bottomsheet_fragment.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-mergeDebugResources-69:/layout/activity_main_dia_economico.xml",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main_dia_economico.xml"
+        "merged": "com.aplicacion.permisapp-mergeDebugResources-74:/layout/history_cardview.xml",
+        "source": "com.aplicacion.permisapp-main-77:/layout/history_cardview.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-mergeDebugResources-69:/layout/activity_main_perfil.xml",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main_perfil.xml"
+        "merged": "com.aplicacion.permisapp-mergeDebugResources-74:/layout/activity_main_home.xml",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main_home.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-mergeDebugResources-69:/layout/activity_main_splash.xml",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main_splash.xml"
+        "merged": "com.aplicacion.permisapp-mergeDebugResources-74:/layout/activity_main_otro.xml",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main_otro.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-mergeDebugResources-69:/layout/home_cardview.xml",
-        "source": "com.aplicacion.permisapp-main-72:/layout/home_cardview.xml"
+        "merged": "com.aplicacion.permisapp-mergeDebugResources-74:/layout/activity_main_format_pdf.xml",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main_format_pdf.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-mergeDebugResources-69:/layout/activity_main_home.xml",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main_home.xml"
+        "merged": "com.aplicacion.permisapp-mergeDebugResources-74:/layout/activity_main_history.xml",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main_history.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-mergeDebugResources-69:/layout/activity_main_llegar_tarde.xml",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main_llegar_tarde.xml"
+        "merged": "com.aplicacion.permisapp-mergeDebugResources-74:/layout/activity_main_status_tramites.xml",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main_status_tramites.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-mergeDebugResources-69:/layout/activity_main_format_pdf.xml",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main_format_pdf.xml"
+        "merged": "com.aplicacion.permisapp-mergeDebugResources-74:/layout/activity_main_perfil.xml",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main_perfil.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-mergeDebugResources-69:/layout/activity_main.xml",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main.xml"
+        "merged": "com.aplicacion.permisapp-mergeDebugResources-74:/layout/dialog_progress.xml",
+        "source": "com.aplicacion.permisapp-main-77:/layout/dialog_progress.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-mergeDebugResources-69:/layout/activity_main_edit_profile.xml",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main_edit_profile.xml"
+        "merged": "com.aplicacion.permisapp-mergeDebugResources-74:/layout/fragment_home.xml",
+        "source": "com.aplicacion.permisapp-main-77:/layout/fragment_home.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-mergeDebugResources-69:/layout/activity_main_history.xml",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main_history.xml"
+        "merged": "com.aplicacion.permisapp-mergeDebugResources-74:/layout/activity_main_lactancia.xml",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main_lactancia.xml"
     }
 ]

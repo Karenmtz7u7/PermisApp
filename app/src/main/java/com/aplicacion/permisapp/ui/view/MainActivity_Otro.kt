@@ -38,7 +38,7 @@ import java.util.*
 
 class MainActivity_Otro : AppCompatActivity() {
 
-    private lateinit var viewModel: ActivityOtroViewModel
+
     private lateinit var binding: ActivityMainOtroBinding
     private val authRepository = AuthRepository()
     val clientRepository = ClientRepository()

@@ -7,6 +7,7 @@
     <string name="horario">Aun no has agregado tu horario \n Pulsa aquí para subirlo</string>
     <string name="guardar_cambios">Guardar cambios</string>
     <string name="default_notification_channel_id">fcm_default_channel</string>
+    <string name="toggle_password_visibility">Toggle Password Visibility</string>
 
     <string-array name="jefes">
         <item>  Víctor Ochoa Luna</item>

@@ -2,6 +2,7 @@ package com.aplicacion.permisapp.ui.view
 
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.app.TimePickerDialog
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -164,7 +165,8 @@ class MainActivityAsistenciaMedica : AppCompatActivity() {
     }
     private fun requestPermissions(){
         ActivityCompat.requestPermissions(this,
-            arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE,
+            arrayOf(
+                Manifest.permission.WRITE_EXTERNAL_STORAGE,
                 Manifest.permission.READ_EXTERNAL_STORAGE),200)
 
     }
@@ -201,24 +203,24 @@ class MainActivityAsistenciaMedica : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == fileResult && resultCode == RESULT_OK && data != null && data.data != null){
 
-                val fileUri = data.data
-                val namePDF = fileUri?.lastPathSegment
-                binding.pdfEvidenciatxt.text = namePDF.toString()
+            val fileUri = data.data
+            val namePDF = fileUri?.lastPathSegment
+            binding.pdfEvidenciatxt.text = namePDF.toString()
 
 
-                val clipData = data.clipData
+            val clipData = data.clipData
 
-                if ( clipData != null){
-                    for (i in 0 until clipData.itemCount){
-                        val uri = clipData.getItemAt(i).uri
-                        uri?.let { fileUpload(it) }
-                    }
-
-                }else{
-                    val uri = data.data
+            if ( clipData != null){
+                for (i in 0 until clipData.itemCount){
+                    val uri = clipData.getItemAt(i).uri
                     uri?.let { fileUpload(it) }
-
                 }
+
+            }else{
+                val uri = data.data
+                uri?.let { fileUpload(it) }
+
+            }
 
         }
     }
@@ -315,20 +317,20 @@ class MainActivityAsistenciaMedica : AppCompatActivity() {
                     noEmpleado = noEmpleado,
                     hora = sTime,
                 )
-                            incidenciasRepository.create(incidencias).addOnCompleteListener {
-                                if (it.isSuccessful) {
-                                    showMessage()
-                                    excel()
-                                    //aqui voy a agregar un progressDialog xd
-                                } else {
-                                    Toast.makeText(this@MainActivityAsistenciaMedica,
-                                        "Hubo un error al procesar la solicitud ${it.exception.toString()}",
-                                        Toast.LENGTH_SHORT).show()
-                                }
-                            }
-                }else{
-                    nohayfirma()
+                incidenciasRepository.create(incidencias).addOnCompleteListener {
+                    if (it.isSuccessful) {
+                        showMessage()
+                        excel()
+                        //aqui voy a agregar un progressDialog xd
+                    } else {
+                        Toast.makeText(this@MainActivityAsistenciaMedica,
+                            "Hubo un error al procesar la solicitud ${it.exception.toString()}",
+                            Toast.LENGTH_SHORT).show()
+                    }
                 }
+            }else{
+                nohayfirma()
+            }
         }
     }
     //este formulario valida que no se vayan a meter datos vacios xd
@@ -503,8 +505,9 @@ class MainActivityAsistenciaMedica : AppCompatActivity() {
             promptInfo = BiometricPrompt.PromptInfo.Builder()
                 .setTitle("Incidencia: Consulta Médica")
                 .setSubtitle("¿Autorizas enviar la solicitud?")
-                .setAllowedAuthenticators(BiometricManager.Authenticators.BIOMETRIC_STRONG
-                        or BiometricManager.Authenticators.DEVICE_CREDENTIAL)
+                .setAllowedAuthenticators(
+                    BiometricManager.Authenticators.BIOMETRIC_STRONG
+                            or BiometricManager.Authenticators.DEVICE_CREDENTIAL)
                 .build()
         }
     }

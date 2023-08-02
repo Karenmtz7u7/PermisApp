@@ -1920,7 +1920,6 @@ color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
 color tooltip_background_dark
 color tooltip_background_light
-color triangle_color
 color ucrop_color_active_aspect_ratio
 color ucrop_color_active_controls_color
 color ucrop_color_black
@@ -2768,6 +2767,8 @@ drawable ic_photo_camera_black_48dp
 drawable ic_rfc
 drawable ic_round_menu_24
 drawable ic_upload
+drawable ic_visibility
+drawable ic_visibility_off
 drawable ic_work
 drawable line_2
 drawable line_4
@@ -3048,6 +3049,7 @@ id compress
 id confirm_button
 id constraint
 id consultabtn
+id consume_window_insets_tag
 id container
 id containerView
 id content
@@ -3219,6 +3221,7 @@ id inspection_slot_table_set
 id invisible
 id inward
 id irseantesbtn
+id is_pooling_container_tag
 id italic
 id item_touch_helper_previous_elevation
 id jumpToEnd
@@ -3369,6 +3372,7 @@ id percent
 id perfilbtn
 id phoneusertxt
 id pin
+id pooling_container_listener_holder_tag
 id position
 id postLayout
 id pressed
@@ -3870,6 +3874,7 @@ string character_counter_pattern
 string clear_text_end_icon_content_description
 string close_drawer
 string close_sheet
+string collapsed
 string common_google_play_services_enable_button
 string common_google_play_services_enable_text
 string common_google_play_services_enable_title
@@ -3895,6 +3900,7 @@ string default_error_msg
 string default_notification_channel_id
 string default_popup_window_title
 string default_web_client_id
+string dialog
 string dropdown_menu
 string error_a11y_label
 string error_camera_app_not_found
@@ -3904,6 +3910,7 @@ string error_failed_to_create_camera_image_file
 string error_failed_to_crop_image
 string error_icon_content_description
 string error_task_cancelled
+string expanded
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
@@ -4033,6 +4040,8 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string permission_camera_denied
 string project_id
+string range_end
+string range_start
 string search_menu_title
 string selected
 string status_bar_notification_info_overflow
@@ -4041,6 +4050,7 @@ string template_percent
 string title_camera
 string title_choose_image_provider
 string title_gallery
+string toggle_password_visibility
 string ucrop_crop
 string ucrop_error_input_data_is_absent
 string ucrop_label_edit_photo
@@ -4323,6 +4333,8 @@ style CardView
 style CardView_Dark
 style CardView_Light
 style DialogWindowTheme
+style FloatingDialogTheme
+style FloatingDialogWindowTheme
 style MaterialAlertDialog_Material3
 style MaterialAlertDialog_Material3_Body_Text
 style MaterialAlertDialog_Material3_Body_Text_CenterStacked

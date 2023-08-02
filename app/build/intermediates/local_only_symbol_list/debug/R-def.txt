@@ -62,6 +62,8 @@ drawable ic_person_24
 drawable ic_rfc
 drawable ic_round_menu_24
 drawable ic_upload
+drawable ic_visibility
+drawable ic_visibility_off
 drawable ic_work
 drawable line_2
 drawable line_4
@@ -301,6 +303,7 @@ string guardar_cambios
 string hello_blank_fragment
 string horario
 string project_id
+string toggle_password_visibility
 style Theme.PermisApp
 style Theme.PermisApp.NoActionBar
 style asistencia_

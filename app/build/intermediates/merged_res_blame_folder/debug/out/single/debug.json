@@ -1,474 +1,482 @@
 [
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_rounded_button.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/rounded_button.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/layout_bottomsheet_fragment.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/layout/bottomsheet_fragment.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/layout_activity_main_home.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main_home.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/xml_data_extraction_rules.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/layout_dialog_view.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/layout/dialog_view.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/layout_activity_main_register_user.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main_register_user.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/mipmap-hdpi_ic_icon_icon_background.png.flat",
-        "source": "com.aplicacion.permisapp-main-72:/mipmap-hdpi/ic_icon_icon_background.png"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/mipmap-xhdpi_ic_icon_icon_round.png.flat",
+        "source": "com.aplicacion.permisapp-main-77:/mipmap-xhdpi/ic_icon_icon_round.png"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_line_4.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/line_4.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/layout_history_cardview.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/layout/history_cardview.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_ic_inciden.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/ic_inciden.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/layout_activity_main_history.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main_history.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_rectangle_3.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/rectangle_3.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_ic_round_menu_24.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/ic_round_menu_24.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_ic_keyboard_arrow_right_.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/ic_keyboard_arrow_right_.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/layout_activity_updatepassword.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_updatepassword.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/mipmap-anydpi-v26_ic_icon_icon_round.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/mipmap-anydpi-v26/ic_icon_icon_round.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_line_2.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/line_2.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/layout_fragment_notify.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/layout/fragment_notify.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/layout_list_item.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/layout/list_item.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/layout_activity_main_status_tramites.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main_status_tramites.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/mipmap-mdpi_ic_icon_icon_background.png.flat",
+        "source": "com.aplicacion.permisapp-main-77:/mipmap-mdpi/ic_icon_icon_background.png"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/mipmap-xxxhdpi_ic_icon_icon_foreground.png.flat",
-        "source": "com.aplicacion.permisapp-main-72:/mipmap-xxxhdpi/ic_icon_icon_foreground.png"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/mipmap-xxxhdpi_ic_icon_icon_foreground.png.flat",
+        "source": "com.aplicacion.permisapp-main-77:/mipmap-xxxhdpi/ic_icon_icon_foreground.png"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/mipmap-xxhdpi_ic_icon_icon_foreground.png.flat",
-        "source": "com.aplicacion.permisapp-main-72:/mipmap-xxhdpi/ic_icon_icon_foreground.png"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/mipmap-xxxhdpi_ic_icon_icon.png.flat",
+        "source": "com.aplicacion.permisapp-main-77:/mipmap-xxxhdpi/ic_icon_icon.png"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable-v24_ellipse_7.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable-v24/ellipse_7.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable-v24_mobile_login_rafiki.png.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable-v24/mobile_login_rafiki.png"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/mipmap-hdpi_ic_icon_icon_round.png.flat",
-        "source": "com.aplicacion.permisapp-main-72:/mipmap-hdpi/ic_icon_icon_round.png"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_ic_baseline_keyboard_backspace_24.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/ic_baseline_keyboard_backspace_24.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/layout_fragment_home.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/layout/fragment_home.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_ic_work.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/ic_work.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_ic_email_.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/ic_email_.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/layout_activity_main_llegar_tarde.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main_llegar_tarde.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_ic_work.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/ic_work.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_ic_visibility.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/ic_visibility.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/layout_activity_main_dia_economico.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main_dia_economico.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_bottomsheetbackground.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/bottomsheetbackground.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_ic_incidencia.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/ic_incidencia.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/xml_backup_rules.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/xml/backup_rules.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_rectangle_4.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/rectangle_4.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/mipmap-xxhdpi_ic_icon_icon_foreground.png.flat",
+        "source": "com.aplicacion.permisapp-main-77:/mipmap-xxhdpi/ic_icon_icon_foreground.png"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_btnmenus.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/btnmenus.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/mipmap-xhdpi_ic_icon_icon_background.png.flat",
+        "source": "com.aplicacion.permisapp-main-77:/mipmap-xhdpi/ic_icon_icon_background.png"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/ic_launcher_background.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_rectangle_2.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/rectangle_2.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_rectangle_gray.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/rectangle_gray.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/mipmap-anydpi-v26_ic_icon_icon.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/mipmap-anydpi-v26/ic_icon_icon.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_ic_outline_vpn_key_24.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/ic_outline_vpn_key_24.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_line_4.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/line_4.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/mipmap-xhdpi_ic_icon_icon_foreground.png.flat",
-        "source": "com.aplicacion.permisapp-main-72:/mipmap-xhdpi/ic_icon_icon_foreground.png"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/layout_activity_main_notofications.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main_notofications.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_ic_output_24.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/ic_output_24.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/menu_bottom_menu.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/menu/bottom_menu.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_ellipse_6.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/ellipse_6.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable-v24/ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/layout_activity_main_format_pdf.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main_format_pdf.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/layout_activity_main_dia_economico.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main_dia_economico.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/layout_activity_main_delete_account.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main_delete_account.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_ic_rfc.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/ic_rfc.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/layout_activity_main_llegar_tarde.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main_llegar_tarde.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_rectangle_4.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/rectangle_4.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/layout_bottomsheet_fragment.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/layout/bottomsheet_fragment.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_ic_upload.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/ic_upload.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_line_2.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/line_2.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_ic_baseline_baby_changing_station_24.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/ic_baseline_baby_changing_station_24.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/layout_activity_main_otro.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main_otro.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_ic_calendar.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/ic_calendar.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/menu_bottom_menu.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/menu/bottom_menu.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/layout_activity_main_lactancia.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main_lactancia.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_ic_check.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/ic_check.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/layout_dialog_progress.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/layout/dialog_progress.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_ic_outline_phone_24.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/ic_outline_phone_24.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/mipmap-mdpi_ic_icon_icon_round.png.flat",
+        "source": "com.aplicacion.permisapp-main-77:/mipmap-mdpi/ic_icon_icon_round.png"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/mipmap-xhdpi_ic_icon_icon.png.flat",
-        "source": "com.aplicacion.permisapp-main-72:/mipmap-xhdpi/ic_icon_icon.png"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/layout_access_code.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/layout/access_code.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/mipmap-xxxhdpi_ic_icon_icon_round.png.flat",
-        "source": "com.aplicacion.permisapp-main-72:/mipmap-xxxhdpi/ic_icon_icon_round.png"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/mipmap-hdpi_ic_icon_icon_round.png.flat",
+        "source": "com.aplicacion.permisapp-main-77:/mipmap-hdpi/ic_icon_icon_round.png"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_reset_password_bro.png.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/reset_password_bro.png"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_ic_lock_24.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/ic_lock_24.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/layout_activity_main_lactancia.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main_lactancia.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_ic_baseline_access_time_.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/ic_baseline_access_time_.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/mipmap-xxxhdpi_ic_icon_icon_background.png.flat",
-        "source": "com.aplicacion.permisapp-main-72:/mipmap-xxxhdpi/ic_icon_icon_background.png"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/mipmap-xxhdpi_ic_icon_icon_round.png.flat",
+        "source": "com.aplicacion.permisapp-main-77:/mipmap-xxhdpi/ic_icon_icon_round.png"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/layout_fragment_tramites.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/layout/fragment_tramites.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/layout_activity_main_perfil.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main_perfil.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_ic_baseline_baby_changing_station_24.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/ic_baseline_baby_changing_station_24.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_ic_baseline_local_hospital_24.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/ic_baseline_local_hospital_24.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_ic_person_24.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/ic_person_24.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/layout_activity_main_restablecer.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main_restablecer.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_ic_baseline_money_off_24.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/ic_baseline_money_off_24.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_ic_outline_phone_24.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/ic_outline_phone_24.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_rectangle_6.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/rectangle_6.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/layout_activity_main_delete_account.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main_delete_account.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_passwordupdate.png.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/passwordupdate.png"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/mipmap-xxhdpi_ic_icon_icon_background.png.flat",
+        "source": "com.aplicacion.permisapp-main-77:/mipmap-xxhdpi/ic_icon_icon_background.png"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/layout_activity_main_asistencia_medica.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main_asistencia_medica.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_ic_visibility_off.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/ic_visibility_off.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_user.png.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/user.png"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_passwordupdate.png.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/passwordupdate.png"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/layout_dialog_progress.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/layout/dialog_progress.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/mipmap-xxhdpi_ic_icon_icon.png.flat",
+        "source": "com.aplicacion.permisapp-main-77:/mipmap-xxhdpi/ic_icon_icon.png"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/mipmap-mdpi_ic_icon_icon_foreground.png.flat",
-        "source": "com.aplicacion.permisapp-main-72:/mipmap-mdpi/ic_icon_icon_foreground.png"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_rectangle_7.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/rectangle_7.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/mipmap-mdpi_ic_icon_icon_round.png.flat",
-        "source": "com.aplicacion.permisapp-main-72:/mipmap-mdpi/ic_icon_icon_round.png"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/layout_activity_main_sin_sueldo.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main_sin_sueldo.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/layout_activity_main_history.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main_history.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_ic_outline_delete_24.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/ic_outline_delete_24.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_ic_baseline_home_.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/ic_baseline_home_.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable-v24_signup.png.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable-v24/signup.png"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_ic_upload.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/ic_upload.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_ic_cancel.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/ic_cancel.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_ic_rfc.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/ic_rfc.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_ic_pdf.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/ic_pdf.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/xml_data_extraction_rules.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/xml/data_extraction_rules.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_ic_camera_24.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/ic_camera_24.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/mipmap-xxhdpi_ic_icon_icon_background.png.flat",
-        "source": "com.aplicacion.permisapp-main-72:/mipmap-xxhdpi/ic_icon_icon_background.png"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_user.png.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/user.png"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable-v24_mobile_login_rafiki.png.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable-v24/mobile_login_rafiki.png"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_firma.png.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/firma.png"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/layout_activity_main.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/layout_activity_main_email_valid.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main_email_valid.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/mipmap-xhdpi_ic_icon_icon_background.png.flat",
-        "source": "com.aplicacion.permisapp-main-72:/mipmap-xhdpi/ic_icon_icon_background.png"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/layout_fragment_tramites.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/layout/fragment_tramites.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/layout_activity_main_edit_profile.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main_edit_profile.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_ellipse_6.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/ellipse_6.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_linearlayoutcircle.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/linearlayoutcircle.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_reset_password_bro.png.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/reset_password_bro.png"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_ic_camera_24.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/ic_camera_24.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_ic_inciden.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/ic_inciden.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/mipmap-mdpi_ic_icon_icon_background.png.flat",
-        "source": "com.aplicacion.permisapp-main-72:/mipmap-mdpi/ic_icon_icon_background.png"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_rectangle_6.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/rectangle_6.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_delete_acountt.png.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/delete_acountt.png"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_ic_check.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/ic_check.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/mipmap-hdpi_ic_icon_icon_foreground.png.flat",
-        "source": "com.aplicacion.permisapp-main-72:/mipmap-hdpi/ic_icon_icon_foreground.png"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/mipmap-hdpi_ic_icon_icon_background.png.flat",
+        "source": "com.aplicacion.permisapp-main-77:/mipmap-hdpi/ic_icon_icon_background.png"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/layout_history_cardview.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/layout/history_cardview.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/mipmap-xxxhdpi_ic_icon_icon_round.png.flat",
+        "source": "com.aplicacion.permisapp-main-77:/mipmap-xxxhdpi/ic_icon_icon_round.png"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/layout_activity_updatepassword.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_updatepassword.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/layout_activity_main_status_tramites.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main_status_tramites.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_ic_round_menu_24.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/ic_round_menu_24.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/layout_activity_main_home.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main_home.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable-v24/ic_launcher_foreground.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_ic_outline_attach_money_.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/ic_outline_attach_money_.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/layout_activity_main_perfil.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main_perfil.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/mipmap-anydpi-v26_ic_icon_icon_round.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/mipmap-anydpi-v26/ic_icon_icon_round.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/mipmap-xxhdpi_ic_icon_icon.png.flat",
-        "source": "com.aplicacion.permisapp-main-72:/mipmap-xxhdpi/ic_icon_icon.png"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_bgcbx.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/bgcbx.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/mipmap-xxxhdpi_ic_icon_icon.png.flat",
-        "source": "com.aplicacion.permisapp-main-72:/mipmap-xxxhdpi/ic_icon_icon.png"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_ic_circle_right_24.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/ic_circle_right_24.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable-v24_logoteschi.png.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable-v24/logoteschi.png"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_ic_person_24.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/ic_person_24.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/layout_activity_main_irse_antes.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main_irse_antes.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/layout_activity_main_irse_antes.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main_irse_antes.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/layout_activity_main_notofications.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main_notofications.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_btnmenus.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/btnmenus.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_backgrounlayout.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/backgrounlayout.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable-v24_ellipse_7.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable-v24/ellipse_7.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_ic_outline_attach_money_.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/ic_outline_attach_money_.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/mipmap-hdpi_ic_icon_icon.png.flat",
+        "source": "com.aplicacion.permisapp-main-77:/mipmap-hdpi/ic_icon_icon.png"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/mipmap-anydpi-v26_ic_icon_icon.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/mipmap-anydpi-v26/ic_icon_icon.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/layout_fragment_notify.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/layout/fragment_notify.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/layout_access_code.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/layout/access_code.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_ic_baseline_home_.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/ic_baseline_home_.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_ic_pdf.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/ic_pdf.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_rectangle_gray.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/rectangle_gray.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_ic_check_24.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/ic_check_24.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_rectangle_5.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/rectangle_5.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_bgcbx.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/bgcbx.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/layout_home_cardview.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/layout/home_cardview.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_ic_baseline_keyboard_backspace_24.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/ic_baseline_keyboard_backspace_24.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_ic_outline_vpn_key_24.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/ic_outline_vpn_key_24.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_ic_lock_24.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/ic_lock_24.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_bottomsheetbackground.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/bottomsheetbackground.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_ic_incidencia.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/ic_incidencia.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/layout_activity_main_splash.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main_splash.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/layout_activity_main_edit_profile.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main_edit_profile.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_rectangle_7.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/rectangle_7.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_ic_check_24.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/ic_check_24.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/mipmap-mdpi_ic_icon_icon.png.flat",
-        "source": "com.aplicacion.permisapp-main-72:/mipmap-mdpi/ic_icon_icon.png"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/layout_activity_main_otro.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main_otro.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/mipmap-xxhdpi_ic_icon_icon_round.png.flat",
-        "source": "com.aplicacion.permisapp-main-72:/mipmap-xxhdpi/ic_icon_icon_round.png"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/layout_activity_main_splash.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main_splash.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_rectangle_5.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/rectangle_5.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable-v24_logoteschi.png.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable-v24/logoteschi.png"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_firma.png.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/firma.png"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_backgroundview.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/backgroundview.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/layout_activity_main_restablecer.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main_restablecer.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/layout_activity_main_format_pdf.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main_format_pdf.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/mipmap-hdpi_ic_icon_icon.png.flat",
-        "source": "com.aplicacion.permisapp-main-72:/mipmap-hdpi/ic_icon_icon.png"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/layout_status_tramite_cardview.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/layout/status_tramite_cardview.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_backgroundview.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/backgroundview.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_delete_acountt.png.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/delete_acountt.png"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/layout_activity_main_email_valid.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main_email_valid.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/layout_activity_main.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/layout_activity_main_sin_sueldo.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main_sin_sueldo.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/mipmap-hdpi_ic_icon_icon_foreground.png.flat",
+        "source": "com.aplicacion.permisapp-main-77:/mipmap-hdpi/ic_icon_icon_foreground.png"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/xml_backup_rules.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/xml/backup_rules.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/layout_dialog_view.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/layout/dialog_view.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_ic_circle_right_24.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/ic_circle_right_24.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/mipmap-xxxhdpi_ic_icon_icon_background.png.flat",
+        "source": "com.aplicacion.permisapp-main-77:/mipmap-xxxhdpi/ic_icon_icon_background.png"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/layout_status_tramite_cardview.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/layout/status_tramite_cardview.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_escudo.png.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/escudo.png"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_ic_cancel.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/ic_cancel.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_ic_notifications_24.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/ic_notifications_24.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/layout_activity_main_register_user.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/layout/activity_main_register_user.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/mipmap-mdpi_ic_icon_icon_foreground.png.flat",
+        "source": "com.aplicacion.permisapp-main-77:/mipmap-mdpi/ic_icon_icon_foreground.png"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_escudo.png.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/escudo.png"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_ic_keyboard_arrow_right_.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/ic_keyboard_arrow_right_.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_ic_baseline_access_time_.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/ic_baseline_access_time_.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_ic_baseline_money_off_24.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/ic_baseline_money_off_24.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_ic_calendar.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/ic_calendar.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_ic_outline_numbers_24.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/ic_outline_numbers_24.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_ic_outline_delete_24.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/ic_outline_delete_24.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_backgrounlayout.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/backgrounlayout.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_ic_history_24.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/ic_history_24.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_ic_history_24.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/ic_history_24.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_ic_baseline_local_hospital_24.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/ic_baseline_local_hospital_24.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_rectangle_3.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/rectangle_3.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/layout_home_cardview.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/layout/home_cardview.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_ic_email_.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/ic_email_.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/layout_list_item.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/layout/list_item.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/mipmap-mdpi_ic_icon_icon.png.flat",
+        "source": "com.aplicacion.permisapp-main-77:/mipmap-mdpi/ic_icon_icon.png"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_ic_notifications_24.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/ic_notifications_24.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/font_poppins.ttf.flat",
+        "source": "com.aplicacion.permisapp-main-77:/font/poppins.ttf"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable-v24_signup.png.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable-v24/signup.png"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/layout_activity_main_asistencia_medica.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/layout/activity_main_asistencia_medica.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/font_poppins.ttf.flat",
-        "source": "com.aplicacion.permisapp-main-72:/font/poppins.ttf"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_linearlayoutcircle.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/linearlayoutcircle.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_rectangle_2.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/rectangle_2.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/mipmap-xhdpi_ic_icon_icon.png.flat",
+        "source": "com.aplicacion.permisapp-main-77:/mipmap-xhdpi/ic_icon_icon.png"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/drawable_ic_outline_numbers_24.xml.flat",
-        "source": "com.aplicacion.permisapp-main-72:/drawable/ic_outline_numbers_24.xml"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_ic_output_24.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/ic_output_24.xml"
     },
     {
-        "merged": "com.aplicacion.permisapp-merged_res-70:/mipmap-xhdpi_ic_icon_icon_round.png.flat",
-        "source": "com.aplicacion.permisapp-main-72:/mipmap-xhdpi/ic_icon_icon_round.png"
+        "merged": "com.aplicacion.permisapp-merged_res-75:/mipmap-xhdpi_ic_icon_icon_foreground.png.flat",
+        "source": "com.aplicacion.permisapp-main-77:/mipmap-xhdpi/ic_icon_icon_foreground.png"
+    },
+    {
+        "merged": "com.aplicacion.permisapp-merged_res-75:/drawable_rounded_button.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/drawable/rounded_button.xml"
+    },
+    {
+        "merged": "com.aplicacion.permisapp-merged_res-75:/layout_fragment_home.xml.flat",
+        "source": "com.aplicacion.permisapp-main-77:/layout/fragment_home.xml"
     }
 ]

@@ -1,4 +1,4 @@
-package com.application.karenmtz.pruebas.ui.theme
+package com.aplicacion.permisapp.ui.theme
 
 import android.app.Activity
 import android.os.Build

@@ -38,6 +38,7 @@
     <string name="clear_text_end_icon_content_description">پاک کردن نوشتار</string>
     <string msgid="406453423630273620" name="close_drawer">"بستن منوی پیمایش"</string>
     <string msgid="7573152094250666567" name="close_sheet">"بستن برگ"</string>
+    <string msgid="5389587048670450460" name="collapsed">"جمع‌شده"</string>
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">فعال کردن</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">‏تا وقتی «خدمات Google Play» را فعال نکنید، %1$s کار نمی‌کند.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">‏‫فعال کردن «خدمات Google Play»</string>
@@ -61,6 +62,7 @@
     <string msgid="8038256446254964252" name="default_error_message">"ورودی نامعتبر"</string>
     <string msgid="4776854077120974966" name="default_error_msg">"خطای ناشناس"</string>
     <string msgid="6312721426453364202" name="default_popup_window_title">"پنجره بالاپر"</string>
+    <string msgid="4057925834421392736" name="dialog">"کادر گفتگو"</string>
     <string msgid="1890207353314751437" name="dropdown_menu">"منوی کرکره‌ای"</string>
     <string name="error_camera_app_not_found">برنامه دوربین پیدا نشد</string>
     <string name="error_failed_pick_gallery_image">خطا در انتخاب عکس از گالری</string>
@@ -69,6 +71,7 @@
     <string name="error_failed_to_crop_image">خطا در برش عکس</string>
     <string name="error_icon_content_description">خطا</string>
     <string name="error_task_cancelled">عملیات لغو شد</string>
+    <string msgid="5974471714631304645" name="expanded">"ازهم بازشده"</string>
     <string name="exposed_dropdown_menu_content_description">نمایش منوی کرکره‌ای</string>
     <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"کپی پیوند"</string>
     <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"بازکردن در مرورگر"</string>
@@ -85,7 +88,7 @@
     <string msgid="7309881387583143581" name="generic_error_user_canceled">"کاربر اصالت‌سنجی را لغو کرد."</string>
     <string name="icon_content_description">نماد کادر گفتگو</string>
     <string msgid="6827826412747255547" name="in_progress">"درحال انجام"</string>
-    <string msgid="2486394087603402002" name="indeterminate">"نه علامت‌گذاری شده و نه علامت‌گذاری آن لغو شده"</string>
+    <string msgid="7933458017204019916" name="indeterminate">"برخی موارد علامت‌گذاری شده است"</string>
     <string name="item_view_role_description">برگه</string>
     <string name="material_clock_toggle_content_description">انتخاب .ق.ظ. یا ب.ظ.</string>
     <string name="material_hour_selection">انتخاب ساعت</string>
@@ -142,6 +145,8 @@
     <string name="password_toggle_content_description">نمایش گذرواژه</string>
     <string name="permission_camera_denied">
         <![CDATA[دسترسی فضای خارجی برای گرفتن عکس لازم است. لطفا دسترسی فضای خارجی را از تنظیمات فعال کنید < دسترسی ها]]></string>
+    <string msgid="5941395253238309765" name="range_end">"پایان محدوده"</string>
+    <string msgid="7097486360902471446" name="range_start">"شروع محدوده"</string>
     <string msgid="6264217191555673260" name="search_menu_title">"جستجو"</string>
     <string msgid="6043586758067023" name="selected">"انتخاب شد"</string>
     <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>

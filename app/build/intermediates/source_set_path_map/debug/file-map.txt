@@ -1,72 +1,77 @@
-com.aplicacion.permisapp-lifecycle-viewmodel-ktx-2.5.1-0 C:\Users\anamj\.gradle\caches\transforms-3\0122576280a6cf2214bc69f3ff1629aa\transformed\lifecycle-viewmodel-ktx-2.5.1\res
-com.aplicacion.permisapp-lifecycle-runtime-ktx-2.5.1-1 C:\Users\anamj\.gradle\caches\transforms-3\022b54f9ef7ebd11e0859560ccb2b57e\transformed\lifecycle-runtime-ktx-2.5.1\res
-com.aplicacion.permisapp-ui-geometry-1.1.1-2 C:\Users\anamj\.gradle\caches\transforms-3\05400825c171f58e78e005e058356fa5\transformed\ui-geometry-1.1.1\res
-com.aplicacion.permisapp-runtime-1.1.1-3 C:\Users\anamj\.gradle\caches\transforms-3\0d7cce4aaf231c39f2bd323b4bce75cc\transformed\runtime-1.1.1\res
-com.aplicacion.permisapp-ui-text-1.1.1-4 C:\Users\anamj\.gradle\caches\transforms-3\10e59935556f4c603cceb67eb92211b3\transformed\ui-text-1.1.1\res
-com.aplicacion.permisapp-lifecycle-process-2.4.1-5 C:\Users\anamj\.gradle\caches\transforms-3\1bf538d67bad1ac383003c88d2fd781f\transformed\lifecycle-process-2.4.1\res
-com.aplicacion.permisapp-navigation-compose-2.5.3-6 C:\Users\anamj\.gradle\caches\transforms-3\1d8e94e2b067a45cb15d5219682ef8fb\transformed\navigation-compose-2.5.3\res
-com.aplicacion.permisapp-emoji2-1.2.0-7 C:\Users\anamj\.gradle\caches\transforms-3\1dc4a4ad9ad64f0851d202f5c5e41a45\transformed\emoji2-1.2.0\res
-com.aplicacion.permisapp-emoji2-views-helper-1.2.0-8 C:\Users\anamj\.gradle\caches\transforms-3\1e02c692c1eca8528a162aff8b070694\transformed\emoji2-views-helper-1.2.0\res
-com.aplicacion.permisapp-material-ripple-1.1.1-9 C:\Users\anamj\.gradle\caches\transforms-3\1e59ebbf5eede1fd8d1be345bf80ef6b\transformed\material-ripple-1.1.1\res
-com.aplicacion.permisapp-lifecycle-livedata-core-ktx-2.4.0-10 C:\Users\anamj\.gradle\caches\transforms-3\26547bfcb0e6ea22b19b5e995b91cd81\transformed\lifecycle-livedata-core-ktx-2.4.0\res
-com.aplicacion.permisapp-core-1.8.0-11 C:\Users\anamj\.gradle\caches\transforms-3\334112a054a67e5a51f837d8c1d21448\transformed\core-1.8.0\res
-com.aplicacion.permisapp-transition-1.2.0-12 C:\Users\anamj\.gradle\caches\transforms-3\36f6a7f5fda1ce7db532c51b8a9e1dea\transformed\transition-1.2.0\res
-com.aplicacion.permisapp-foundation-1.1.1-13 C:\Users\anamj\.gradle\caches\transforms-3\37c1028539682d96aa522876487c9c03\transformed\foundation-1.1.1\res
-com.aplicacion.permisapp-ui-unit-1.1.1-14 C:\Users\anamj\.gradle\caches\transforms-3\42e151045c8397bcb5c4a0d67ca43287\transformed\ui-unit-1.1.1\res
-com.aplicacion.permisapp-drawerlayout-1.1.1-15 C:\Users\anamj\.gradle\caches\transforms-3\436034298a4eead8478333003228ab48\transformed\drawerlayout-1.1.1\res
-com.aplicacion.permisapp-material-1.1.1-16 C:\Users\anamj\.gradle\caches\transforms-3\55295b83f263f0cf381110558b8eacbd\transformed\material-1.1.1\res
-com.aplicacion.permisapp-lifecycle-livedata-ktx-2.4.0-17 C:\Users\anamj\.gradle\caches\transforms-3\56ec322701c77bcdc3569ff586714f11\transformed\lifecycle-livedata-ktx-2.4.0\res
-com.aplicacion.permisapp-ui-graphics-1.1.1-18 C:\Users\anamj\.gradle\caches\transforms-3\5ec51b20b8b839b2bfa45da95bada224\transformed\ui-graphics-1.1.1\res
-com.aplicacion.permisapp-material-1.7.0-19 C:\Users\anamj\.gradle\caches\transforms-3\6793e0336767df26f484e751757081d9\transformed\material-1.7.0\res
-com.aplicacion.permisapp-play-services-basement-18.1.0-20 C:\Users\anamj\.gradle\caches\transforms-3\68ac8efc88deee1be7d82811e633e44c\transformed\play-services-basement-18.1.0\res
-com.aplicacion.permisapp-browser-1.4.0-21 C:\Users\anamj\.gradle\caches\transforms-3\6d5c3aa9f615fc1d677e45b2d29b2b51\transformed\browser-1.4.0\res
-com.aplicacion.permisapp-activity-ktx-1.5.1-22 C:\Users\anamj\.gradle\caches\transforms-3\723cd57d541480be9f7fd1bd18ba5738\transformed\activity-ktx-1.5.1\res
-com.aplicacion.permisapp-savedstate-1.2.0-23 C:\Users\anamj\.gradle\caches\transforms-3\72b6b1b185009981cb1a4e5ccfdaf12e\transformed\savedstate-1.2.0\res
-com.aplicacion.permisapp-runtime-saveable-1.1.1-24 C:\Users\anamj\.gradle\caches\transforms-3\7652accaead7370c6510e9e2c41983e1\transformed\runtime-saveable-1.1.1\res
-com.aplicacion.permisapp-firebase-common-20.2.0-25 C:\Users\anamj\.gradle\caches\transforms-3\79192eef4829d7010bca3b188fb0bc86\transformed\firebase-common-20.2.0\res
-com.aplicacion.permisapp-constraintlayout-2.1.4-26 C:\Users\anamj\.gradle\caches\transforms-3\791a1a3bad817f8b24470a7eeeca894a\transformed\constraintlayout-2.1.4\res
-com.aplicacion.permisapp-navigation-runtime-2.5.3-27 C:\Users\anamj\.gradle\caches\transforms-3\7957810c0e98359c4fa3795459bb7ee5\transformed\navigation-runtime-2.5.3\res
-com.aplicacion.permisapp-lifecycle-livedata-2.4.0-28 C:\Users\anamj\.gradle\caches\transforms-3\79c0c9880bd925d801967d5d878979db\transformed\lifecycle-livedata-2.4.0\res
-com.aplicacion.permisapp-core-ktx-1.8.0-29 C:\Users\anamj\.gradle\caches\transforms-3\8823444e29501cd5b73e903f26cc873b\transformed\core-ktx-1.8.0\res
-com.aplicacion.permisapp-ui-util-1.1.1-30 C:\Users\anamj\.gradle\caches\transforms-3\8b8d362b874ce503c1c8d1758a32b973\transformed\ui-util-1.1.1\res
-com.aplicacion.permisapp-firebase-messaging-23.1.0-31 C:\Users\anamj\.gradle\caches\transforms-3\8c19071995450b5f9c63d023d39e8cb1\transformed\firebase-messaging-23.1.0\res
-com.aplicacion.permisapp-animation-core-1.1.1-32 C:\Users\anamj\.gradle\caches\transforms-3\92b647c367b0dcb247c659ebf971fae8\transformed\animation-core-1.1.1\res
-com.aplicacion.permisapp-cardview-1.0.0-33 C:\Users\anamj\.gradle\caches\transforms-3\951a41c04670ced2fac37459e455583b\transformed\cardview-1.0.0\res
-com.aplicacion.permisapp-ui-tooling-preview-1.1.1-34 C:\Users\anamj\.gradle\caches\transforms-3\984ec7a19436e97c0444a052b19358a8\transformed\ui-tooling-preview-1.1.1\res
-com.aplicacion.permisapp-savedstate-ktx-1.2.0-35 C:\Users\anamj\.gradle\caches\transforms-3\99cbac9ca26c16d9bdec9d1cd6b08094\transformed\savedstate-ktx-1.2.0\res
-com.aplicacion.permisapp-biometric-1.1.0-36 C:\Users\anamj\.gradle\caches\transforms-3\9c13e5c0951ba6e126272234557ca798\transformed\biometric-1.1.0\res
-com.aplicacion.permisapp-appcompat-resources-1.5.1-37 C:\Users\anamj\.gradle\caches\transforms-3\a4e15a706bb25de2ff1699b794148e07\transformed\appcompat-resources-1.5.1\res
-com.aplicacion.permisapp-annotation-experimental-1.1.0-38 C:\Users\anamj\.gradle\caches\transforms-3\a83d7bdbb0f44f942918ff90f0ecbc23\transformed\annotation-experimental-1.1.0\res
-com.aplicacion.permisapp-appcompat-1.5.1-39 C:\Users\anamj\.gradle\caches\transforms-3\ac910ccaa31aa4d9053ab16502e20de5\transformed\appcompat-1.5.1\res
-com.aplicacion.permisapp-fragment-1.3.6-40 C:\Users\anamj\.gradle\caches\transforms-3\ae4a3668467d1d4608e353b2c7e6997d\transformed\fragment-1.3.6\res
-com.aplicacion.permisapp-play-services-base-18.0.1-41 C:\Users\anamj\.gradle\caches\transforms-3\b3ec8ba4deaa68620d2e0211740de64a\transformed\play-services-base-18.0.1\res
-com.aplicacion.permisapp-navigation-runtime-ktx-2.5.3-42 C:\Users\anamj\.gradle\caches\transforms-3\b62353c39e861a0800c763a4eafe92a6\transformed\navigation-runtime-ktx-2.5.3\res
-com.aplicacion.permisapp-lifecycle-livedata-core-2.5.1-43 C:\Users\anamj\.gradle\caches\transforms-3\b9ab2385133c2b26c24826377b71629d\transformed\lifecycle-livedata-core-2.5.1\res
-com.aplicacion.permisapp-glide-4.13.2-44 C:\Users\anamj\.gradle\caches\transforms-3\bacd982eba98e39d7a67add1dbd834b8\transformed\glide-4.13.2\res
-com.aplicacion.permisapp-imagepicker-2.1-45 C:\Users\anamj\.gradle\caches\transforms-3\bc74faa100a9c834997287935ef5b54d\transformed\imagepicker-2.1\res
-com.aplicacion.permisapp-ucrop-2.2.6-46 C:\Users\anamj\.gradle\caches\transforms-3\bffafdbfe6e68343b48b2f3a3e1c8391\transformed\ucrop-2.2.6\res
-com.aplicacion.permisapp-lifecycle-viewmodel-compose-2.5.1-47 C:\Users\anamj\.gradle\caches\transforms-3\bffb701def0d466fccc1cfa47151c0a7\transformed\lifecycle-viewmodel-compose-2.5.1\res
-com.aplicacion.permisapp-navigation-common-ktx-2.5.3-48 C:\Users\anamj\.gradle\caches\transforms-3\c3b9332fb8d76fceec9c4ac6d610b6da\transformed\navigation-common-ktx-2.5.3\res
-com.aplicacion.permisapp-material-icons-core-1.1.1-49 C:\Users\anamj\.gradle\caches\transforms-3\c8501563b8574b2cbd0cd8eb852e0dc4\transformed\material-icons-core-1.1.1\res
-com.aplicacion.permisapp-startup-runtime-1.1.1-50 C:\Users\anamj\.gradle\caches\transforms-3\c96a53b576e2d41ddfb211c04ba6d1e7\transformed\startup-runtime-1.1.1\res
-com.aplicacion.permisapp-lifecycle-runtime-2.5.1-51 C:\Users\anamj\.gradle\caches\transforms-3\cca65ce0377ddb451c7c0cc2dcac4cbf\transformed\lifecycle-runtime-2.5.1\res
-com.aplicacion.permisapp-activity-compose-1.5.1-52 C:\Users\anamj\.gradle\caches\transforms-3\d26cf7d95d4602d0c02fe10ee1f11ed5\transformed\activity-compose-1.5.1\res
-com.aplicacion.permisapp-recyclerview-1.1.0-53 C:\Users\anamj\.gradle\caches\transforms-3\d4e5859961bc1ce05bd78d4df854a10a\transformed\recyclerview-1.1.0\res
-com.aplicacion.permisapp-lifecycle-viewmodel-savedstate-2.5.1-54 C:\Users\anamj\.gradle\caches\transforms-3\d515eb3baee228668aa833d8c8f36b5e\transformed\lifecycle-viewmodel-savedstate-2.5.1\res
-com.aplicacion.permisapp-foundation-layout-1.1.1-55 C:\Users\anamj\.gradle\caches\transforms-3\d73fa182f0ecb91c112c8b40f9de3d74\transformed\foundation-layout-1.1.1\res
-com.aplicacion.permisapp-navigation-common-2.5.3-56 C:\Users\anamj\.gradle\caches\transforms-3\daa05a08b4cc48cedbbb8bc9589dc8a2\transformed\navigation-common-2.5.3\res
-com.aplicacion.permisapp-viewpager2-1.0.0-57 C:\Users\anamj\.gradle\caches\transforms-3\dddf2871b033a060a6bee88b6f43774a\transformed\viewpager2-1.0.0\res
-com.aplicacion.permisapp-lifecycle-viewmodel-2.5.1-58 C:\Users\anamj\.gradle\caches\transforms-3\e1dd43589a32c1309f889043f602c153\transformed\lifecycle-viewmodel-2.5.1\res
-com.aplicacion.permisapp-activity-1.5.1-59 C:\Users\anamj\.gradle\caches\transforms-3\e62d024334ce9b5a113fd7787d2cf966\transformed\activity-1.5.1\res
-com.aplicacion.permisapp-ui-1.1.1-60 C:\Users\anamj\.gradle\caches\transforms-3\e987c9bb750a4b2d8ec45b939fd83e5d\transformed\ui-1.1.1\res
-com.aplicacion.permisapp-animation-1.1.1-61 C:\Users\anamj\.gradle\caches\transforms-3\ec2e848a9822e43cd64af6e4c3de95b2\transformed\animation-1.1.1\res
-com.aplicacion.permisapp-coordinatorlayout-1.1.0-62 C:\Users\anamj\.gradle\caches\transforms-3\ee1abc62d5b8674d7e701fc006a02574\transformed\coordinatorlayout-1.1.0\res
-com.aplicacion.permisapp-profileinstaller-1.1.0-63 C:\Users\anamj\.gradle\caches\transforms-3\f9f192f3be365311003c9b54501e1861\transformed\profileinstaller-1.1.0\res
-com.aplicacion.permisapp-google-services-64 C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\build\generated\res\google-services\debug
-com.aplicacion.permisapp-resValues-65 C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\build\generated\res\resValues\debug
-com.aplicacion.permisapp-rs-66 C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\build\generated\res\rs\debug
-com.aplicacion.permisapp-packageDebugResources-67 C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
-com.aplicacion.permisapp-packageDebugResources-68 C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
-com.aplicacion.permisapp-merged_res-69 C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\build\intermediates\merged_res\debug
-com.aplicacion.permisapp-debug-70 C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\debug\res
-com.aplicacion.permisapp-main-71 C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\res
+com.aplicacion.permisapp-lifecycle-process-2.4.1-0 C:\Users\anamj\.gradle\caches\transforms-3\00a92b83aba68c11a52ba6e457ea7c31\transformed\lifecycle-process-2.4.1\res
+com.aplicacion.permisapp-material-1.3.0-1 C:\Users\anamj\.gradle\caches\transforms-3\02a21c1a2675f2470361e03195878e1d\transformed\material-1.3.0\res
+com.aplicacion.permisapp-recyclerview-1.1.0-2 C:\Users\anamj\.gradle\caches\transforms-3\04b77735d1c5a3ddfde29b266f369440\transformed\recyclerview-1.1.0\res
+com.aplicacion.permisapp-profileinstaller-1.2.0-3 C:\Users\anamj\.gradle\caches\transforms-3\061f146ebe763477c3157a36850fbf72\transformed\profileinstaller-1.2.0\res
+com.aplicacion.permisapp-lifecycle-viewmodel-2.5.1-4 C:\Users\anamj\.gradle\caches\transforms-3\102693541da5cf265e00b12a09159e36\transformed\lifecycle-viewmodel-2.5.1\res
+com.aplicacion.permisapp-viewpager2-1.0.0-5 C:\Users\anamj\.gradle\caches\transforms-3\10fa228f90fc47b5518585d47a7f99b1\transformed\viewpager2-1.0.0\res
+com.aplicacion.permisapp-activity-ktx-1.5.1-6 C:\Users\anamj\.gradle\caches\transforms-3\14b8b6c490b42629c60a51c3ca3d4988\transformed\activity-ktx-1.5.1\res
+com.aplicacion.permisapp-fragment-1.3.6-7 C:\Users\anamj\.gradle\caches\transforms-3\193eb8bf9ed576cfd082af7341cc8eea\transformed\fragment-1.3.6\res
+com.aplicacion.permisapp-activity-1.5.1-8 C:\Users\anamj\.gradle\caches\transforms-3\1decbd9401392beaa616760a05c946ac\transformed\activity-1.5.1\res
+com.aplicacion.permisapp-browser-1.4.0-9 C:\Users\anamj\.gradle\caches\transforms-3\207e00fcf6018bfcee0ba72239b91941\transformed\browser-1.4.0\res
+com.aplicacion.permisapp-navigation-runtime-ktx-2.5.3-10 C:\Users\anamj\.gradle\caches\transforms-3\21730de8a599b3736f3296e192abfa27\transformed\navigation-runtime-ktx-2.5.3\res
+com.aplicacion.permisapp-appcompat-1.5.1-11 C:\Users\anamj\.gradle\caches\transforms-3\2317f6cabe6bd6cbcd15a388fb40e1b3\transformed\appcompat-1.5.1\res
+com.aplicacion.permisapp-startup-runtime-1.1.1-12 C:\Users\anamj\.gradle\caches\transforms-3\2694f26cd4a5f71128d2124c4697439f\transformed\startup-runtime-1.1.1\res
+com.aplicacion.permisapp-lifecycle-livedata-2.4.0-13 C:\Users\anamj\.gradle\caches\transforms-3\28d29bc4e8c5210c99cc1a5996560bc1\transformed\lifecycle-livedata-2.4.0\res
+com.aplicacion.permisapp-ui-graphics-1.3.0-14 C:\Users\anamj\.gradle\caches\transforms-3\2bbfabffae7f9a1adab5421d037ffb6e\transformed\ui-graphics-1.3.0\res
+com.aplicacion.permisapp-lifecycle-runtime-ktx-2.5.1-15 C:\Users\anamj\.gradle\caches\transforms-3\315a4817ccf860cb6481163eecba52fb\transformed\lifecycle-runtime-ktx-2.5.1\res
+com.aplicacion.permisapp-navigation-common-2.5.3-16 C:\Users\anamj\.gradle\caches\transforms-3\361f43391153cf9028dcc4ffbc9d6bcf\transformed\navigation-common-2.5.3\res
+com.aplicacion.permisapp-foundation-layout-1.3.0-17 C:\Users\anamj\.gradle\caches\transforms-3\3973a0b52fd66e8899524f13bac90dac\transformed\foundation-layout-1.3.0\res
+com.aplicacion.permisapp-imagepicker-2.1-18 C:\Users\anamj\.gradle\caches\transforms-3\39c9a65b5bfe62ae225ec96f32036d46\transformed\imagepicker-2.1\res
+com.aplicacion.permisapp-lifecycle-viewmodel-compose-2.5.1-19 C:\Users\anamj\.gradle\caches\transforms-3\429aee6526c6c480944184fdb38ec1b1\transformed\lifecycle-viewmodel-compose-2.5.1\res
+com.aplicacion.permisapp-runtime-saveable-1.3.0-20 C:\Users\anamj\.gradle\caches\transforms-3\443820d5d80456552011d0c36ba5abd5\transformed\runtime-saveable-1.3.0\res
+com.aplicacion.permisapp-lifecycle-runtime-2.5.1-21 C:\Users\anamj\.gradle\caches\transforms-3\47f7ae2b8cba0719f05c58e745f6a491\transformed\lifecycle-runtime-2.5.1\res
+com.aplicacion.permisapp-ui-tooling-preview-1.3.0-22 C:\Users\anamj\.gradle\caches\transforms-3\489247eadeb28b9c9e8da6097717b733\transformed\ui-tooling-preview-1.3.0\res
+com.aplicacion.permisapp-customview-poolingcontainer-1.0.0-23 C:\Users\anamj\.gradle\caches\transforms-3\4f94a5defebb5be6cc59e97836fcaf00\transformed\customview-poolingcontainer-1.0.0\res
+com.aplicacion.permisapp-lifecycle-viewmodel-savedstate-2.5.1-24 C:\Users\anamj\.gradle\caches\transforms-3\5238c5780073dc4ea5fe7aab9a8f72d8\transformed\lifecycle-viewmodel-savedstate-2.5.1\res
+com.aplicacion.permisapp-material3-1.0.0-25 C:\Users\anamj\.gradle\caches\transforms-3\52515b318cdbd666775ea244e8368ff2\transformed\material3-1.0.0\res
+com.aplicacion.permisapp-navigation-compose-2.5.3-26 C:\Users\anamj\.gradle\caches\transforms-3\5b85e6a9d2a26bf876f5c632e59727d6\transformed\navigation-compose-2.5.3\res
+com.aplicacion.permisapp-runtime-1.3.0-27 C:\Users\anamj\.gradle\caches\transforms-3\5c4cb13d1f33b026f0ed969134dbdb07\transformed\runtime-1.3.0\res
+com.aplicacion.permisapp-ui-tooling-1.3.0-28 C:\Users\anamj\.gradle\caches\transforms-3\5f6aa437ece401e17342eb380c45a8fd\transformed\ui-tooling-1.3.0\res
+com.aplicacion.permisapp-ui-tooling-data-1.3.0-29 C:\Users\anamj\.gradle\caches\transforms-3\687a90f9ac645eb0e73625b52fe6983b\transformed\ui-tooling-data-1.3.0\res
+com.aplicacion.permisapp-material-1.7.0-30 C:\Users\anamj\.gradle\caches\transforms-3\75fde5066a1eb06b464ac10c72734c39\transformed\material-1.7.0\res
+com.aplicacion.permisapp-ui-text-1.3.0-31 C:\Users\anamj\.gradle\caches\transforms-3\787193596df038c78a48bd51312b56bb\transformed\ui-text-1.3.0\res
+com.aplicacion.permisapp-lifecycle-viewmodel-ktx-2.5.1-32 C:\Users\anamj\.gradle\caches\transforms-3\78c5cf64486a6508a8aef9aecfee30d5\transformed\lifecycle-viewmodel-ktx-2.5.1\res
+com.aplicacion.permisapp-ui-test-manifest-1.3.0-33 C:\Users\anamj\.gradle\caches\transforms-3\7b4676b3f4929502541b56f602775e2a\transformed\ui-test-manifest-1.3.0\res
+com.aplicacion.permisapp-lifecycle-livedata-ktx-2.4.0-34 C:\Users\anamj\.gradle\caches\transforms-3\7f890201d70e4e08e2ce362c45f0b8b6\transformed\lifecycle-livedata-ktx-2.4.0\res
+com.aplicacion.permisapp-material-ripple-1.3.0-35 C:\Users\anamj\.gradle\caches\transforms-3\7ff7d14819596d8025a395c69c2afce8\transformed\material-ripple-1.3.0\res
+com.aplicacion.permisapp-savedstate-1.2.0-36 C:\Users\anamj\.gradle\caches\transforms-3\807dd6b4e64b956ec67045a6cccc8b60\transformed\savedstate-1.2.0\res
+com.aplicacion.permisapp-coordinatorlayout-1.1.0-37 C:\Users\anamj\.gradle\caches\transforms-3\81899107bd4bab396f4012088f4b7b62\transformed\coordinatorlayout-1.1.0\res
+com.aplicacion.permisapp-constraintlayout-2.1.4-38 C:\Users\anamj\.gradle\caches\transforms-3\8ed270e7cc560dc88939e87acdf68a2d\transformed\constraintlayout-2.1.4\res
+com.aplicacion.permisapp-appcompat-resources-1.5.1-39 C:\Users\anamj\.gradle\caches\transforms-3\913fd124143e4443187b882807d043c2\transformed\appcompat-resources-1.5.1\res
+com.aplicacion.permisapp-material-icons-core-1.3.0-40 C:\Users\anamj\.gradle\caches\transforms-3\91cbdc018ab8db62218032428bfdf2ea\transformed\material-icons-core-1.3.0\res
+com.aplicacion.permisapp-ui-unit-1.3.0-41 C:\Users\anamj\.gradle\caches\transforms-3\921940bea3d15d4ac2cfc3f16e9f7780\transformed\ui-unit-1.3.0\res
+com.aplicacion.permisapp-foundation-1.3.0-42 C:\Users\anamj\.gradle\caches\transforms-3\93397ebc7395a5fa7c4154b3f7cb3265\transformed\foundation-1.3.0\res
+com.aplicacion.permisapp-ui-geometry-1.3.0-43 C:\Users\anamj\.gradle\caches\transforms-3\9540787b773e5bdec66a0f1e205f7075\transformed\ui-geometry-1.3.0\res
+com.aplicacion.permisapp-lifecycle-livedata-core-2.5.1-44 C:\Users\anamj\.gradle\caches\transforms-3\9892af8417ec0837d7a4bfc98ca541d5\transformed\lifecycle-livedata-core-2.5.1\res
+com.aplicacion.permisapp-animation-core-1.3.0-45 C:\Users\anamj\.gradle\caches\transforms-3\9aee8aa51a4e02c2bcf2a22b1f9a3d72\transformed\animation-core-1.3.0\res
+com.aplicacion.permisapp-firebase-messaging-23.1.0-46 C:\Users\anamj\.gradle\caches\transforms-3\a3ead15422e8ff97c46ab2198f12c314\transformed\firebase-messaging-23.1.0\res
+com.aplicacion.permisapp-cardview-1.0.0-47 C:\Users\anamj\.gradle\caches\transforms-3\b22dc7166aa5064a4288c79ed92a8ef5\transformed\cardview-1.0.0\res
+com.aplicacion.permisapp-navigation-common-ktx-2.5.3-48 C:\Users\anamj\.gradle\caches\transforms-3\b4d983684fc450a021b799b56a7b4399\transformed\navigation-common-ktx-2.5.3\res
+com.aplicacion.permisapp-drawerlayout-1.1.1-49 C:\Users\anamj\.gradle\caches\transforms-3\b5fa2d73b8eaf549c40c45f11574c8ce\transformed\drawerlayout-1.1.1\res
+com.aplicacion.permisapp-glide-4.13.2-50 C:\Users\anamj\.gradle\caches\transforms-3\bb3b0ac7b6e251cce962fd579e7955d0\transformed\glide-4.13.2\res
+com.aplicacion.permisapp-core-1.8.0-51 C:\Users\anamj\.gradle\caches\transforms-3\c073e6115e65c31ff14f5df459f43ee7\transformed\core-1.8.0\res
+com.aplicacion.permisapp-play-services-base-18.0.1-52 C:\Users\anamj\.gradle\caches\transforms-3\c54985cde7623e4ad068c9bfa7bde7b0\transformed\play-services-base-18.0.1\res
+com.aplicacion.permisapp-biometric-1.1.0-53 C:\Users\anamj\.gradle\caches\transforms-3\c868c95a3b5a8af9071b9fabbb99241b\transformed\biometric-1.1.0\res
+com.aplicacion.permisapp-navigation-runtime-2.5.3-54 C:\Users\anamj\.gradle\caches\transforms-3\ce4b7b4cd34cca8741ddd839127de6d4\transformed\navigation-runtime-2.5.3\res
+com.aplicacion.permisapp-activity-compose-1.5.1-55 C:\Users\anamj\.gradle\caches\transforms-3\cfc89d074ffe440b1765747d8370889b\transformed\activity-compose-1.5.1\res
+com.aplicacion.permisapp-ui-util-1.3.0-56 C:\Users\anamj\.gradle\caches\transforms-3\d18a964d652242c74bff51bf8b45c27f\transformed\ui-util-1.3.0\res
+com.aplicacion.permisapp-ucrop-2.2.6-57 C:\Users\anamj\.gradle\caches\transforms-3\d263a49cfeb4560a3d67f19a7fd63c3f\transformed\ucrop-2.2.6\res
+com.aplicacion.permisapp-transition-1.2.0-58 C:\Users\anamj\.gradle\caches\transforms-3\d6080851183816e6986c0ecab6e47bd7\transformed\transition-1.2.0\res
+com.aplicacion.permisapp-animation-1.3.0-59 C:\Users\anamj\.gradle\caches\transforms-3\dfc89a0e8d2494f169affa661600b322\transformed\animation-1.3.0\res
+com.aplicacion.permisapp-emoji2-1.2.0-60 C:\Users\anamj\.gradle\caches\transforms-3\e51eb2bf0cf1b4b2f835e8fb8d54f743\transformed\emoji2-1.2.0\res
+com.aplicacion.permisapp-play-services-basement-18.1.0-61 C:\Users\anamj\.gradle\caches\transforms-3\e85280d936bb557300b29df61383fffb\transformed\play-services-basement-18.1.0\res
+com.aplicacion.permisapp-emoji2-views-helper-1.2.0-62 C:\Users\anamj\.gradle\caches\transforms-3\ea7fa5def6416e232d972eccb55e09fa\transformed\emoji2-views-helper-1.2.0\res
+com.aplicacion.permisapp-firebase-common-20.2.0-63 C:\Users\anamj\.gradle\caches\transforms-3\ec1a8d2028f266eda996cc5943b9ce14\transformed\firebase-common-20.2.0\res
+com.aplicacion.permisapp-core-ktx-1.8.0-64 C:\Users\anamj\.gradle\caches\transforms-3\effcd1c5c82f4f51bce0b6233f4edde3\transformed\core-ktx-1.8.0\res
+com.aplicacion.permisapp-ui-1.3.0-65 C:\Users\anamj\.gradle\caches\transforms-3\f3007d983a49c1aebba814f9abc0aab7\transformed\ui-1.3.0\res
+com.aplicacion.permisapp-savedstate-ktx-1.2.0-66 C:\Users\anamj\.gradle\caches\transforms-3\f4f0bdb4b08d52a9388c54d93426cae4\transformed\savedstate-ktx-1.2.0\res
+com.aplicacion.permisapp-lifecycle-livedata-core-ktx-2.4.0-67 C:\Users\anamj\.gradle\caches\transforms-3\f70c0edad2e0b13aef3a5049e31b83b7\transformed\lifecycle-livedata-core-ktx-2.4.0\res
+com.aplicacion.permisapp-annotation-experimental-1.1.0-68 C:\Users\anamj\.gradle\caches\transforms-3\f75e97796c6fe74864b5bf27c8075315\transformed\annotation-experimental-1.1.0\res
+com.aplicacion.permisapp-google-services-69 C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\build\generated\res\google-services\debug
+com.aplicacion.permisapp-resValues-70 C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\build\generated\res\resValues\debug
+com.aplicacion.permisapp-rs-71 C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\build\generated\res\rs\debug
+com.aplicacion.permisapp-packageDebugResources-72 C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.aplicacion.permisapp-packageDebugResources-73 C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.aplicacion.permisapp-merged_res-74 C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\build\intermediates\merged_res\debug
+com.aplicacion.permisapp-debug-75 C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\debug\res
+com.aplicacion.permisapp-main-76 C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\main\res
