@@ -1,0 +1,7 @@
+com.aplicacion.permisapp.test.app-androidTest-0 C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\build\generated\res\resValues\androidTest\debug
+com.aplicacion.permisapp.test.app-androidTest-1 C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\build\generated\res\rs\androidTest\debug
+com.aplicacion.permisapp.test.app-mergeDebugAndroidTestResources-2 C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.aplicacion.permisapp.test.app-mergeDebugAndroidTestResources-3 C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.aplicacion.permisapp.test.app-merged_res-4 C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\build\intermediates\merged_res\debugAndroidTest
+com.aplicacion.permisapp.test.app-androidTest-5 C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\androidTest\res
+com.aplicacion.permisapp.test.app-androidTestDebug-6 C:\Users\anamj\OneDrive\Documentos\PermisApp Residencias\aplicacion\app\src\androidTestDebug\res

@@ -49,7 +49,6 @@
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_icon_icon_round"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/Theme.PermisApp.NoActionBar" >
         <activity
             android:name="com.aplicacion.permisapp.ui.view.MainActivityDeleteAccount"
