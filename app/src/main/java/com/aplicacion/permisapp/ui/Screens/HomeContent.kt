@@ -338,9 +338,3 @@ fun historiesRCV(){
     }
 
 }
-
-@Preview
-@Composable
-fun itemHome(){
-
-}
